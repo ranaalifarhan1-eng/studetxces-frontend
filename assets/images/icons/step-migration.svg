@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Database cylinder with upload arrow -->
+  <ellipse cx="24" cy="14" rx="14" ry="5" fill="#10b981"/>
+  <path d="M10 14v10c0 2.76 6.27 5 14 5s14-2.24 14-5v-10" stroke="#059669" stroke-width="2" fill="#ecfdf5"/>
+  <path d="M10 24v10c0 2.76 6.27 5 14 5s14-2.24 14-5v-10" stroke="#047857" stroke-width="2" fill="#d1fae5"/>
+  <!-- Upload cloud arrow badge -->
+  <circle cx="33" cy="31" r="9" fill="#047857" stroke="#ffffff" stroke-width="2"/>
+  <path d="M33 26l-4 4h2.5v5h3v-5H37l-4-4z" fill="#34d399"/>
+</svg>

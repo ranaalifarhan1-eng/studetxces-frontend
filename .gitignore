@@ -1,0 +1,13 @@
+# Duplicate local backup
+index.html.html
+
+# Temporary testing & screenshot artifacts
+screenshot-*.png
+hero-*.png
+*.log
+
+# OS & IDE metadata
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

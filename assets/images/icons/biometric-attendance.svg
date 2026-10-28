@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect width="48" height="48" rx="12" fill="#eff6ff"/>
+  <!-- Fingerprint concentric ridges -->
+  <path d="M24 12c-6.627 0-12 5.373-12 12 0 3.314 1.343 6.314 3.515 8.485" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+  <path d="M32.485 32.485C34.657 30.314 36 27.314 36 24c0-6.627-5.373-12-12-12" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+  <path d="M24 16c-4.418 0-8 3.582-8 8 0 2.21.895 4.21 2.343 5.657" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+  <path d="M29.657 29.657C31.105 28.21 32 26.21 32 24c0-4.418-3.582-8-8-8" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+  <path d="M24 20c-2.21 0-4 1.79-4 4 0 1.105.448 2.105 1.172 2.828" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M26.828 26.828C27.552 26.105 28 25.105 28 24c0-2.21-1.79-4-4-4" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round"/>
+  <!-- Scanning laser beam across biometric -->
+  <line x1="8" y1="24" x2="40" y2="24" stroke="#10b981" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="24" cy="24" r="3" fill="#10b981"/>
+  <!-- Verification check badge -->
+  <circle cx="36" cy="36" r="6" fill="#10b981"/>
+  <path d="M33.5 36l1.5 1.5 3.5-3.5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

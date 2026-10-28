@@ -1,0 +1,1935 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentXces — #1 Cloud School Management ERP for Pakistani Schools</title>
+  <meta name="description" content="StudentXces is Pakistan's premier cloud-based School ERP. Streamline admissions, 3-part bank fee challans, exams, biometric attendance, staff payroll, and WhatsApp alerts with your custom domain.">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              200: '#a7f3d0',
+              300: '#6ee7b7',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+              950: '#022c22',
+            },
+            navy: {
+              800: '#0f172a',
+              900: '#0b1324',
+              950: '#060c18',
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          boxShadow: {
+            'glow': '0 0 45px -5px rgba(16, 185, 129, 0.35)',
+            'card': '0 10px 30px -5px rgba(15, 23, 42, 0.05), 0 4px 10px -2px rgba(15, 23, 42, 0.02)',
+            'card-hover': '0 20px 40px -10px rgba(16, 185, 129, 0.15), 0 8px 16px -4px rgba(15, 23, 42, 0.06)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Font Awesome 6 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* Custom Gradients & Micro-patterns */
+    .bg-grid-pattern {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(16, 185, 129, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #065f46 0%, #10b981 50%, #0284c7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .text-gradient-gold {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans selection:bg-brand-500 selection:text-white overflow-x-hidden">
+
+  <!-- TOP TICKER ANNOUNCEMENT -->
+  <div class="bg-navy-950 text-slate-300 py-2.5 px-4 text-xs font-medium border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-brand-500/20 text-brand-400 border border-brand-500/30 shrink-0">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-400 animate-ping"></span>
+          New in 2026
+        </span>
+        <span class="text-slate-300 leading-snug">⚡ Automated WhatsApp Fee Reminders &amp; 3-Part Bank Challan Generator for Pakistani Schools</span>
+      </div>
+      <div class="flex items-center justify-center gap-4 text-slate-300 text-xs shrink-0">
+        <a href="#pricing" class="hover:text-brand-400 transition-colors flex items-center gap-1">
+          <i class="fa-solid fa-tag text-brand-400"></i> From PKR 3,000/mo
+        </a>
+        <span class="text-slate-700">|</span>
+        <a href="https://wa.me/923094141972?text=Hello%20StudentXces%20Team!%20I%20would%20like%20to%20schedule%20a%20live%20school%20ERP%20demo." target="_blank" rel="noopener" class="hover:text-emerald-400 transition-colors font-semibold text-emerald-400 flex items-center gap-1.5">
+          <i class="fa-brands fa-whatsapp text-sm text-emerald-400"></i> +92 309 4141972
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/90 transition-all duration-300 shadow-sm" id="main-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white border border-slate-200/90 shadow-sm flex items-center justify-center p-1.5 group-hover:scale-105 group-hover:border-brand-500/40 group-hover:shadow-md transition-all shrink-0">
+          <img src="assets/images/studentxces-icon.png" alt="StudentXces Brand Logo Icon" class="w-full h-full object-contain">
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-1.5">
+            <span class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 leading-none">Student<span class="text-brand-600">Xces</span></span>
+            <span class="text-[9px] sm:text-[10px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-brand-100 text-brand-800 tracking-wider">ERP</span>
+          </div>
+          <span class="text-[9px] sm:text-[10px] font-medium text-slate-500 tracking-wide mt-0.5">Cloud School Operating System</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="#features" class="hover:text-brand-600 transition-colors">Features</a>
+        <a href="#simulator" class="hover:text-brand-600 transition-colors">Interactive Demo</a>
+        <a href="#modules" class="hover:text-brand-600 transition-colors">14 Modules</a>
+        <a href="#how-it-works" class="hover:text-brand-600 transition-colors">How It Works</a>
+        <a href="#pricing" class="hover:text-brand-600 transition-colors">Packages</a>
+        <a href="#faq" class="hover:text-brand-600 transition-colors">FAQ</a>
+      </nav>
+
+      <!-- CTA Buttons -->
+      <div class="hidden sm:flex items-center gap-3">
+        <button onclick="openDemoModal()" class="px-5 py-2.5 rounded-full text-sm font-bold bg-brand-600 hover:bg-brand-700 text-white shadow-md shadow-brand-600/30 hover:shadow-lg hover:shadow-brand-600/40 transform hover:-translate-y-0.5 transition-all flex items-center gap-2">
+          <i class="fa-solid fa-desktop text-xs"></i> Book Live Demo
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button onclick="toggleMobileNav()" class="md:hidden p-2 text-slate-700 hover:text-brand-600 focus:outline-none shrink-0" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars text-2xl" id="nav-toggle-icon"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-5 space-y-4 shadow-xl">
+      <div class="flex items-center gap-2.5 pb-3 border-b border-slate-100">
+        <div class="w-8 h-8 rounded-lg bg-white border border-slate-200 p-1 flex items-center justify-center shadow-xs">
+          <img src="assets/images/studentxces-icon.png" alt="StudentXces" class="w-full h-full object-contain">
+        </div>
+        <span class="text-lg font-black text-slate-900">Student<span class="text-brand-600">Xces</span> <span class="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-brand-100 text-brand-800">ERP</span></span>
+      </div>
+      <a href="#features" onclick="toggleMobileNav()" class="block text-base font-semibold text-slate-700 hover:text-brand-600">Features</a>
+      <a href="#simulator" onclick="toggleMobileNav()" class="block text-base font-semibold text-slate-700 hover:text-brand-600">Live Dashboard Simulator</a>
+      <a href="#modules" onclick="toggleMobileNav()" class="block text-base font-semibold text-slate-700 hover:text-brand-600">14 ERP Modules</a>
+      <a href="#how-it-works" onclick="toggleMobileNav()" class="block text-base font-semibold text-slate-700 hover:text-brand-600">How It Works (4 Steps)</a>
+      <a href="#pricing" onclick="toggleMobileNav()" class="block text-base font-semibold text-slate-700 hover:text-brand-600">Pricing in PKR</a>
+      <a href="#faq" onclick="toggleMobileNav()" class="block text-base font-semibold text-slate-700 hover:text-brand-600">FAQ</a>
+      <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+        <button onclick="openDemoModal(); toggleMobileNav()" class="w-full text-center py-3 rounded-xl bg-brand-600 text-white font-bold">
+          Book Live Demo
+        </button>
+        <a href="https://wa.me/923094141972" target="_blank" class="w-full text-center py-2.5 rounded-xl bg-emerald-50 text-emerald-700 font-semibold border border-emerald-200 flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Support
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-14 pb-20 sm:pb-24 overflow-hidden bg-gradient-to-b from-white via-emerald-50/25 to-slate-50">
+    <!-- Ambient Soft Glow -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] max-w-[95vw] h-[360px] bg-gradient-to-tr from-emerald-200/20 via-teal-100/15 to-transparent rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <div class="absolute top-16 left-1/2 -translate-x-1/2 w-[540px] max-w-[85vw] h-[240px] bg-emerald-400/10 rounded-full blur-[90px] pointer-events-none -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <!-- Badge -->
+      <div class="inline-flex flex-wrap justify-center items-center gap-2 px-4 py-1.5 rounded-2xl sm:rounded-full bg-white border border-brand-200/80 shadow-sm text-brand-900 text-xs sm:text-sm font-semibold mb-6 hover:border-brand-400 transition-colors cursor-default max-w-full">
+        <span class="flex h-2 w-2 relative shrink-0">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+        </span>
+        <span class="font-bold text-brand-700">100% Tailored for Pakistani Schools</span>
+        <span class="hidden sm:inline text-slate-400">&bull;</span>
+        <span class="text-slate-600 hidden sm:inline">Punjab, Sindh, KPK &amp; Federal Curriculum</span>
+      </div>
+
+      <!-- Main Heading -->
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] max-w-5xl mx-auto mb-6 break-words">
+        Admissions, 3-Part Bank Challans &amp; Exams on <span class="text-gradient">One Connected School ERP</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-10">
+        Say goodbye to virus-corrupted offline computers, misplaced registers, and manual fee reconciliations. StudentXces runs your entire campus from your web browser under your own custom domain.
+      </p>
+
+      <!-- Primary CTAs -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 max-w-xl mx-auto mb-12 sm:mb-14">
+        <a href="https://wa.me/923094141972?text=Hello!%20I%20would%20like%20a%20guided%20live%20demo%20of%20StudentXces%20School%20Management%20System." target="_blank" rel="noopener" class="w-full sm:w-auto h-12 sm:h-[50px] px-6 sm:px-7 rounded-xl text-sm sm:text-base font-bold bg-brand-600 hover:bg-brand-700 text-white shadow-sm hover:shadow-md shadow-brand-600/20 transform hover:-translate-y-0.5 transition-all duration-200 inline-flex items-center justify-center gap-2.5 whitespace-nowrap">
+          <i class="fa-brands fa-whatsapp text-lg text-emerald-100"></i>
+          <span>Instant WhatsApp Demo</span>
+        </a>
+        <button onclick="scrollToSimulator()" class="w-full sm:w-auto h-12 sm:h-[50px] px-6 sm:px-7 rounded-xl text-sm sm:text-base font-bold bg-white hover:bg-slate-50 text-slate-800 border border-slate-300/90 hover:border-slate-400 shadow-sm hover:shadow hover:-translate-y-0.5 transition-all duration-200 inline-flex items-center justify-center gap-2.5 whitespace-nowrap">
+          <i class="fa-solid fa-sliders text-brand-600 text-sm"></i>
+          <span>Try Interactive Preview</span>
+        </button>
+      </div>
+
+      <!-- Key Value Badges -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto text-left">
+        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80 shadow-sm flex items-center gap-3 hover:border-emerald-300 hover:shadow-md transition-all">
+          <img src="assets/images/icons/fees-challan.svg" alt="3-Part Bank Challan" class="w-10 h-10 shrink-0">
+          <div>
+            <div class="text-xs font-bold text-slate-800">3-Part Bank Challans</div>
+            <div class="text-[11px] text-slate-500">Bank, School &amp; Parent Copy</div>
+          </div>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80 shadow-sm flex items-center gap-3 hover:border-blue-300 hover:shadow-md transition-all">
+          <img src="assets/images/icons/biometric-attendance.svg" alt="Biometric &amp; RFID Attendance" class="w-10 h-10 shrink-0">
+          <div>
+            <div class="text-xs font-bold text-slate-800">Biometric &amp; RFID</div>
+            <div class="text-[11px] text-slate-500">Live SMS &amp; App Alerts</div>
+          </div>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80 shadow-sm flex items-center gap-3 hover:border-amber-300 hover:shadow-md transition-all">
+          <img src="assets/images/icons/custom-domain.svg" alt="Custom Domain" class="w-10 h-10 shrink-0">
+          <div>
+            <div class="text-xs font-bold text-slate-800">Your Custom Domain</div>
+            <div class="text-[11px] text-slate-500">portal.yourschool.edu.pk</div>
+          </div>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80 shadow-sm flex items-center gap-3 hover:border-purple-300 hover:shadow-md transition-all">
+          <img src="assets/images/icons/cloud-backup.svg" alt="Cloud Backup" class="w-10 h-10 shrink-0">
+          <div>
+            <div class="text-xs font-bold text-slate-800">Zero Local Servers</div>
+            <div class="text-[11px] text-slate-500">100% Cloud Backups Daily</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE LIVE ERP DASHBOARD SIMULATOR -->
+  <section id="simulator" class="py-16 -mt-10 relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Interactive Selector Pills -->
+      <div class="flex items-center justify-center gap-2 mb-6 flex-wrap">
+        <button onclick="setSimTab('overview')" id="tab-overview" class="sim-tab-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-bold border transition-all flex items-center gap-2 bg-brand-900 text-white border-brand-900 shadow-md">
+          <i class="fa-solid fa-chart-pie"></i> Principal Dashboard
+        </button>
+        <button onclick="setSimTab('challan')" id="tab-challan" class="sim-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold border transition-all flex items-center gap-2 bg-white text-slate-600 border-slate-200 hover:border-brand-400">
+          <i class="fa-solid fa-file-invoice-dollar"></i> 3-Part Fee Challan
+        </button>
+        <button onclick="setSimTab('attendance')" id="tab-attendance" class="sim-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold border transition-all flex items-center gap-2 bg-white text-slate-600 border-slate-200 hover:border-brand-400">
+          <i class="fa-brands fa-whatsapp text-emerald-500"></i> WhatsApp SMS Alerts
+        </button>
+        <button onclick="setSimTab('exam')" id="tab-exam" class="sim-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold border transition-all flex items-center gap-2 bg-white text-slate-600 border-slate-200 hover:border-brand-400">
+          <i class="fa-solid fa-award text-amber-500"></i> Report Card / DMC
+        </button>
+      </div>
+
+      <!-- Browser Mockup Window -->
+      <div class="rounded-2xl border border-slate-300/80 bg-white shadow-2xl overflow-hidden transition-all duration-300 ring-1 ring-slate-900/5">
+        <!-- Browser Bar -->
+        <div class="bg-slate-900 text-slate-400 px-4 py-3 flex items-center justify-between border-b border-slate-800">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+            <div class="hidden sm:flex items-center gap-1.5 ml-2 pl-3 border-l border-slate-800">
+              <img src="assets/images/studentxces-icon-light.png" alt="StudentXces" class="w-3.5 h-3.5 object-contain">
+              <span class="text-[11px] font-bold text-slate-300">StudentXces Cloud</span>
+            </div>
+          </div>
+          <div class="bg-slate-800/80 text-slate-300 px-3 py-1 rounded-md text-[11px] sm:text-xs font-mono flex items-center gap-1.5 sm:gap-2 w-auto max-w-[210px] sm:max-w-md justify-center border border-slate-700/60">
+            <i class="fa-solid fa-lock text-emerald-400 text-[10px] shrink-0"></i>
+            <span id="browser-url" class="truncate">portal.alliedmodel.edu.pk/dashboard</span>
+          </div>
+          <div class="flex items-center gap-2 text-xs text-slate-400">
+            <span class="hidden sm:inline">Academic Session: 2026-27</span>
+          </div>
+        </div>
+
+        <!-- SIMULATOR SCREEN 1: PRINCIPAL OVERVIEW DASHBOARD -->
+        <div id="sim-screen-overview" class="p-6 bg-slate-50 min-h-[460px]">
+          <!-- Top Row KPI Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+              <div class="flex items-center justify-between text-xs text-slate-500 font-semibold mb-1">
+                <span>TOTAL STUDENTS</span>
+                <i class="fa-solid fa-users text-brand-600"></i>
+              </div>
+              <div class="text-2xl font-extrabold text-slate-900">842</div>
+              <div class="text-[11px] text-emerald-600 font-semibold mt-1 flex items-center gap-1">
+                <i class="fa-solid fa-arrow-trend-up"></i> +46 new admissions this session
+              </div>
+            </div>
+
+            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+              <div class="flex items-center justify-between text-xs text-slate-500 font-semibold mb-1">
+                <span>TODAY ATTENDANCE</span>
+                <i class="fa-solid fa-clock text-blue-600"></i>
+              </div>
+              <div class="text-2xl font-extrabold text-slate-900">94.8%</div>
+              <div class="text-[11px] text-slate-500 mt-1">798 Present &bull; 44 Absent (SMS Sent)</div>
+            </div>
+
+            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+              <div class="flex items-center justify-between text-xs text-slate-500 font-semibold mb-1">
+                <span>MONTHLY COLLECTION</span>
+                <i class="fa-solid fa-sack-dollar text-emerald-600"></i>
+              </div>
+              <div class="text-2xl font-extrabold text-emerald-700">PKR 3.48M</div>
+              <div class="text-[11px] text-slate-500 mt-1">87% Paid on Bank Challans</div>
+            </div>
+
+            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+              <div class="flex items-center justify-between text-xs text-slate-500 font-semibold mb-1">
+                <span>ACTIVE STAFF</span>
+                <i class="fa-solid fa-user-tie text-purple-600"></i>
+              </div>
+              <div class="text-2xl font-extrabold text-slate-900">48</div>
+              <div class="text-[11px] text-slate-500 mt-1">Payroll calculated &bull; 0 Overdue</div>
+            </div>
+          </div>
+
+          <!-- Mid Section: Interactive Chart Mock & Fast Actions -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="lg:col-span-2 bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <h4 class="font-bold text-slate-900 text-sm">Fee Collection Breakdown (Current Session in PKR)</h4>
+                  <p class="text-xs text-slate-500">Reconciled via Bank Al-Habib / Meezan / JazzCash API</p>
+                </div>
+                <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">Live Synced</span>
+              </div>
+              
+              <!-- Progress Bars Breakdown -->
+              <div class="space-y-3 pt-2">
+                <div>
+                  <div class="flex justify-between text-xs font-bold text-slate-700 mb-1">
+                    <span>Tuition Fee (Collected: PKR 2,890,000 / Target: PKR 3,200,000)</span>
+                    <span class="text-brand-600">90.3%</span>
+                  </div>
+                  <div class="w-full h-3 bg-slate-100 rounded-full overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-emerald-500 to-brand-600 rounded-full" style="width: 90.3%;"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="flex justify-between text-xs font-bold text-slate-700 mb-1">
+                    <span>Annual Exam &amp; Registration Funds</span>
+                    <span class="text-blue-600">78.5%</span>
+                  </div>
+                  <div class="w-full h-3 bg-slate-100 rounded-full overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full" style="width: 78.5%;"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="flex justify-between text-xs font-bold text-slate-700 mb-1">
+                    <span>Van / Transport Monthly Fees</span>
+                    <span class="text-amber-600">84.2%</span>
+                  </div>
+                  <div class="w-full h-3 bg-slate-100 rounded-full overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-amber-400 to-orange-500 rounded-full" style="width: 84.2%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick shortcut badges -->
+              <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                <span>Recent Activity: Batch Challans issued for Class 9 &amp; 10 (Matric)</span>
+                <button onclick="setSimTab('challan')" class="text-brand-700 font-bold hover:underline">View Generated Challan &rarr;</button>
+              </div>
+            </div>
+
+            <!-- Fast Action Box -->
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm mb-1">Quick Admin Actions</h4>
+                <p class="text-xs text-slate-500 mb-4">Daily tasks available in 1 click</p>
+                
+                <div class="space-y-2">
+                  <button onclick="setSimTab('challan')" class="w-full text-left px-3.5 py-2.5 rounded-lg bg-slate-50 hover:bg-brand-50 border border-slate-200 hover:border-brand-300 text-xs font-bold text-slate-800 flex items-center justify-between transition-colors">
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-print text-brand-600"></i> Generate Monthly Challan</span>
+                    <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
+                  </button>
+                  <button onclick="setSimTab('attendance')" class="w-full text-left px-3.5 py-2.5 rounded-lg bg-slate-50 hover:bg-brand-50 border border-slate-200 hover:border-brand-300 text-xs font-bold text-slate-800 flex items-center justify-between transition-colors">
+                    <span class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-emerald-500"></i> Send Absentee SMS Blast</span>
+                    <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
+                  </button>
+                  <button onclick="setSimTab('exam')" class="w-full text-left px-3.5 py-2.5 rounded-lg bg-slate-50 hover:bg-brand-50 border border-slate-200 hover:border-brand-300 text-xs font-bold text-slate-800 flex items-center justify-between transition-colors">
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-file-pdf text-rose-600"></i> Print Term DMCs / Cards</span>
+                    <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="mt-4 p-3 bg-brand-50/70 border border-brand-200 rounded-lg text-[11px] text-brand-900">
+                <i class="fa-solid fa-shield-halved text-brand-600"></i>
+                <strong>Security:</strong> All campus accounts protected with 2FA &amp; role restrictions.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SIMULATOR SCREEN 2: 3-PART BANK CHALLAN (PAKISTAN STANDARD) -->
+        <div id="sim-screen-challan" class="p-6 bg-slate-100 min-h-[460px] hidden">
+          <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl border border-slate-300 shadow-md">
+            <div class="flex items-center justify-between border-b pb-4 mb-4">
+              <div>
+                <span class="text-xs font-bold text-brand-700 uppercase tracking-wider">Automated Voucher Template</span>
+                <h4 class="text-lg font-black text-slate-900">3-Part Bank Challan Generator (A4 Standard)</h4>
+              </div>
+              <div class="text-right">
+                <span class="px-3 py-1 rounded bg-emerald-100 text-emerald-800 font-mono text-xs font-bold">Challan # 2026-09412</span>
+              </div>
+            </div>
+
+            <!-- The 3 Columns: Bank Copy, School Copy, Student Copy -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-[11px] text-slate-700 font-mono">
+              <!-- Part 1: Bank Copy -->
+              <div class="border border-dashed border-slate-400 p-3 rounded bg-amber-50/30">
+                <div class="text-center font-bold pb-2 border-b border-slate-300">
+                  <div class="font-sans font-extrabold text-xs text-slate-900">ALLIED MODEL HIGH SCHOOL</div>
+                  <div class="text-[10px] text-slate-500">Meezan Bank Ltd. (A/C: 0102-01048821)</div>
+                  <div class="bg-amber-100 text-amber-900 px-1 py-0.5 mt-1 font-bold rounded">1. BANK COPY</div>
+                </div>
+                <div class="mt-2 space-y-1">
+                  <div><strong>Student:</strong> Hamza Ali Khan</div>
+                  <div><strong>Roll #:</strong> 24-B (Class 9-A)</div>
+                  <div><strong>Due Date:</strong> 10-Oct-2026</div>
+                </div>
+                <table class="w-full mt-3 border-t border-b border-slate-200">
+                  <tr><td class="py-0.5">Tuition Fee:</td><td class="text-right">4,500</td></tr>
+                  <tr><td class="py-0.5">Exam Fund:</td><td class="text-right">500</td></tr>
+                  <tr><td class="py-0.5">Lab / IT:</td><td class="text-right">300</td></tr>
+                  <tr class="font-bold border-t border-slate-300">
+                    <td class="py-1">Total PKR:</td>
+                    <td class="text-right text-emerald-700">5,300</td>
+                  </tr>
+                </table>
+                <div class="mt-4 pt-4 border-t border-slate-300 text-center text-[10px] text-slate-400">Bank Cashier Stamp</div>
+              </div>
+
+              <!-- Part 2: School Copy -->
+              <div class="border border-dashed border-slate-400 p-3 rounded bg-blue-50/30">
+                <div class="text-center font-bold pb-2 border-b border-slate-300">
+                  <div class="font-sans font-extrabold text-xs text-slate-900">ALLIED MODEL HIGH SCHOOL</div>
+                  <div class="text-[10px] text-slate-500">Meezan Bank Ltd. (A/C: 0102-01048821)</div>
+                  <div class="bg-blue-100 text-blue-900 px-1 py-0.5 mt-1 font-bold rounded">2. SCHOOL COPY</div>
+                </div>
+                <div class="mt-2 space-y-1">
+                  <div><strong>Student:</strong> Hamza Ali Khan</div>
+                  <div><strong>Roll #:</strong> 24-B (Class 9-A)</div>
+                  <div><strong>Due Date:</strong> 10-Oct-2026</div>
+                </div>
+                <table class="w-full mt-3 border-t border-b border-slate-200">
+                  <tr><td class="py-0.5">Tuition Fee:</td><td class="text-right">4,500</td></tr>
+                  <tr><td class="py-0.5">Exam Fund:</td><td class="text-right">500</td></tr>
+                  <tr><td class="py-0.5">Lab / IT:</td><td class="text-right">300</td></tr>
+                  <tr class="font-bold border-t border-slate-300">
+                    <td class="py-1">Total PKR:</td>
+                    <td class="text-right text-emerald-700">5,300</td>
+                  </tr>
+                </table>
+                <div class="mt-4 pt-4 border-t border-slate-300 text-center text-[10px] text-slate-400">Accountant Signature</div>
+              </div>
+
+              <!-- Part 3: Student Copy -->
+              <div class="border border-dashed border-slate-400 p-3 rounded bg-emerald-50/30">
+                <div class="text-center font-bold pb-2 border-b border-slate-300">
+                  <div class="font-sans font-extrabold text-xs text-slate-900">ALLIED MODEL HIGH SCHOOL</div>
+                  <div class="text-[10px] text-slate-500">Kuickpay ID / JazzCash / 1Link</div>
+                  <div class="bg-emerald-100 text-emerald-900 px-1 py-0.5 mt-1 font-bold rounded">3. STUDENT COPY</div>
+                </div>
+                <div class="mt-2 space-y-1">
+                  <div><strong>Student:</strong> Hamza Ali Khan</div>
+                  <div><strong>Roll #:</strong> 24-B (Class 9-A)</div>
+                  <div><strong>Due Date:</strong> 10-Oct-2026</div>
+                </div>
+                <table class="w-full mt-3 border-t border-b border-slate-200">
+                  <tr><td class="py-0.5">Tuition Fee:</td><td class="text-right">4,500</td></tr>
+                  <tr><td class="py-0.5">Exam Fund:</td><td class="text-right">500</td></tr>
+                  <tr><td class="py-0.5">Lab / IT:</td><td class="text-right">300</td></tr>
+                  <tr class="font-bold border-t border-slate-300">
+                    <td class="py-1">Total PKR:</td>
+                    <td class="text-right text-emerald-700">5,300</td>
+                  </tr>
+                </table>
+                <div class="mt-4 pt-4 border-t border-slate-300 text-center text-[10px] text-slate-400">Paid Receipt (Keep Safe)</div>
+              </div>
+            </div>
+
+            <!-- Footer explanation -->
+            <div class="mt-5 text-center text-xs text-slate-500 flex items-center justify-center gap-2">
+              <i class="fa-solid fa-circle-check text-brand-600"></i>
+              <span>One click prints 1,000+ student challans grouped class-wise with automatic late fee surcharge calculations.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SIMULATOR SCREEN 3: WHATSAPP & SMS AUTOMATION -->
+        <div id="sim-screen-attendance" class="p-6 bg-slate-100 min-h-[460px] hidden">
+          <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            
+            <!-- Left: Settings & Trigger -->
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+              <h4 class="font-bold text-slate-900 text-sm mb-1">Automated WhatsApp &amp; SMS Gateway</h4>
+              <p class="text-xs text-slate-500 mb-4">Direct integration with Branded SMS &amp; WhatsApp Business API</p>
+
+              <div class="space-y-3">
+                <div class="p-3 rounded-lg bg-slate-50 border border-slate-200 text-xs">
+                  <div class="font-bold text-slate-800 flex items-center justify-between">
+                    <span>1. Attendance Trigger</span>
+                    <span class="text-emerald-600 font-mono text-[10px]">ENABLED</span>
+                  </div>
+                  <div class="text-slate-500 text-[11px] mt-0.5">Automatically trigger message if student not punched by 08:30 AM</div>
+                </div>
+
+                <div class="p-3 rounded-lg bg-slate-50 border border-slate-200 text-xs">
+                  <div class="font-bold text-slate-800 flex items-center justify-between">
+                    <span>2. Fee Defaulter Alert</span>
+                    <span class="text-emerald-600 font-mono text-[10px]">ENABLED</span>
+                  </div>
+                  <div class="text-slate-500 text-[11px] mt-0.5">Send friendly warning 3 days before 10th of every month</div>
+                </div>
+
+                <div class="p-3 rounded-lg bg-slate-50 border border-slate-200 text-xs">
+                  <div class="font-bold text-slate-800 flex items-center justify-between">
+                    <span>3. Daily Diary &amp; Homework</span>
+                    <span class="text-emerald-600 font-mono text-[10px]">AUTO-SYNC</span>
+                  </div>
+                  <div class="text-slate-500 text-[11px] mt-0.5">Sync teacher diary to parents portal at 01:30 PM dismissal</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Realistic Smartphone Mockup with WhatsApp Message in Urdu/English -->
+            <div class="w-full max-w-[280px] mx-auto bg-slate-900 p-3 rounded-[32px] shadow-2xl border-4 border-slate-800">
+              <div class="bg-[#e5ddd5] rounded-[24px] p-3 text-slate-900 min-h-[380px] flex flex-col justify-between">
+                <!-- Phone Top Bar -->
+                <div class="bg-[#075e54] -mx-3 -mt-3 p-2.5 rounded-t-[20px] text-white flex items-center gap-2">
+                  <div class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-xs">
+                    <i class="fa-solid fa-school"></i>
+                  </div>
+                  <div class="leading-tight">
+                    <div class="text-xs font-bold">Allied School Official</div>
+                    <div class="text-[9px] text-emerald-200">Online &bull; WhatsApp Verified</div>
+                  </div>
+                </div>
+
+                <!-- Bubble 1: Attendance Alert -->
+                <div class="bg-white p-2.5 rounded-lg shadow-sm text-[11px] leading-relaxed border-l-4 border-emerald-500 my-2">
+                  <p class="font-bold text-slate-900 text-[10px]">⚠️ Attendance Alert &bull; Official Notice</p>
+                  <p class="mt-1 text-slate-700">
+                    Dear Parent, your child <strong>Hamza Ali (Class 9-A)</strong> has been marked absent today, <strong>27-Oct-2026</strong>. Please contact campus office if this is an error.
+                  </p>
+                  <p class="mt-1 text-slate-500 text-[9px] text-right">08:35 AM &bull; Delivered</p>
+                </div>
+
+                <!-- Bubble 2: Fee Alert with link -->
+                <div class="bg-[#dcf8c6] p-2.5 rounded-lg shadow-sm text-[11px] leading-relaxed my-1">
+                  <p class="font-bold text-slate-900 text-[10px]">💳 Fee Reminder &bull; Billing Voucher</p>
+                  <p class="mt-1 text-slate-700">
+                    Tuition fee challan for October 2026 (PKR 5,300) is now available. Due date: 10th Oct.
+                  </p>
+                  <div class="mt-1 text-[10px] text-blue-700 underline font-semibold">portal.school.edu.pk/fee/ch-9412</div>
+                  <p class="mt-1 text-slate-500 text-[9px] text-right">Just now &bull; Read</p>
+                </div>
+
+                <!-- Dummy Keyboard spacer -->
+                <div class="bg-white/80 p-1.5 rounded-full text-center text-[10px] text-slate-400">
+                  <i class="fa-solid fa-lock text-[8px]"></i> End-to-end encrypted
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SIMULATOR SCREEN 4: EXAM DMC & GRADE SHEET -->
+        <div id="sim-screen-exam" class="p-6 bg-slate-100 min-h-[460px] hidden">
+          <div class="max-w-3xl mx-auto bg-white p-6 rounded-xl border border-slate-300 shadow-sm text-xs font-sans">
+            <div class="text-center border-b pb-3 mb-4">
+              <div class="font-extrabold text-sm text-slate-900 tracking-wider">BOARD OF INTERMEDIATE &amp; SECONDARY EDUCATION MAPPING</div>
+              <div class="text-base font-black text-brand-900">STUDENT DETAILED MARKS CERTIFICATE (DMC)</div>
+              <div class="text-[11px] text-slate-500">Mid-Term Examination &bull; Session 2026-27</div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4 bg-slate-50 p-2.5 rounded border border-slate-200">
+              <div><strong>Student Name:</strong> Ayesha Siddiqui</div>
+              <div><strong>Father Name:</strong> M. Siddiqui</div>
+              <div><strong>Class &amp; Section:</strong> 10th - Science (Pre-Med)</div>
+              <div><strong>Roll Number:</strong> 10482</div>
+            </div>
+
+            <div class="overflow-x-auto w-full">
+            <table class="w-full min-w-[500px] border-collapse border border-slate-200 text-left">
+              <thead>
+                <tr class="bg-slate-100 text-slate-700">
+                  <th class="p-2 border border-slate-200">Subject</th>
+                  <th class="p-2 border border-slate-200">Total Marks</th>
+                  <th class="p-2 border border-slate-200">Obtained</th>
+                  <th class="p-2 border border-slate-200">Grade</th>
+                  <th class="p-2 border border-slate-200">Remarks</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="p-2 border border-slate-200 font-bold">English Compulsory</td>
+                  <td class="p-2 border border-slate-200">75</td>
+                  <td class="p-2 border border-slate-200">68</td>
+                  <td class="p-2 border border-slate-200 font-bold text-emerald-600">A+</td>
+                  <td class="p-2 border border-slate-200 text-slate-500">Excellent Command</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border border-slate-200 font-bold">Urdu</td>
+                  <td class="p-2 border border-slate-200">75</td>
+                  <td class="p-2 border border-slate-200">71</td>
+                  <td class="p-2 border border-slate-200 font-bold text-emerald-600">A+</td>
+                  <td class="p-2 border border-slate-200 text-slate-500">Outstanding</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border border-slate-200 font-bold">Mathematics (Science)</td>
+                  <td class="p-2 border border-slate-200">75</td>
+                  <td class="p-2 border border-slate-200">74</td>
+                  <td class="p-2 border border-slate-200 font-bold text-emerald-600">A+</td>
+                  <td class="p-2 border border-slate-200 text-slate-500">Top of Class</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border border-slate-200 font-bold">Physics &amp; Practical</td>
+                  <td class="p-2 border border-slate-200">75</td>
+                  <td class="p-2 border border-slate-200">65</td>
+                  <td class="p-2 border border-slate-200 font-bold text-emerald-600">A</td>
+                  <td class="p-2 border border-slate-200 text-slate-500">Very Good</td>
+                </tr>
+                <tr>
+                  <td class="p-2 border border-slate-200 font-bold">Biology &amp; Practical</td>
+                  <td class="p-2 border border-slate-200">75</td>
+                  <td class="p-2 border border-slate-200">69</td>
+                  <td class="p-2 border border-slate-200 font-bold text-emerald-600">A+</td>
+                  <td class="p-2 border border-slate-200 text-slate-500">Strong Conceptual</td>
+                </tr>
+                <tr class="bg-brand-50/50 font-bold text-slate-900 border-t-2 border-slate-400">
+                  <td class="p-2 border border-slate-200">Total Aggregate:</td>
+                  <td class="p-2 border border-slate-200">375</td>
+                  <td class="p-2 border border-slate-200 text-brand-700">347 (92.5%)</td>
+                  <td class="p-2 border border-slate-200 text-emerald-700">A+ (Grade 1)</td>
+                  <td class="p-2 border border-slate-200 text-emerald-700">Position 1st in Class</td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+
+            <div class="mt-6 pt-6 flex justify-between text-slate-600 text-center text-[10px]">
+              <div class="border-t border-slate-300 w-32 pt-1">Class Teacher</div>
+              <div class="border-t border-slate-300 w-32 pt-1">Exam Controller</div>
+              <div class="border-t border-slate-300 w-32 pt-1">Principal Signature &amp; Stamp</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON: OLD DESKTOP SOFTWARE VS STUDENTXCES CLOUD -->
+  <section id="features" class="py-20 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-extrabold uppercase text-xs tracking-wider">Why Pakistani Schools Are Switching</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 mb-4 tracking-tight">
+          Stop Risking Your School's Records with Old Offline Software
+        </h2>
+        <p class="text-slate-600 text-base leading-relaxed">
+          Traditional .EXE and MS Access desktop school software frequently crash, get infected by flash drive viruses, and trap your accounts on a single accountant's PC.
+        </p>
+      </div>
+
+      <!-- Modern Comparison Table Grid -->
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-card border border-slate-200 text-left text-sm">
+          <thead>
+            <tr class="bg-slate-900 text-white">
+              <th class="p-4 sm:p-5 font-bold w-1/3">Core Operational Feature</th>
+              <th class="p-4 sm:p-5 font-bold text-rose-300 w-1/3 bg-rose-950/40 border-l border-r border-slate-800">
+                <i class="fa-solid fa-xmark mr-1.5 text-rose-400"></i> Traditional Desktop (.EXE) Software
+              </th>
+              <th class="p-4 sm:p-5 font-bold text-emerald-300 w-1/3 bg-brand-950/70 border-l border-brand-900">
+                <i class="fa-solid fa-check mr-1.5 text-brand-400"></i> StudentXces Cloud ERP
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200">
+            <tr class="hover:bg-slate-50/80 transition-colors">
+              <td class="p-4 sm:p-5 font-semibold text-slate-900">Accessibility &amp; Devices</td>
+              <td class="p-4 sm:p-5 text-slate-600 bg-rose-50/20 border-l border-r border-slate-200">
+                Locked to 1 specific office computer. Can't be opened from home or mobile.
+              </td>
+              <td class="p-4 sm:p-5 font-bold text-brand-900 bg-brand-50/30 border-l border-brand-200">
+                Access 24/7 on Laptop, Tablet, or Mobile Phone via any browser.
+              </td>
+            </tr>
+            <tr class="hover:bg-slate-50/80 transition-colors">
+              <td class="p-4 sm:p-5 font-semibold text-slate-900">Data Loss &amp; Virus Risk</td>
+              <td class="p-4 sm:p-5 text-slate-600 bg-rose-50/20 border-l border-r border-slate-200">
+                Extremely high. If hard drive burns or Windows corrupts, 5 years of records are wiped out.
+              </td>
+              <td class="p-4 sm:p-5 font-bold text-brand-900 bg-brand-50/30 border-l border-brand-200">
+                Automatic daily encrypted off-site cloud backups. Zero data loss guarantee.
+              </td>
+            </tr>
+            <tr class="hover:bg-slate-50/80 transition-colors">
+              <td class="p-4 sm:p-5 font-semibold text-slate-900">Fee Challan &amp; Bank Integration</td>
+              <td class="p-4 sm:p-5 text-slate-600 bg-rose-50/20 border-l border-r border-slate-200">
+                Manual Excel copying. Difficult to compute previous arrears or partial payments.
+              </td>
+              <td class="p-4 sm:p-5 font-bold text-brand-900 bg-brand-50/30 border-l border-brand-200">
+                Generates 3-Part Bank Challans in 1 click with auto arrears, fines, and online banking reconciliation.
+              </td>
+            </tr>
+            <tr class="hover:bg-slate-50/80 transition-colors">
+              <td class="p-4 sm:p-5 font-semibold text-slate-900">Parents &amp; Teachers Portal</td>
+              <td class="p-4 sm:p-5 text-slate-600 bg-rose-50/20 border-l border-r border-slate-200">
+                None. Requires printing costly circulars and paper report cards every month.
+              </td>
+              <td class="p-4 sm:p-5 font-bold text-brand-900 bg-brand-50/30 border-l border-brand-200">
+                Dedicated parent &amp; student portal with real-time marks, diary, and fee receipts.
+              </td>
+            </tr>
+            <tr class="hover:bg-slate-50/80 transition-colors">
+              <td class="p-4 sm:p-5 font-semibold text-slate-900">School Brand Identity</td>
+              <td class="p-4 sm:p-5 text-slate-600 bg-rose-50/20 border-l border-r border-slate-200">
+                Generic software showing the developer's watermarks and branding.
+              </td>
+              <td class="p-4 sm:p-5 font-bold text-brand-900 bg-brand-50/30 border-l border-brand-200">
+                100% White-Labeled. Runs on your school domain with custom logo and motto.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALL 14 UNIFIED MODULES (WITH FILTER TABS) -->
+  <section id="modules" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-brand-600 font-extrabold uppercase text-xs tracking-wider">Enterprise Grade Architecture</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 mb-4 tracking-tight">
+          All 14 Modules Integrated Into One Single Database
+        </h2>
+        <p class="text-slate-600 text-base leading-relaxed">
+          No separate plugins or disconnected add-ons. From kindergarten admission to high school alumni graduation, everything works synchronously.
+        </p>
+
+        <!-- Category Filters -->
+        <div class="flex items-center justify-center gap-2 mt-8 flex-wrap">
+          <button onclick="filterModules('all')" class="mod-filter-btn active px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-brand-600 text-white shadow-sm">All 14 Modules</button>
+          <button onclick="filterModules('academic')" class="mod-filter-btn px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-white text-slate-600 border border-slate-300 hover:border-brand-400">Academics &amp; Students</button>
+          <button onclick="filterModules('finance')" class="mod-filter-btn px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-white text-slate-600 border border-slate-300 hover:border-brand-400">Finance &amp; Payroll</button>
+          <button onclick="filterModules('ops')" class="mod-filter-btn px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-white text-slate-600 border border-slate-300 hover:border-brand-400">Campus Operations</button>
+        </div>
+      </div>
+
+      <!-- Modules Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="modules-container">
+        
+        <!-- Module 1 -->
+        <div class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between" data-category="academic">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-user-graduate"></i>
+              </div>
+              <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-slate-100 text-slate-600">Core</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Student Information System</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Complete student bio-data, B-Form verification, family groupings, previous academic records, and session-to-session promotion workflows.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-brand-700 flex items-center gap-1">
+            <i class="fa-solid fa-check"></i> Bulk Excel Import / Export
+          </div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between" data-category="finance">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+              </div>
+              <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">High Impact</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Fee &amp; Bank Challans</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              3-Part custom bank challans, automated monthly billing, family discounts, advance fees, fine calculations, and bank ledger reconciliations.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-brand-700 flex items-center gap-1">
+            <i class="fa-solid fa-check"></i> 1Link / Kuickpay Ready
+          </div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between" data-category="academic">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-calendar-check"></i>
+              </div>
+              <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-slate-100 text-slate-600">Daily</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Attendance &amp; Biometrics</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Section-wise teacher attendance or automated biometric finger/facial machine sync with instant WhatsApp alerts for absentees.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-brand-700 flex items-center gap-1">
+            <i class="fa-solid fa-check"></i> Realtime Parent Notifier
+          </div>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between" data-category="academic">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-slate-100 text-slate-600">Grading</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Examinations &amp; DMCs</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Term-wise mark sheets, grading criteria (BISE, FBISE, Cambridge scales), student positions, and instant printable report card certificates.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-brand-700 flex items-center gap-1">
+            <i class="fa-solid fa-check"></i> Position &amp; Grade Analytics
+          </div>
+        </div>
+
+        <!-- Module 5 -->
+        <div class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between" data-category="finance">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-users-gear"></i>
+              </div>
+              <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-slate-100 text-slate-600">HR</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Staff &amp; Payroll Management</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Teacher qualification profiles, leave tracking workflows, salary deductions, bonuses, advances, and printable bank disbursement sheets.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-brand-700 flex items-center gap-1">
+            <i class="fa-solid fa-check"></i> Auto Tax &amp; Leave Deductions
+          </div>
+        </div>
+
+        <!-- Module 6 -->
+        <div class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between" data-category="academic">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-cyan-100 text-cyan-700 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-calendar-days"></i>
+              </div>
+              <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-slate-100 text-slate-600">Schedule</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Timetable &amp; Periods</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Visual period planner for every class and section with intelligent conflict-detection to prevent teacher double-bookings.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-brand-700 flex items-center gap-1">
+            <i class="fa-solid fa-check"></i> Teacher &amp; Class Wise Views
+          </div>
+        </div>
+
+        <!-- Module 7 -->
+        <div class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between" data-category="academic">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+              <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-slate-100 text-slate-600">Daily</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Homework &amp; Digital Diary</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Subject teachers post homework, worksheets, and syllabus outlines directly to the student and parent mobile portals.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-brand-700 flex items-center gap-1">
+            <i class="fa-solid fa-check"></i> Zero Paper Diary Costs
+          </div>
+        </div>
+
+        <!-- Module 8 -->
+        <div class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between" data-category="ops">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-bullhorn"></i>
+              </div>
+              <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-slate-100 text-slate-600">Notices</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Noticeboard &amp; Circulars</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Broadcast sudden holiday announcements, exam circulars, and sports gala events instantly without expensive manual printouts.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-brand-700 flex items-center gap-1">
+            <i class="fa-solid fa-check"></i> Instant Push Delivery
+          </div>
+        </div>
+
+        <!-- Module 9 -->
+        <div class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between" data-category="ops">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-book-bookmark"></i>
+              </div>
+              <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-slate-100 text-slate-600">Library</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Library Barcode Catalog</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Complete cataloging of books, author registers, issue/return histories, barcode scanner compatibility, and automated late fine calculation.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-brand-700 flex items-center gap-1">
+            <i class="fa-solid fa-check"></i> Barcode Scanner Ready
+          </div>
+        </div>
+
+        <!-- Module 10 -->
+        <div class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between" data-category="ops">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-700 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-bus"></i>
+              </div>
+              <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-slate-100 text-slate-600">Transport</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">School Van &amp; Transport</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Manage school buses, van drivers, passenger student rosters, stop-wise fee billing, and driver document renewals.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-brand-700 flex items-center gap-1">
+            <i class="fa-solid fa-check"></i> Auto Transport Fee Add-on
+          </div>
+        </div>
+
+        <!-- Module 11 -->
+        <div class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between" data-category="ops">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-lime-100 text-lime-700 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-boxes-stacked"></i>
+              </div>
+              <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-slate-100 text-slate-600">Assets</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">School Inventory &amp; Stock</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Control laboratory supplies, uniform stocks, library furniture, school stationery purchases, and branch asset audits.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-brand-700 flex items-center gap-1">
+            <i class="fa-solid fa-check"></i> Stock Threshold Warnings
+          </div>
+        </div>
+
+        <!-- Module 12 -->
+        <div class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between" data-category="ops">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-pink-100 text-pink-700 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-bed"></i>
+              </div>
+              <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-slate-100 text-slate-600">Boarding</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Hostel &amp; Mess Management</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Track room numbers, bed allocations, warden shift logs, mess charges, and visitor permissions for boarding schools.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-brand-700 flex items-center gap-1">
+            <i class="fa-solid fa-check"></i> Mess Fee Integration
+          </div>
+        </div>
+
+        <!-- Module 13 -->
+        <div class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between" data-category="finance">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">Intelligence</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">50+ Executive Reports</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Comprehensive financial audit reports, monthly cash collection summaries, fee defalcation trackers, and board result analytics in Excel &amp; PDF.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-brand-700 flex items-center gap-1">
+            <i class="fa-solid fa-check"></i> 1-Click PDF / Excel Export
+          </div>
+        </div>
+
+        <!-- Module 14 -->
+        <div class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between" data-category="ops">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-certificate"></i>
+              </div>
+              <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-sky-100 text-sky-800">Identity</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">CNAME Custom Domain &amp; Brand</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              White-label your portal under your official school address (e.g. portal.beaconhouse.edu.pk) with your emblem, custom login page, and color scheme.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-brand-700 flex items-center gap-1">
+            <i class="fa-solid fa-check"></i> Full White-label Freedom
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS & 4-STEP ONBOARDING (REPLACED CALCULATOR) -->
+  <section id="how-it-works" class="py-20 bg-gradient-to-tr from-brand-950 via-slate-900 to-navy-950 text-white relative overflow-hidden">
+    <!-- Ambient Blur Circles -->
+    <div class="absolute -top-24 -left-24 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-block text-xs font-bold uppercase tracking-wider text-brand-400 bg-brand-500/10 px-3.5 py-1 rounded-full border border-brand-500/20 mb-3">
+          Zero Technical Friction &bull; 24-Hour Deployment
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight">
+          How Your School Transitions to StudentXces
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
+          No dedicated IT personnel or expensive server upgrades required. Our specialized migration team transitions your entire campus within 24 hours.
+        </p>
+      </div>
+
+      <!-- 4 Stepper Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        
+        <!-- Step 1 -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 relative hover:bg-white/10 hover:border-brand-500/50 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center text-lg font-black border border-brand-500/30">
+                01
+              </div>
+              <img src="assets/images/icons/step-migration.svg" alt="Data Migration" class="w-10 h-10 object-contain">
+            </div>
+            <span class="text-xs font-mono text-slate-400 font-semibold">Step 1 &bull; 2 Hours</span>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Free Data Migration</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Send us your existing student and staff spreadsheets or physical register records. Our migration team cleans, validates, and uploads all data securely to the cloud.
+          </p>
+          <div class="mt-4 pt-3 border-t border-white/10 text-[11px] text-brand-400 flex items-center gap-1.5 font-semibold">
+            <i class="fa-solid fa-circle-check"></i> 100% Free Migration Service
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 relative hover:bg-white/10 hover:border-brand-500/50 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-lg font-black border border-blue-500/30">
+                02
+              </div>
+              <img src="assets/images/icons/step-branding.svg" alt="Custom Branding" class="w-10 h-10 object-contain">
+            </div>
+            <span class="text-xs font-mono text-slate-400 font-semibold">Step 2 &bull; 4 Hours</span>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Custom Branding &amp; Domain</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            We configure your official school crest, emblem, fee structure, and dedicated web domain (e.g., <code class="text-emerald-300 font-mono text-[11px]">portal.yourschool.edu.pk</code>) for an executive look.
+          </p>
+          <div class="mt-4 pt-3 border-t border-white/10 text-[11px] text-blue-400 flex items-center gap-1.5 font-semibold">
+            <i class="fa-solid fa-circle-check"></i> 100% White-Labeled Identity
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 relative hover:bg-white/10 hover:border-brand-500/50 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg font-black border border-amber-500/30">
+                03
+              </div>
+              <img src="assets/images/icons/step-training.svg" alt="Staff Orientation" class="w-10 h-10 object-contain">
+            </div>
+            <span class="text-xs font-mono text-slate-400 font-semibold">Step 3 &bull; Afternoon</span>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Staff &amp; Teacher Orientation</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Your accountants and faculty receive a quick 30-minute interactive walkthrough. Intuitive step-by-step video manuals and direct WhatsApp desk support ensure smooth adoption.
+          </p>
+          <div class="mt-4 pt-3 border-t border-white/10 text-[11px] text-amber-400 flex items-center gap-1.5 font-semibold">
+            <i class="fa-solid fa-circle-check"></i> Step-by-Step Training Guides
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 relative hover:bg-white/10 hover:border-brand-500/50 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-lg font-black border border-purple-500/30">
+                04
+              </div>
+              <img src="assets/images/icons/step-launch.svg" alt="Print Challans &amp; Launch" class="w-10 h-10 object-contain">
+            </div>
+            <span class="text-xs font-mono text-slate-400 font-semibold">Step 4 &bull; Go Live!</span>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Print Challans &amp; Launch</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Print 3-Part Bank fee challans in 1 click, launch RFID/biometric attendance tracking, and start broadcasting instant WhatsApp notices to parents immediately.
+          </p>
+          <div class="mt-4 pt-3 border-t border-white/10 text-[11px] text-purple-400 flex items-center gap-1.5 font-semibold">
+            <i class="fa-solid fa-circle-check"></i> Effortless &amp; Reliable Launch
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Campus Stakeholders Grid (What Everyone Gets) -->
+      <div class="bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-10 backdrop-blur-md">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+          <h3 class="text-xl sm:text-2xl font-bold text-white">Dedicated Role-Based Portals for Every Campus Member</h3>
+          <p class="text-xs sm:text-sm text-slate-400 mt-1">Granular access control ensures each user sees only what is relevant to their daily responsibilities.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+          <!-- Role 1: Principal / Owner -->
+          <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-700/60 hover:border-brand-500/40 transition-all">
+            <img src="assets/images/icons/role-principal.svg" alt="Principal &amp; Director" class="w-11 h-11 rounded-xl mb-3 shrink-0">
+            <h4 class="font-bold text-white text-sm mb-1">Principal &amp; Director</h4>
+            <p class="text-slate-400 mb-3">Executive smartphone dashboard tracking daily fee collections, total enrollment, staff punctuality, and overall academic analytics from anywhere.</p>
+            <ul class="space-y-1.5 text-slate-300">
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-brand-400 text-[10px]"></i> Real-time Revenue Updates</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-brand-400 text-[10px]"></i> Payroll &amp; Expense Approvals</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-brand-400 text-[10px]"></i> Tamper-proof Audit Trails</li>
+            </ul>
+          </div>
+
+          <!-- Role 2: Accountant / Admin -->
+          <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-700/60 hover:border-blue-500/40 transition-all">
+            <img src="assets/images/icons/role-accountant.svg" alt="Accountant &amp; Cashier" class="w-11 h-11 rounded-xl mb-3 shrink-0">
+            <h4 class="font-bold text-white text-sm mb-1">Accountant &amp; Cashier</h4>
+            <p class="text-slate-400 mb-3">Generate batch 3-part bank challans with cumulative arrears, print single counter slips, and automate general ledgers effortlessly.</p>
+            <ul class="space-y-1.5 text-slate-300">
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-blue-400 text-[10px]"></i> Automated Late Surcharges</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-blue-400 text-[10px]"></i> Sibling &amp; Staff Concessions</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-blue-400 text-[10px]"></i> Bank Book &amp; Cash Balance Sync</li>
+            </ul>
+          </div>
+
+          <!-- Role 3: Teachers -->
+          <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-700/60 hover:border-amber-500/40 transition-all">
+            <img src="assets/images/icons/role-teacher.svg" alt="Subject Teachers" class="w-11 h-11 rounded-xl mb-3 shrink-0">
+            <h4 class="font-bold text-white text-sm mb-1">Subject Teachers</h4>
+            <p class="text-slate-400 mb-3">Mark 30-second section attendance via smartphone, enter examination marks swiftly, and broadcast homework diaries with zero paperwork.</p>
+            <ul class="space-y-1.5 text-slate-300">
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Fast Grade Entry Grid</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Digital Class Diary &amp; Tasks</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Period &amp; Subject Schedule</li>
+            </ul>
+          </div>
+
+          <!-- Role 4: Parents & Students -->
+          <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-700/60 hover:border-purple-500/40 transition-all">
+            <img src="assets/images/icons/role-parents.svg" alt="Parents &amp; Students" class="w-11 h-11 rounded-xl mb-3 shrink-0">
+            <h4 class="font-bold text-white text-sm mb-1">Parents &amp; Students</h4>
+            <p class="text-slate-400 mb-3">Receive automated attendance updates, download digital fee slips for online banking, view term report cards, and check school notices.</p>
+            <ul class="space-y-1.5 text-slate-300">
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> WhatsApp Absence Alerts</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Term DMC Report Downloads</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-purple-400 text-[10px]"></i> Real-time Fee Status &amp; Ledger</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Quick CTA -->
+        <div class="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="text-center sm:text-left">
+            <div class="text-sm font-bold text-white">Would you like a demonstration configured with your school's actual challan format?</div>
+            <div class="text-xs text-slate-400">Speak directly with our technical onboarding specialists on WhatsApp.</div>
+          </div>
+          <a href="https://wa.me/923094141972?text=Hello!%20I%20would%20like%20to%20inquire%20about%20onboarding%20and%20request%20a%20demo%20for%20my%20school." target="_blank" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-xs sm:text-sm shadow-lg shadow-brand-600/30 transition-all flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-base"></i> Talk to Us: +92 309 4141972
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TRANSPARENT PRICING IN PKR WITH TERM DISCOUNT TOGGLES -->
+  <section id="pricing" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-brand-600 font-extrabold uppercase text-xs tracking-wider">Transparent Pakistani Rupee Rates</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 mb-4 tracking-tight">
+          Simple, Fair Pricing with Zero Hidden Costs
+        </h2>
+        <p class="text-slate-600 text-base leading-relaxed">
+          No per-student surprise penalties. Choose a plan based on your school's capacity and pay quarterly, bi-annually, or annually with guaranteed discounts.
+        </p>
+
+        <!-- Billing Term Tabs -->
+        <div class="inline-flex p-1.5 rounded-2xl bg-slate-100 border border-slate-200 mt-8 gap-1">
+          <button onclick="setBillingTerm('quarterly')" id="btn-term-quarterly" class="term-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-slate-800 shadow-sm transition-all">
+            Quarterly (3 Months)
+          </button>
+          <button onclick="setBillingTerm('halfyearly')" id="btn-term-halfyearly" class="term-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold text-slate-600 hover:text-slate-900 transition-all flex items-center gap-1.5">
+            6 Months <span class="text-[10px] bg-emerald-100 text-emerald-800 font-extrabold px-1.5 py-0.2 rounded-full">5% OFF</span>
+          </button>
+          <button onclick="setBillingTerm('annual')" id="btn-term-annual" class="term-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold text-slate-600 hover:text-slate-900 transition-all flex items-center gap-1.5">
+            12 Months <span class="text-[10px] bg-brand-500 text-white font-extrabold px-1.5 py-0.2 rounded-full">10% OFF</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Pricing Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
+        
+        <!-- PLAN 1: STARTER -->
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between">
+          <div>
+            <div class="text-sm font-extrabold uppercase text-slate-500 tracking-wider mb-2">Starter Campus</div>
+            <h3 class="text-2xl font-black text-slate-900">Primary / Branch</h3>
+            <p class="text-xs text-slate-500 mt-1 mb-6">Ideal for standalone primary schools, academies, or new preschool branches.</p>
+
+            <!-- Price -->
+            <div class="flex items-baseline gap-1.5 mb-1">
+              <span class="text-3xl sm:text-4xl font-extrabold text-slate-900" id="price-starter">PKR 9,000</span>
+              <span class="text-xs text-slate-500 font-semibold" id="period-starter">/ 3 Months</span>
+            </div>
+            <div class="text-[11px] text-slate-400 mb-6" id="subtext-starter">Equivalent to PKR 3,000 / month</div>
+
+            <!-- Capacity Badges -->
+            <div class="grid grid-cols-3 gap-2 py-3 border-y border-slate-100 text-center text-xs mb-6">
+              <div class="bg-slate-50 p-2 rounded-lg">
+                <div class="font-bold text-slate-800">300</div>
+                <div class="text-[10px] text-slate-400">Students</div>
+              </div>
+              <div class="bg-slate-50 p-2 rounded-lg">
+                <div class="font-bold text-slate-800">25</div>
+                <div class="text-[10px] text-slate-400">Staff</div>
+              </div>
+              <div class="bg-slate-50 p-2 rounded-lg">
+                <div class="font-bold text-slate-800">5 GB</div>
+                <div class="text-[10px] text-slate-400">Storage</div>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <ul class="space-y-3 text-xs text-slate-600 mb-8">
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-check text-brand-600"></i>
+                <span><strong>9 Core Modules:</strong> Students, Attendance, Fees, Exams</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-check text-brand-600"></i>
+                <span>3-Part Bank Challan Printing</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-check text-brand-600"></i>
+                <span>Report Cards &amp; DMC Generator</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-check text-brand-600"></i>
+                <span>Parent &amp; Teacher Web Portals</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-slate-400">
+                <i class="fa-solid fa-minus"></i>
+                <span>Custom Domain (Subdomain included)</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="https://wa.me/923094141972?text=Hello!%20I%20am%20interested%20in%20the%20Starter%20Plan%20(PKR%203,000/mo)." target="_blank" class="w-full py-3.5 rounded-xl border-2 border-brand-600 hover:bg-brand-50 text-brand-700 font-extrabold text-sm text-center transition-all block">
+            Select Starter Plan
+          </a>
+        </div>
+
+        <!-- PLAN 2: STANDARD (FEATURED) -->
+        <div class="bg-gradient-to-b from-white to-brand-50/60 rounded-3xl p-8 border-2 border-brand-500 shadow-xl relative flex flex-col justify-between transform md:-translate-y-2">
+          <!-- Featured Tag -->
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-600 to-emerald-700 text-white text-[11px] font-black uppercase tracking-wider px-4 py-1 rounded-full shadow-md">
+            Most Popular in Pakistan
+          </div>
+
+          <div>
+            <div class="text-sm font-extrabold uppercase text-brand-700 tracking-wider mb-2">Comprehensive Campus</div>
+            <h3 class="text-2xl font-black text-slate-900">Standard School</h3>
+            <p class="text-xs text-slate-500 mt-1 mb-6">Designed for established matriculation &amp; O-Level private schools.</p>
+
+            <!-- Price -->
+            <div class="flex items-baseline gap-1.5 mb-1">
+              <span class="text-3xl sm:text-4xl font-extrabold text-slate-900" id="price-standard">PKR 15,000</span>
+              <span class="text-xs text-slate-500 font-semibold" id="period-standard">/ 3 Months</span>
+            </div>
+            <div class="text-[11px] text-emerald-700 font-semibold mb-6" id="subtext-standard">Equivalent to PKR 5,000 / month</div>
+
+            <!-- Capacity Badges -->
+            <div class="grid grid-cols-3 gap-2 py-3 border-y border-brand-200 text-center text-xs mb-6 bg-white/60 rounded-xl">
+              <div class="p-2 rounded-lg">
+                <div class="font-bold text-slate-900">800</div>
+                <div class="text-[10px] text-slate-500">Students</div>
+              </div>
+              <div class="p-2 rounded-lg">
+                <div class="font-bold text-slate-900">75</div>
+                <div class="text-[10px] text-slate-500">Staff</div>
+              </div>
+              <div class="p-2 rounded-lg">
+                <div class="font-bold text-slate-900">20 GB</div>
+                <div class="text-[10px] text-slate-500">Storage</div>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <ul class="space-y-3 text-xs text-slate-700 mb-8">
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-600"></i>
+                <span><strong>13 Modules Included:</strong> HR, Timetable, Library, Transport</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-600"></i>
+                <span><strong>CNAME Custom Domain</strong> (e.g. portal.myschool.edu.pk)</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-600"></i>
+                <span>WhatsApp Notification Gateway Hookup</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-600"></i>
+                <span>Biometric Machine Real-time Attendance Integration</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-600"></i>
+                <span>Priority WhatsApp Support for Accountants</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="https://wa.me/923094141972?text=Hello!%20I%20am%20interested%20in%20the%20Standard%20Plan%20(PKR%205,000/mo)." target="_blank" class="w-full py-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-extrabold text-sm text-center shadow-md shadow-brand-600/30 transition-all block">
+            Select Standard Plan
+          </a>
+        </div>
+
+        <!-- PLAN 3: PRO / NETWORK -->
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between">
+          <div>
+            <div class="text-sm font-extrabold uppercase text-slate-500 tracking-wider mb-2">School Network</div>
+            <h3 class="text-2xl font-black text-slate-900">Pro Enterprise</h3>
+            <p class="text-xs text-slate-500 mt-1 mb-6">For large colleges, high schools, and multi-campus school chains.</p>
+
+            <!-- Price -->
+            <div class="flex items-baseline gap-1.5 mb-1">
+              <span class="text-3xl sm:text-4xl font-extrabold text-slate-900" id="price-pro">PKR 24,000</span>
+              <span class="text-xs text-slate-500 font-semibold" id="period-pro">/ 3 Months</span>
+            </div>
+            <div class="text-[11px] text-slate-400 mb-6" id="subtext-pro">Equivalent to PKR 8,000 / month</div>
+
+            <!-- Capacity Badges -->
+            <div class="grid grid-cols-3 gap-2 py-3 border-y border-slate-100 text-center text-xs mb-6">
+              <div class="bg-slate-50 p-2 rounded-lg">
+                <div class="font-bold text-slate-800">2,000</div>
+                <div class="text-[10px] text-slate-400">Students</div>
+              </div>
+              <div class="bg-slate-50 p-2 rounded-lg">
+                <div class="font-bold text-slate-800">200</div>
+                <div class="text-[10px] text-slate-400">Staff</div>
+              </div>
+              <div class="bg-slate-50 p-2 rounded-lg">
+                <div class="font-bold text-slate-800">50 GB</div>
+                <div class="text-[10px] text-slate-400">Storage</div>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <ul class="space-y-3 text-xs text-slate-600 mb-8">
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-check text-brand-600"></i>
+                <span><strong>All 14 Modules Unlocked:</strong> +Hostel &amp; Inventory</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-check text-brand-600"></i>
+                <span>Multi-Campus Network Administration Access</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-check text-brand-600"></i>
+                <span>Dedicated Cloud Server &amp; Custom IP</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-check text-brand-600"></i>
+                <span>Dedicated Account Manager on Direct Call</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="https://wa.me/923094141972?text=Hello!%20I%20am%20interested%20in%20the%20Pro%20Plan%20(PKR%208,000/mo)." target="_blank" class="w-full py-3.5 rounded-xl border-2 border-brand-600 hover:bg-brand-50 text-brand-700 font-extrabold text-sm text-center transition-all block">
+            Select Pro Enterprise
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING SECTION & FORM -->
+  <section id="demo" class="py-20 bg-slate-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-xl grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-800 text-xs font-bold mb-3">
+            <img src="assets/images/studentxces-icon.png" alt="StudentXces" class="w-4 h-4 object-contain">
+            <span>StudentXces School ERP</span>
+          </div>
+          <span class="block text-xs font-extrabold uppercase text-brand-600 tracking-wider">Fast Onboarding</span>
+          <h2 class="text-3xl font-extrabold text-slate-900 mt-2 mb-4 leading-tight">
+            Schedule a 15-Minute Live Guided Demonstration
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            We will demonstrate the system live according to your school's actual fee challan layout and grading methodology. Our engineering team also helps you import your current student database at zero additional cost.
+          </p>
+
+          <div class="space-y-4 text-xs text-slate-700">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <div class="font-bold text-slate-900">Direct Contact:</div>
+                <div>+92 309 4141972 (WhatsApp &amp; Voice)</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <div class="font-bold text-slate-900">Official Support:</div>
+                <div>support@studentxces.com</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <form onsubmit="handleDemoSubmit(event)" class="space-y-4 bg-slate-50 p-6 rounded-2xl border border-slate-200">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">School / College Name *</label>
+            <input type="text" id="demo-school" required placeholder="e.g. The City School Campus II" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all">
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">City *</label>
+              <input type="text" id="demo-city" required placeholder="e.g. Lahore / Rawalpindi" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Approx Students</label>
+              <select id="demo-students" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all">
+                <option value="Under 300">Under 300</option>
+                <option value="300 - 800" selected>300 - 800</option>
+                <option value="800 - 1500">800 - 1,500</option>
+                <option value="1500+">1,500+</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">WhatsApp Mobile Number *</label>
+            <input type="tel" id="demo-phone" required placeholder="0300 1234567" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all">
+          </div>
+
+          <button type="submit" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-extrabold text-sm transition-all shadow-md flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Send Demo Request to WhatsApp</span>
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FREQUENTLY ASKED QUESTIONS (ACCORDION) -->
+  <section id="faq" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span class="text-brand-600 font-extrabold uppercase text-xs tracking-wider">Clarity &amp; Assurance</span>
+        <h2 class="text-3xl font-extrabold text-slate-900 mt-2 tracking-tight">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="space-y-3.5">
+        
+        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all bg-slate-50/50">
+          <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
+            <span>Do we need to buy local physical servers or high-end office computers?</span>
+            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-xs sm:text-sm text-slate-600 hidden leading-relaxed border-t border-slate-200/60 pt-3">
+            Not at all. StudentXces is 100% cloud-hosted. You do not need to invest in expensive hardware or local database servers. You can operate and monitor your entire campus 24/7 through any modern web browser on a laptop, tablet, or mobile phone.
+          </div>
+        </div>
+
+        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all bg-slate-50/50">
+          <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
+            <span>Can we use our own custom school domain (e.g. portal.myschool.edu.pk)?</span>
+            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-xs sm:text-sm text-slate-600 hidden leading-relaxed border-t border-slate-200/60 pt-3">
+            Yes! Our Standard and Pro plans include full custom domain mapping (CNAME) and comprehensive white-labeling. Your school logo, branding colors, and official seal appear across all login portals, parent dashboards, and generated reports.
+          </div>
+        </div>
+
+        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all bg-slate-50/50">
+          <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
+            <span>How do the 3-part bank challans and online fee collection work?</span>
+            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-xs sm:text-sm text-slate-600 hidden leading-relaxed border-t border-slate-200/60 pt-3">
+            StudentXces produces standardized 3-part challans (Bank Copy, School Copy, Student Copy) compatible with major Pakistani commercial banks (such as Meezan, HBL, Bank Alfalah, and Bank Al Habib) in a single click. It also supports digital collection integrations via 1Link, KuickPay, JazzCash, and Easypaisa.
+          </div>
+        </div>
+
+        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all bg-slate-50/50">
+          <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
+            <span>Can our existing student and staff records be imported from Excel?</span>
+            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-xs sm:text-sm text-slate-600 hidden leading-relaxed border-t border-slate-200/60 pt-3">
+            Yes, definitely. Our platform provides bulk CSV/Excel import tools. During onboarding, our dedicated engineering team migrates all your student rosters, roll numbers, guardian contacts, and past balances free of charge.
+          </div>
+        </div>
+
+        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all bg-slate-50/50">
+          <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
+            <span>What happens during local power outages or internet interruptions?</span>
+            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-xs sm:text-sm text-slate-600 hidden leading-relaxed border-t border-slate-200/60 pt-3">
+            Because the system is securely hosted in the cloud, campus operations remain uninterrupted. Staff and administration can immediately access the portal using a mobile 4G hotspot or home Wi-Fi. Your records remain safe and immune to local hard drive failures.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-navy-950 text-slate-400 py-16 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-800/80">
+        
+        <!-- Col 1 -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 p-2 flex items-center justify-center shadow-inner">
+              <img src="assets/images/studentxces-icon-light.png" alt="StudentXces Emblem" class="w-full h-full object-contain">
+            </div>
+            <div class="flex flex-col">
+              <div class="flex items-center gap-1.5">
+                <span class="text-xl font-black text-white">Student<span class="text-brand-400">Xces</span></span>
+                <span class="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-brand-500/20 text-brand-300 border border-brand-500/30">ERP</span>
+              </div>
+              <span class="text-[10px] text-slate-400">Cloud School Operating System</span>
+            </div>
+          </div>
+          <p class="leading-relaxed text-slate-400 text-xs">
+            StudentXces is Pakistan's leading cloud-hosted school management ERP. Engineered for reliability, financial accuracy, and seamless parent-teacher communication.
+          </p>
+          <div class="flex items-center gap-3 text-slate-400 pt-2">
+            <a href="https://wa.me/923094141972" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition-colors">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-colors">
+              <i class="fa-brands fa-facebook-f text-sm"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-sky-500 hover:text-white flex items-center justify-center transition-colors">
+              <i class="fa-brands fa-linkedin-in text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div>
+          <div class="font-bold text-white uppercase tracking-wider text-xs mb-4">Core Modules</div>
+          <ul class="space-y-2">
+            <li><a href="#modules" class="hover:text-brand-400 transition-colors">Student Admission &amp; SIS</a></li>
+            <li><a href="#modules" class="hover:text-brand-400 transition-colors">3-Part Fee Challans</a></li>
+            <li><a href="#modules" class="hover:text-brand-400 transition-colors">Daily Biometric Attendance</a></li>
+            <li><a href="#modules" class="hover:text-brand-400 transition-colors">Exams &amp; Board DMCs</a></li>
+            <li><a href="#modules" class="hover:text-brand-400 transition-colors">Staff HR &amp; Payroll</a></li>
+            <li><a href="#modules" class="hover:text-brand-400 transition-colors">Transport &amp; Van Routes</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Coverage -->
+        <div>
+          <div class="font-bold text-white uppercase tracking-wider text-xs mb-4">Regional Presence</div>
+          <ul class="space-y-2 text-slate-400">
+            <li><span>📍 Lahore Regional Office (Punjab)</span></li>
+            <li><span>📍 Karachi Customer Center (Sindh)</span></li>
+            <li><span>📍 Islamabad &amp; Rawalpindi Desk</span></li>
+            <li><span>📍 Peshawar &amp; Northern Region</span></li>
+            <li><span>🌐 Serving 150+ Schools Nationally</span></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Direct Contacts -->
+        <div>
+          <div class="font-bold text-white uppercase tracking-wider text-xs mb-4">Support &amp; Sales</div>
+          <div class="space-y-2.5">
+            <div>
+              <div class="text-[11px] text-slate-500 font-semibold">WHATSAPP HELPLINE:</div>
+              <a href="https://wa.me/923094141972" class="text-sm font-extrabold text-emerald-400 hover:underline">+92 309 4141972</a>
+            </div>
+            <div>
+              <div class="text-[11px] text-slate-500 font-semibold">EMAIL INQUIRIES:</div>
+              <span class="text-slate-300">support@studentxces.com</span>
+            </div>
+            <div>
+              <div class="text-[11px] text-slate-500 font-semibold">ACTIVE UPTIME:</div>
+              <span class="inline-flex items-center gap-1.5 text-emerald-400 font-bold">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> 99.98% Cloud SLA
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-[11px]">
+        <div>
+          &copy; 2026 StudentXces Technologies Pakistan. All rights reserved. Built for school excellence.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="#" class="hover:underline">Terms of Service</a>
+          <span>&bull;</span>
+          <a href="#" class="hover:underline">Security Whitepaper</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/923094141972?text=Hello%20StudentXces%20Team!%20I%20would%20like%20more%20information%20regarding%20the%20School%20ERP." target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center text-3xl shadow-xl hover:scale-110 active:scale-95 transition-all duration-300" title="Chat with Support Team">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- DEMO MODAL POPUP -->
+  <div id="demo-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white w-full max-w-lg rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-200 relative animate-in fade-in zoom-in duration-200">
+      <button onclick="closeDemoModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 text-lg">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <div class="w-14 h-14 rounded-2xl bg-white border border-slate-200/90 shadow-sm flex items-center justify-center p-2 mx-auto mb-3">
+          <img src="assets/images/studentxces-icon.png" alt="StudentXces Brand Logo" class="w-full h-full object-contain">
+        </div>
+        <h3 class="text-2xl font-black text-slate-900">Request Custom School Demo</h3>
+        <p class="text-xs text-slate-500 mt-1">Free 15-minute screen share walkthrough tailored to your syllabus &amp; fee structure.</p>
+      </div>
+
+      <form onsubmit="handleModalSubmit(event)" class="space-y-3.5">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">School / College Name</label>
+          <input type="text" id="modal-school" required placeholder="e.g. Cambridge Grammar School" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">City</label>
+            <input type="text" id="modal-city" required placeholder="Lahore / Islamabad" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Enrolled Students</label>
+            <input type="number" id="modal-students" required placeholder="e.g. 650" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Your Mobile / WhatsApp Number</label>
+          <input type="tel" id="modal-phone" required placeholder="0309 4141972" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none">
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-extrabold text-sm transition-all shadow-md flex items-center justify-center gap-2 mt-4">
+          <i class="fa-brands fa-whatsapp text-lg"></i> Connect on WhatsApp Now
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // 1. Mobile Menu Toggle
+    function toggleMobileNav() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    // 2. Interactive Simulator Tab Switching
+    function setSimTab(tabId) {
+      // Hide all simulator screens
+      document.getElementById('sim-screen-overview').classList.add('hidden');
+      document.getElementById('sim-screen-challan').classList.add('hidden');
+      document.getElementById('sim-screen-attendance').classList.add('hidden');
+      document.getElementById('sim-screen-exam').classList.add('hidden');
+
+      // Reset button styles
+      const tabs = document.querySelectorAll('.sim-tab-btn');
+      tabs.forEach(btn => {
+        btn.classList.remove('active', 'bg-brand-900', 'text-white', 'border-brand-900', 'shadow-md');
+        btn.classList.add('bg-white', 'text-slate-600', 'border-slate-200');
+      });
+
+      // Show selected screen
+      const activeScreen = document.getElementById(`sim-screen-${tabId}`);
+      if (activeScreen) activeScreen.classList.remove('hidden');
+
+      // Style active button
+      const activeBtn = document.getElementById(`tab-${tabId}`);
+      if (activeBtn) {
+        activeBtn.classList.add('active', 'bg-brand-900', 'text-white', 'border-brand-900', 'shadow-md');
+        activeBtn.classList.remove('bg-white', 'text-slate-600', 'border-slate-200');
+      }
+
+      // Update mock URL
+      const urlBar = document.getElementById('browser-url');
+      if (tabId === 'overview') urlBar.textContent = 'portal.alliedmodel.edu.pk/dashboard';
+      if (tabId === 'challan') urlBar.textContent = 'portal.alliedmodel.edu.pk/fees/generate-challans';
+      if (tabId === 'attendance') urlBar.textContent = 'portal.alliedmodel.edu.pk/attendance/whatsapp-gateway';
+      if (tabId === 'exam') urlBar.textContent = 'portal.alliedmodel.edu.pk/examinations/dmc-report-card';
+    }
+
+    function scrollToSimulator() {
+      document.getElementById('simulator').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // 3. Module Categorization Filter
+    function filterModules(category) {
+      const cards = document.querySelectorAll('.module-card');
+      const filterBtns = document.querySelectorAll('.mod-filter-btn');
+
+      filterBtns.forEach(btn => {
+        btn.classList.remove('active', 'bg-brand-600', 'text-white', 'shadow-sm');
+        btn.classList.add('bg-white', 'text-slate-600', 'border', 'border-slate-300');
+      });
+
+      if (typeof event !== 'undefined' && event && event.target) {
+        event.target.classList.add('active', 'bg-brand-600', 'text-white', 'shadow-sm');
+        event.target.classList.remove('bg-white', 'text-slate-600', 'border', 'border-slate-300');
+      }
+
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // 4. Billing Period Toggle (Quarterly, 6-Month with 5% off, Annual with 10% off)
+    let currentTerm = 'quarterly';
+    const pricingData = {
+      quarterly: {
+        starter: 'PKR 9,000',
+        starterPeriod: '/ 3 Months',
+        starterSub: 'Equivalent to PKR 3,000 / month',
+        standard: 'PKR 15,000',
+        standardPeriod: '/ 3 Months',
+        standardSub: 'Equivalent to PKR 5,000 / month',
+        pro: 'PKR 24,000',
+        proPeriod: '/ 3 Months',
+        proSub: 'Equivalent to PKR 8,000 / month'
+      },
+      halfyearly: {
+        starter: 'PKR 17,100',
+        starterPeriod: '/ 6 Months',
+        starterSub: '5% Saved (PKR 2,850 / month)',
+        standard: 'PKR 28,500',
+        standardPeriod: '/ 6 Months',
+        standardSub: '5% Saved (PKR 4,750 / month)',
+        pro: 'PKR 45,600',
+        proPeriod: '/ 6 Months',
+        proSub: '5% Saved (PKR 7,600 / month)'
+      },
+      annual: {
+        starter: 'PKR 32,400',
+        starterPeriod: '/ 12 Months',
+        starterSub: '10% Saved (PKR 2,700 / month)',
+        standard: 'PKR 54,000',
+        standardPeriod: '/ 12 Months',
+        standardSub: '10% Saved (PKR 4,500 / month)',
+        pro: 'PKR 86,400',
+        proPeriod: '/ 12 Months',
+        proSub: '10% Saved (PKR 7,200 / month)'
+      }
+    };
+
+    function setBillingTerm(term) {
+      currentTerm = term;
+      const buttons = document.querySelectorAll('.term-btn');
+      buttons.forEach(b => {
+        b.classList.remove('bg-white', 'text-slate-800', 'shadow-sm');
+        b.classList.add('text-slate-600');
+      });
+
+      const activeBtn = document.getElementById(`btn-term-${term}`);
+      activeBtn.classList.add('bg-white', 'text-slate-800', 'shadow-sm');
+      activeBtn.classList.remove('text-slate-600');
+
+      const data = pricingData[term];
+      document.getElementById('price-starter').textContent = data.starter;
+      document.getElementById('period-starter').textContent = data.starterPeriod;
+      document.getElementById('subtext-starter').textContent = data.starterSub;
+
+      document.getElementById('price-standard').textContent = data.standard;
+      document.getElementById('period-standard').textContent = data.standardPeriod;
+      document.getElementById('subtext-standard').textContent = data.standardSub;
+
+      document.getElementById('price-pro').textContent = data.pro;
+      document.getElementById('period-pro').textContent = data.proPeriod;
+      document.getElementById('subtext-pro').textContent = data.proSub;
+    }
+
+    // 6. FAQ Accordion Toggle
+    function toggleFaq(button) {
+      const item = button.parentElement;
+      const answer = item.querySelector('.faq-answer');
+      const icon = button.querySelector('i');
+
+      const isHidden = answer.classList.contains('hidden');
+
+      // Close all others
+      document.querySelectorAll('.faq-answer').forEach(ans => ans.classList.add('hidden'));
+      document.querySelectorAll('.faq-item i').forEach(ic => ic.classList.remove('rotate-180'));
+
+      if (isHidden) {
+        answer.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      }
+    }
+
+    // 7. Modal Functions
+    function openDemoModal() {
+      const modal = document.getElementById('demo-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeDemoModal() {
+      const modal = document.getElementById('demo-modal');
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+    }
+
+    // Close modal on click outside
+    window.addEventListener('click', function(e) {
+      const modal = document.getElementById('demo-modal');
+      if (e.target === modal) {
+        closeDemoModal();
+      }
+    });
+
+    // 8. Lead Form Submission to WhatsApp
+    function handleDemoSubmit(e) {
+      e.preventDefault();
+      const school = document.getElementById('demo-school').value;
+      const city = document.getElementById('demo-city').value;
+      const students = document.getElementById('demo-students').value;
+      const phone = document.getElementById('demo-phone').value;
+
+      const message = `Hello! I would like to schedule a live demo of StudentXces School ERP.\n\n🏫 School: ${school}\n📍 City: ${city}\n👥 Students: ${students}\n📱 Phone: ${phone}`;
+      const url = `https://wa.me/923094141972?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+
+    function handleModalSubmit(e) {
+      e.preventDefault();
+      const school = document.getElementById('modal-school').value;
+      const city = document.getElementById('modal-city').value;
+      const students = document.getElementById('modal-students').value;
+      const phone = document.getElementById('modal-phone').value;
+
+      const message = `Hello StudentXces Team, here is my demo request:\n\n🏫 School: ${school}\n📍 City: ${city}\n👥 Enrolled: ${students}\n📱 WhatsApp: ${phone}`;
+      const url = `https://wa.me/923094141972?text=${encodeURIComponent(message)}`;
+      closeDemoModal();
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>

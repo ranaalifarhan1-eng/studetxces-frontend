@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Rocket launch into live operation -->
+  <g transform="translate(14, 6) rotate(45 10 10)">
+    <!-- Rocket body -->
+    <path d="M12 2C8 6 6 12 6 18h12c0-6-2-12-6-16z" fill="#9333ea"/>
+    <!-- Window -->
+    <circle cx="12" cy="10" r="3" fill="#ffffff"/>
+    <circle cx="12" cy="10" r="1.5" fill="#3b82f6"/>
+    <!-- Fins -->
+    <path d="M6 14L2 18v3h4" fill="#a855f7"/>
+    <path d="M18 14l4 4v3h-4" fill="#a855f7"/>
+    <!-- Flame -->
+    <path d="M8 18c0 4 4 8 4 8s4-4 4-8" fill="#f59e0b"/>
+    <path d="M10 18c0 2 2 4 2 4s2-2 2-4" fill="#ef4444"/>
+  </g>
+  <!-- Speed trail & sparkles -->
+  <circle cx="12" cy="36" r="2.5" fill="#c084fc"/>
+  <circle cx="8" cy="42" r="1.5" fill="#e9d5ff"/>
+  <circle cx="38" cy="12" r="2" fill="#34d399"/>
+  <circle cx="42" cy="18" r="1.5" fill="#6ee7b7"/>
+</svg>
