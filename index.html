@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StudentXces — #1 Cloud School Management ERP for Pakistani Schools</title>
-  <meta name="description" content="StudentXces is Pakistan's premier cloud-based School ERP. Streamline admissions, 3-part bank fee challans, exams, biometric attendance, staff payroll, and WhatsApp alerts with your custom domain.">
+  <meta name="description" content="StudentXces is Pakistan's premier cloud-based School ERP. Streamline admissions, 3-part bank fee challans, exams, Cloud-Based Attendance, staff payroll, and WhatsApp alerts with your custom domain.">
   
   <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
@@ -101,8 +101,8 @@
           <i class="fa-solid fa-tag text-brand-400"></i> From PKR 3,000/mo
         </a>
         <span class="text-slate-700">|</span>
-        <a href="https://wa.me/923094141972?text=Hello%20StudentXces%20Team!%20I%20would%20like%20to%20schedule%20a%20live%20school%20ERP%20demo." target="_blank" rel="noopener" class="hover:text-emerald-400 transition-colors font-semibold text-emerald-400 flex items-center gap-1.5">
-          <i class="fa-brands fa-whatsapp text-sm text-emerald-400"></i> +92 309 4141972
+        <a href="https://wa.me/923066589195?text=Hello%20StudentXces%20Team!%20I%20would%20like%20to%20schedule%20a%20live%20school%20ERP%20demo." target="_blank" rel="noopener" class="hover:text-emerald-400 transition-colors font-semibold text-emerald-400 flex items-center gap-1.5">
+          <i class="fa-brands fa-whatsapp text-sm text-emerald-400"></i> +92 306 6589195
         </a>
       </div>
     </div>
@@ -112,33 +112,25 @@
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/90 transition-all duration-300 shadow-sm" id="main-header">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3">
       <!-- Logo -->
-      <a href="#" class="flex items-center gap-2.5 sm:gap-3 group shrink-0">
-        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white border border-slate-200/90 shadow-sm flex items-center justify-center p-1.5 group-hover:scale-105 group-hover:border-brand-500/40 group-hover:shadow-md transition-all shrink-0">
-          <img src="assets/images/studentxces-icon.png" alt="StudentXces Brand Logo Icon" class="w-full h-full object-contain">
-        </div>
-        <div class="flex flex-col">
-          <div class="flex items-center gap-1.5">
-            <span class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 leading-none">Student<span class="text-brand-600">Xces</span></span>
-            <span class="text-[9px] sm:text-[10px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-brand-100 text-brand-800 tracking-wider">ERP</span>
-          </div>
-          <span class="text-[9px] sm:text-[10px] font-medium text-slate-500 tracking-wide mt-0.5">Cloud School Operating System</span>
-        </div>
+      <a href="#" class="flex items-center group shrink-0" aria-label="StudentXces Home">
+        <img src="assets/studentxces_logo.png" alt="StudentXces" class="h-10 sm:h-11 lg:h-12 w-auto object-contain group-hover:opacity-90 transition-opacity">
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+      <nav class="hidden md:flex items-center gap-5 lg:gap-8 text-xs lg:text-sm font-semibold text-slate-600">
         <a href="#features" class="hover:text-brand-600 transition-colors">Features</a>
         <a href="#simulator" class="hover:text-brand-600 transition-colors">Interactive Demo</a>
         <a href="#modules" class="hover:text-brand-600 transition-colors">14 Modules</a>
         <a href="#how-it-works" class="hover:text-brand-600 transition-colors">How It Works</a>
+        <a href="#reviews" class="hover:text-brand-600 transition-colors">Reviews</a>
         <a href="#pricing" class="hover:text-brand-600 transition-colors">Packages</a>
         <a href="#faq" class="hover:text-brand-600 transition-colors">FAQ</a>
       </nav>
 
       <!-- CTA Buttons -->
       <div class="hidden sm:flex items-center gap-3">
-        <button onclick="openDemoModal()" class="px-5 py-2.5 rounded-full text-sm font-bold bg-brand-600 hover:bg-brand-700 text-white shadow-md shadow-brand-600/30 hover:shadow-lg hover:shadow-brand-600/40 transform hover:-translate-y-0.5 transition-all flex items-center gap-2">
-          <i class="fa-solid fa-desktop text-xs"></i> Book Live Demo
+        <button onclick="scrollToSimulator()" class="px-5 py-2.5 rounded-full text-sm font-bold bg-brand-600 hover:bg-brand-700 text-white shadow-md shadow-brand-600/30 hover:shadow-lg hover:shadow-brand-600/40 transform hover:-translate-y-0.5 transition-all flex items-center gap-2">
+          <i class="fa-solid fa-desktop text-xs"></i> Try Live Demo
         </button>
       </div>
 
@@ -150,23 +142,21 @@
 
     <!-- Mobile Navigation Drawer -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-5 space-y-4 shadow-xl">
-      <div class="flex items-center gap-2.5 pb-3 border-b border-slate-100">
-        <div class="w-8 h-8 rounded-lg bg-white border border-slate-200 p-1 flex items-center justify-center shadow-xs">
-          <img src="assets/images/studentxces-icon.png" alt="StudentXces" class="w-full h-full object-contain">
-        </div>
-        <span class="text-lg font-black text-slate-900">Student<span class="text-brand-600">Xces</span> <span class="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-brand-100 text-brand-800">ERP</span></span>
+      <div class="flex items-center pb-3 border-b border-slate-100">
+        <img src="assets/studentxces_logo.png" alt="StudentXces" class="h-9 w-auto object-contain">
       </div>
       <a href="#features" onclick="toggleMobileNav()" class="block text-base font-semibold text-slate-700 hover:text-brand-600">Features</a>
       <a href="#simulator" onclick="toggleMobileNav()" class="block text-base font-semibold text-slate-700 hover:text-brand-600">Live Dashboard Simulator</a>
       <a href="#modules" onclick="toggleMobileNav()" class="block text-base font-semibold text-slate-700 hover:text-brand-600">14 ERP Modules</a>
       <a href="#how-it-works" onclick="toggleMobileNav()" class="block text-base font-semibold text-slate-700 hover:text-brand-600">How It Works (4 Steps)</a>
+      <a href="#reviews" onclick="toggleMobileNav()" class="block text-base font-semibold text-slate-700 hover:text-brand-600">Reviews</a>
       <a href="#pricing" onclick="toggleMobileNav()" class="block text-base font-semibold text-slate-700 hover:text-brand-600">Pricing in PKR</a>
       <a href="#faq" onclick="toggleMobileNav()" class="block text-base font-semibold text-slate-700 hover:text-brand-600">FAQ</a>
       <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
-        <button onclick="openDemoModal(); toggleMobileNav()" class="w-full text-center py-3 rounded-xl bg-brand-600 text-white font-bold">
-          Book Live Demo
+        <button onclick="scrollToSimulator(); toggleMobileNav()" class="w-full text-center py-3 rounded-xl bg-brand-600 text-white font-bold">
+          Try Live Demo
         </button>
-        <a href="https://wa.me/923094141972" target="_blank" class="w-full text-center py-2.5 rounded-xl bg-emerald-50 text-emerald-700 font-semibold border border-emerald-200 flex items-center justify-center gap-2">
+        <a href="https://wa.me/923066589195" target="_blank" class="w-full text-center py-2.5 rounded-xl bg-emerald-50 text-emerald-700 font-semibold border border-emerald-200 flex items-center justify-center gap-2">
           <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Support
         </a>
       </div>
@@ -193,7 +183,7 @@
 
       <!-- Main Heading -->
       <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] max-w-5xl mx-auto mb-6 break-words">
-        Admissions, 3-Part Bank Challans &amp; Exams on <span class="text-gradient">One Connected School ERP</span>
+        Admissions, 3-Part Bank Challans &amp; Exams on <span class="text-gradient">One Connected School</span>
       </h1>
 
       <!-- Subtitle -->
@@ -203,13 +193,13 @@
 
       <!-- Primary CTAs -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 max-w-xl mx-auto mb-12 sm:mb-14">
-        <a href="https://wa.me/923094141972?text=Hello!%20I%20would%20like%20a%20guided%20live%20demo%20of%20StudentXces%20School%20Management%20System." target="_blank" rel="noopener" class="w-full sm:w-auto h-12 sm:h-[50px] px-6 sm:px-7 rounded-xl text-sm sm:text-base font-bold bg-brand-600 hover:bg-brand-700 text-white shadow-sm hover:shadow-md shadow-brand-600/20 transform hover:-translate-y-0.5 transition-all duration-200 inline-flex items-center justify-center gap-2.5 whitespace-nowrap">
-          <i class="fa-brands fa-whatsapp text-lg text-emerald-100"></i>
-          <span>Instant WhatsApp Demo</span>
+        <a href="#pricing" class="w-full sm:w-auto h-12 sm:h-[50px] px-6 sm:px-7 rounded-xl text-sm sm:text-base font-bold bg-brand-600 hover:bg-brand-700 text-white shadow-sm hover:shadow-md shadow-brand-600/20 transform hover:-translate-y-0.5 transition-all duration-200 inline-flex items-center justify-center gap-2.5 whitespace-nowrap">
+          <i class="fa-solid fa-tags text-emerald-100 text-base"></i>
+          <span>Pricing Plans</span>
         </a>
         <button onclick="scrollToSimulator()" class="w-full sm:w-auto h-12 sm:h-[50px] px-6 sm:px-7 rounded-xl text-sm sm:text-base font-bold bg-white hover:bg-slate-50 text-slate-800 border border-slate-300/90 hover:border-slate-400 shadow-sm hover:shadow hover:-translate-y-0.5 transition-all duration-200 inline-flex items-center justify-center gap-2.5 whitespace-nowrap">
-          <i class="fa-solid fa-sliders text-brand-600 text-sm"></i>
-          <span>Try Interactive Preview</span>
+          <i class="fa-solid fa-play text-brand-600 text-xs"></i>
+          <span>Try Live Demo</span>
         </button>
       </div>
 
@@ -224,9 +214,9 @@
         </div>
 
         <div class="p-3.5 rounded-xl bg-white/80 border border-slate-200/80 shadow-sm flex items-center gap-3 hover:border-blue-300 hover:shadow-md transition-all">
-          <img src="assets/images/icons/biometric-attendance.svg" alt="Biometric &amp; RFID Attendance" class="w-10 h-10 shrink-0">
+          <img src="assets/images/icons/cloud-attendance.svg" alt="Cloud-Based Attendance" class="w-10 h-10 shrink-0">
           <div>
-            <div class="text-xs font-bold text-slate-800">Biometric &amp; RFID</div>
+            <div class="text-xs font-bold text-slate-800">Cloud-Based Attendance</div>
             <div class="text-[11px] text-slate-500">Live SMS &amp; App Alerts</div>
           </div>
         </div>
@@ -257,7 +247,7 @@
       <!-- Interactive Selector Pills -->
       <div class="flex items-center justify-center gap-2 mb-6 flex-wrap">
         <button onclick="setSimTab('overview')" id="tab-overview" class="sim-tab-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-bold border transition-all flex items-center gap-2 bg-brand-900 text-white border-brand-900 shadow-md">
-          <i class="fa-solid fa-chart-pie"></i> Principal Dashboard
+          <i class="fa-solid fa-chart-pie"></i> School Dashboard
         </button>
         <button onclick="setSimTab('challan')" id="tab-challan" class="sim-tab-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold border transition-all flex items-center gap-2 bg-white text-slate-600 border-slate-200 hover:border-brand-400">
           <i class="fa-solid fa-file-invoice-dollar"></i> 3-Part Fee Challan
@@ -292,826 +282,9 @@
           </div>
         </div>
 
-        <!-- SIMULATOR SCREEN 1: PRINCIPAL OVERVIEW DASHBOARD -->
-        <div id="sim-screen-overview" class="bg-slate-50 min-h-[640px] flex flex-col md:flex-row relative">
-          
-          <!-- LEFT SIDEBAR: PRINCIPAL ERP NAVIGATION -->
-          <aside id="principal-sim-sidebar" class="w-full md:w-60 lg:w-64 bg-white border-b md:border-b-0 md:border-r border-slate-200/90 shrink-0 flex flex-col justify-between hidden md:flex select-none z-20">
-            <!-- Sidebar Brand Header -->
-            <div class="p-4 border-b border-slate-100 bg-white">
-              <div class="flex items-center gap-2.5">
-                <img src="assets/images/studentxces-icon.png" alt="StudentXces ERP" class="w-8 h-8 rounded-lg object-contain shadow-2xs">
-                <div>
-                  <div class="flex items-center gap-1.5">
-                    <span class="font-extrabold text-slate-900 text-sm tracking-tight">StudentXces</span>
-                    <span class="bg-brand-100 text-brand-800 text-[9px] font-black px-1.5 py-0.2 rounded uppercase tracking-wider">ERP</span>
-                  </div>
-                  <div class="text-[11px] text-slate-500 font-medium truncate max-w-[140px]">Allied Model High</div>
-                </div>
-              </div>
-              <div class="mt-3 px-2.5 py-1.5 rounded-lg bg-slate-50 border border-slate-200/70 flex items-center justify-between text-[11px]">
-                <span class="text-slate-700 font-semibold flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse"></span> Main Campus
-                </span>
-                <span class="text-[10px] font-mono text-slate-400">Lahore</span>
-              </div>
-            </div>
-
-            <!-- Grouped Navigation Menu -->
-            <div class="flex-1 overflow-y-auto p-3 space-y-4 text-xs font-medium text-slate-600 max-h-[560px]">
-              <!-- Section: SYSTEM -->
-              <div>
-                <div class="px-2.5 pb-1 text-[10px] font-black tracking-wider uppercase text-slate-400">System</div>
-                <div class="space-y-0.5">
-                  <a href="javascript:void(0)" onclick="setSimTab('overview')" class="flex items-center justify-between px-2.5 py-2 rounded-lg bg-brand-50 text-brand-800 font-bold border-l-3 border-brand-600 transition-colors">
-                    <span class="flex items-center gap-2.5"><i class="fa-solid fa-chart-pie w-4 text-brand-600 text-center"></i> Dashboard</span>
-                    <span class="text-[10px] bg-brand-200/60 text-brand-800 px-1.5 py-0.2 rounded-full font-bold">Active</span>
-                  </a>
-                  <a href="javascript:void(0)" onclick="showSimNotice('Notifications: 3 unread campus alerts & broadcasts.')" class="flex items-center justify-between px-2.5 py-2 rounded-lg hover:bg-slate-100 text-slate-600 transition-colors">
-                    <span class="flex items-center gap-2.5"><i class="fa-regular fa-bell w-4 text-slate-400 text-center"></i> Notifications</span>
-                    <span class="text-[10px] bg-rose-500 text-white px-1.5 py-0.2 rounded-full font-bold">3</span>
-                  </a>
-                </div>
-              </div>
-
-              <!-- Section: SCHOOL SETUP -->
-              <div>
-                <div class="px-2.5 pb-1 text-[10px] font-black tracking-wider uppercase text-slate-400">School Setup</div>
-                <div class="space-y-0.5">
-                  <a href="javascript:void(0)" onclick="showSimNotice('Campus Profile: Allied Model High School (Affiliation #LHR-4912).')" class="flex items-center gap-2.5 px-2.5 py-2 rounded-lg hover:bg-slate-100 text-slate-600 transition-colors">
-                    <i class="fa-solid fa-school w-4 text-slate-400 text-center"></i> Campus Profile
-                  </a>
-                  <a href="javascript:void(0)" onclick="showSimNotice('Classes & Sections: 24 active sections from Nursery to 10th Matric.')" class="flex items-center justify-between px-2.5 py-2 rounded-lg hover:bg-slate-100 text-slate-600 transition-colors">
-                    <span class="flex items-center gap-2.5"><i class="fa-solid fa-layer-group w-4 text-slate-400 text-center"></i> Classes &amp; Sections</span>
-                    <span class="text-[10px] bg-slate-100 text-slate-600 border border-slate-200 px-1.5 py-0.2 rounded font-semibold">24</span>
-                  </a>
-                </div>
-              </div>
-
-              <!-- Section: ACADEMIC -->
-              <div>
-                <div class="px-2.5 pb-1 text-[10px] font-black tracking-wider uppercase text-slate-400">Academic</div>
-                <div class="space-y-0.5">
-                  <a href="javascript:void(0)" onclick="showSimNotice('Admissions & SIS: 842 students enrolled. +46 new admissions in 2026-27.')" class="flex items-center justify-between px-2.5 py-2 rounded-lg hover:bg-slate-100 text-slate-600 transition-colors">
-                    <span class="flex items-center gap-2.5"><i class="fa-solid fa-user-graduate w-4 text-slate-400 text-center"></i> Admissions &amp; SIS</span>
-                    <span class="text-[10px] bg-blue-100 text-blue-700 font-bold px-1.5 py-0.2 rounded">842</span>
-                  </a>
-                  <a href="javascript:void(0)" onclick="setSimTab('attendance')" class="flex items-center justify-between px-2.5 py-2 rounded-lg hover:bg-emerald-50 hover:text-emerald-700 text-slate-600 transition-colors">
-                    <span class="flex items-center gap-2.5"><i class="fa-solid fa-clipboard-user w-4 text-emerald-600 text-center"></i> Biometric Attendance</span>
-                    <span class="text-[10px] bg-emerald-100 text-emerald-700 font-bold px-1.5 py-0.2 rounded">94.8%</span>
-                  </a>
-                  <a href="javascript:void(0)" onclick="setSimTab('exam')" class="flex items-center justify-between px-2.5 py-2 rounded-lg hover:bg-amber-50 hover:text-amber-800 text-slate-600 transition-colors">
-                    <span class="flex items-center gap-2.5"><i class="fa-solid fa-award w-4 text-amber-500 text-center"></i> Examinations &amp; DMCs</span>
-                    <span class="text-[10px] bg-amber-100 text-amber-800 font-bold px-1.5 py-0.2 rounded">Mid-Term</span>
-                  </a>
-                  <a href="javascript:void(0)" onclick="showSimNotice('Class Timetable: 140 weekly periods with automatic faculty substitution.')" class="flex items-center gap-2.5 px-2.5 py-2 rounded-lg hover:bg-slate-100 text-slate-600 transition-colors">
-                    <i class="fa-solid fa-calendar-days w-4 text-slate-400 text-center"></i> Class Timetable
-                  </a>
-                </div>
-              </div>
-
-              <!-- Section: HR SETUP -->
-              <div>
-                <div class="px-2.5 pb-1 text-[10px] font-black tracking-wider uppercase text-slate-400">HR Setup</div>
-                <div class="space-y-0.5">
-                  <a href="javascript:void(0)" onclick="showSimNotice('Faculty & Staff: 48 registered staff members. 100% attendance today.')" class="flex items-center justify-between px-2.5 py-2 rounded-lg hover:bg-slate-100 text-slate-600 transition-colors">
-                    <span class="flex items-center gap-2.5"><i class="fa-solid fa-chalkboard-user w-4 text-slate-400 text-center"></i> Faculty &amp; Staff</span>
-                    <span class="text-[10px] bg-purple-100 text-purple-700 font-bold px-1.5 py-0.2 rounded">48</span>
-                  </a>
-                  <a href="javascript:void(0)" onclick="showSimNotice('Staff Payroll: Monthly salaries calculated with biometric deductions & allowances.')" class="flex items-center gap-2.5 px-2.5 py-2 rounded-lg hover:bg-slate-100 text-slate-600 transition-colors">
-                    <i class="fa-solid fa-money-check-dollar w-4 text-slate-400 text-center"></i> Staff Payroll
-                  </a>
-                </div>
-              </div>
-
-              <!-- Section: FEES & FINANCE -->
-              <div>
-                <div class="px-2.5 pb-1 text-[10px] font-black tracking-wider uppercase text-slate-400">Fees &amp; Finance</div>
-                <div class="space-y-0.5">
-                  <a href="javascript:void(0)" onclick="setSimTab('challan')" class="flex items-center justify-between px-2.5 py-2 rounded-lg hover:bg-emerald-50 hover:text-emerald-700 text-slate-600 transition-colors">
-                    <span class="flex items-center gap-2.5"><i class="fa-solid fa-file-invoice-dollar w-4 text-emerald-600 text-center"></i> 3-Part Fee Challans</span>
-                    <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.2 rounded">Voucher</span>
-                  </a>
-                  <a href="javascript:void(0)" onclick="showSimNotice('Fee Defaulters: 32 students overdue. Total arrears: PKR 460,000.')" class="flex items-center justify-between px-2.5 py-2 rounded-lg hover:bg-amber-50 hover:text-amber-800 text-slate-600 transition-colors">
-                    <span class="flex items-center gap-2.5"><i class="fa-solid fa-receipt w-4 text-amber-500 text-center"></i> Fee Defaulters</span>
-                    <span class="text-[10px] bg-amber-100 text-amber-800 font-bold px-1.5 py-0.2 rounded">32 Overdue</span>
-                  </a>
-                  <a href="javascript:void(0)" onclick="showSimNotice('Bank Reconciliation: Linked with Meezan Bank Ltd. (A/C: 0102-01048821) & 1Link 1Bill.')" class="flex items-center gap-2.5 px-2.5 py-2 rounded-lg hover:bg-slate-100 text-slate-600 transition-colors">
-                    <i class="fa-solid fa-building-columns w-4 text-slate-400 text-center"></i> Bank Reconciliation
-                  </a>
-                </div>
-              </div>
-
-              <!-- Section: REPORTS -->
-              <div>
-                <div class="px-2.5 pb-1 text-[10px] font-black tracking-wider uppercase text-slate-400">Reports</div>
-                <div class="space-y-0.5">
-                  <a href="javascript:void(0)" onclick="showSimNotice('Executive Reports: 50+ auto-generated reports ready for PDF/Excel download.')" class="flex items-center gap-2.5 px-2.5 py-2 rounded-lg hover:bg-slate-100 text-slate-600 transition-colors">
-                    <i class="fa-solid fa-chart-line w-4 text-slate-400 text-center"></i> Executive Analytics
-                  </a>
-                  <a href="javascript:void(0)" onclick="showSimNotice('Ministry & BISE: Punjab Board Matric Enrollment Returns exported.')" class="flex items-center gap-2.5 px-2.5 py-2 rounded-lg hover:bg-slate-100 text-slate-600 transition-colors">
-                    <i class="fa-solid fa-file-lines w-4 text-slate-400 text-center"></i> BISE Board Returns
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Sidebar Principal User Footnote -->
-            <div class="p-3 border-t border-slate-100 bg-slate-50/70">
-              <div class="flex items-center gap-2.5">
-                <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs ring-2 ring-emerald-300/50">
-                  MF
-                </div>
-                <div class="flex-1 min-w-0">
-                  <div class="text-xs font-bold text-slate-900 truncate">M. Farhan Ali</div>
-                  <div class="text-[10px] text-emerald-600 font-semibold flex items-center gap-1">
-                    <i class="fa-solid fa-shield-halved text-[9px]"></i> Principal Role (2FA)
-                  </div>
-                </div>
-                <span class="w-2 h-2 rounded-full bg-emerald-500" title="Online & Connected"></span>
-              </div>
-            </div>
-          </aside>
-
-          <!-- MAIN DASHBOARD CONTENT AREA -->
-          <div class="flex-1 flex flex-col min-w-0 bg-slate-50/70">
-            
-            <!-- TOP APP HEADER -->
-            <header class="bg-white border-b border-slate-200/90 px-4 sm:px-6 py-3 flex items-center justify-between gap-3 sticky top-0 z-10 shadow-2xs">
-              <!-- Left: Mobile Sidebar Toggle & Page Title -->
-              <div class="flex items-center gap-3">
-                <button onclick="toggleSimSidebar()" class="md:hidden w-8 h-8 rounded-lg border border-slate-200 text-slate-600 flex items-center justify-center hover:bg-slate-100 transition-colors" title="Toggle Navigation Menu">
-                  <i class="fa-solid fa-bars text-xs"></i>
-                </button>
-                <div>
-                  <div class="flex items-center gap-2">
-                    <h3 class="text-base sm:text-lg font-black text-slate-900 tracking-tight">Principal Executive Dashboard</h3>
-                    <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
-                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block mr-1"></span> Live Sync
-                    </span>
-                  </div>
-                  <p class="text-[11px] text-slate-500 font-medium hidden sm:block">
-                    Allied Model High School &bull; Lahore Main Campus &bull; Session 2026-27
-                  </p>
-                </div>
-              </div>
-
-              <!-- Right: Academic Session, Search, Notifications, Profile -->
-              <div class="flex items-center gap-2 sm:gap-3">
-                <!-- Session Context Pill -->
-                <div class="hidden lg:flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
-                  <i class="fa-regular fa-calendar-check text-brand-600"></i>
-                  <span>Session 2026-27</span>
-                  <i class="fa-solid fa-angle-down text-[10px] text-slate-400"></i>
-                </div>
-
-                <!-- Quick Search -->
-                <div class="hidden sm:flex items-center relative">
-                  <i class="fa-solid fa-magnifying-glass text-slate-400 text-xs absolute left-3"></i>
-                  <input type="text" placeholder="Search student, fee..." class="w-36 md:w-48 pl-8 pr-3 py-1.5 bg-slate-50 hover:bg-white focus:bg-white border border-slate-200 focus:border-brand-500 rounded-lg text-xs text-slate-700 focus:outline-none focus:ring-1 focus:ring-brand-500 transition-all">
-                </div>
-
-                <!-- Notification Bell -->
-                <button onclick="showSimNotice('Notifications: 44 parent SMS sent &bull; Fee deposit confirmed for Challan #2026-09412')" class="relative w-8 h-8 rounded-lg border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50 flex items-center justify-center transition-colors">
-                  <i class="fa-regular fa-bell text-xs"></i>
-                  <span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-rose-500 text-white text-[9px] font-black flex items-center justify-center">3</span>
-                </button>
-
-                <!-- Theme Toggle Preview -->
-                <button onclick="showSimNotice('Theme: High-contrast Light SaaS theme currently active.')" class="w-8 h-8 rounded-lg border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50 flex items-center justify-center transition-colors" title="Toggle theme">
-                  <i class="fa-regular fa-sun text-xs text-amber-500"></i>
-                </button>
-
-                <!-- Principal Profile Tag -->
-                <div class="flex items-center gap-2 pl-2 border-l border-slate-200">
-                  <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-600 to-brand-800 text-white flex items-center justify-center font-bold text-xs shadow-2xs">
-                    FA
-                  </div>
-                  <div class="hidden xl:block text-left">
-                    <div class="text-xs font-bold text-slate-900 leading-tight">M. Farhan Ali</div>
-                    <div class="text-[10px] text-emerald-600 font-semibold leading-tight">Principal</div>
-                  </div>
-                </div>
-              </div>
-            </header>
-
-            <!-- SCROLLABLE DASHBOARD VIEWPORT -->
-            <div class="p-4 sm:p-6 space-y-6 overflow-y-auto max-h-[750px]">
-              
-              <!-- WELCOME & SUMMARY BAR -->
-              <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-2xs flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 rounded-xl bg-brand-50 border border-brand-200 text-brand-700 flex items-center justify-center text-lg shrink-0">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                  </div>
-                  <div>
-                    <h4 class="text-sm font-extrabold text-slate-900">Welcome back, Principal Farhan</h4>
-                    <p class="text-xs text-slate-500">Campus summary for Today &bull; Biometric terminals &amp; 1Link bank gateway synced at 08:30 AM</p>
-                  </div>
-                </div>
-                <div class="flex items-center gap-2 self-start sm:self-auto">
-                  <button onclick="showSimNotice('Generating comprehensive daily executive PDF report for Allied Model High School...')" class="px-3 py-1.5 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold text-slate-700 flex items-center gap-1.5 transition-colors">
-                    <i class="fa-solid fa-download text-slate-500"></i> Export Brief (PDF)
-                  </button>
-                  <button onclick="setSimTab('challan')" class="px-3 py-1.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold flex items-center gap-1.5 shadow-2xs transition-colors">
-                    <i class="fa-solid fa-plus text-xs"></i> New Challan Run
-                  </button>
-                </div>
-              </div>
-
-              <!-- TOP ROW: 5 SUMMARY KPI CARDS -->
-              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5">
-                
-                <!-- Card 1: Total Students (Blue) -->
-                <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-2xs hover:shadow-md transition-all group">
-                  <div class="flex items-center justify-between mb-2">
-                    <span class="text-[10px] font-bold text-slate-400 tracking-wider uppercase">Total Students</span>
-                    <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center text-xs group-hover:scale-110 transition-transform">
-                      <i class="fa-solid fa-user-graduate"></i>
-                    </div>
-                  </div>
-                  <div class="text-2xl font-black text-slate-900 tracking-tight">842</div>
-                  <div class="mt-1 flex items-center justify-between text-[11px]">
-                    <span class="text-emerald-600 font-bold flex items-center gap-1">
-                      <i class="fa-solid fa-arrow-trend-up text-[10px]"></i> +46 new
-                    </span>
-                    <span class="text-slate-400 font-medium">+5.8% vs last year</span>
-                  </div>
-                </div>
-
-                <!-- Card 2: Today Attendance (Emerald) -->
-                <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-2xs hover:shadow-md transition-all group">
-                  <div class="flex items-center justify-between mb-2">
-                    <span class="text-[10px] font-bold text-slate-400 tracking-wider uppercase">Today Attendance</span>
-                    <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-xs group-hover:scale-110 transition-transform">
-                      <i class="fa-solid fa-clipboard-user"></i>
-                    </div>
-                  </div>
-                  <div class="text-2xl font-black text-emerald-700 tracking-tight">94.8%</div>
-                  <div class="mt-1 flex items-center justify-between text-[11px]">
-                    <span class="text-slate-600 font-medium">798 Present &bull; 44 Absent</span>
-                    <span class="px-1.5 py-0.2 bg-emerald-100 text-emerald-800 rounded text-[9px] font-black uppercase">SMS Sent</span>
-                  </div>
-                </div>
-
-                <!-- Card 3: Fee Collection This Month (Purple) -->
-                <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-2xs hover:shadow-md transition-all group">
-                  <div class="flex items-center justify-between mb-2">
-                    <span class="text-[10px] font-bold text-slate-400 tracking-wider uppercase">October Collection</span>
-                    <div class="w-8 h-8 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center text-xs group-hover:scale-110 transition-transform">
-                      <i class="fa-solid fa-sack-dollar"></i>
-                    </div>
-                  </div>
-                  <div class="text-2xl font-black text-purple-800 tracking-tight">PKR 3.48M</div>
-                  <div class="mt-1 flex items-center justify-between text-[11px]">
-                    <span class="text-slate-600 font-medium">87.0% of PKR 4.0M Target</span>
-                    <span class="text-purple-600 font-bold">+12% MoM</span>
-                  </div>
-                </div>
-
-                <!-- Card 4: Outstanding Fees (Amber) -->
-                <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-2xs hover:shadow-md transition-all group">
-                  <div class="flex items-center justify-between mb-2">
-                    <span class="text-[10px] font-bold text-slate-400 tracking-wider uppercase">Outstanding Arrears</span>
-                    <div class="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center text-xs group-hover:scale-110 transition-transform">
-                      <i class="fa-solid fa-file-invoice-dollar"></i>
-                    </div>
-                  </div>
-                  <div class="text-2xl font-black text-amber-800 tracking-tight">PKR 460K</div>
-                  <div class="mt-1 flex items-center justify-between text-[11px]">
-                    <span class="text-slate-600 font-medium">32 Overdue Students</span>
-                    <span class="px-1.5 py-0.2 bg-amber-100 text-amber-800 rounded text-[9px] font-black uppercase">2nd Notice</span>
-                  </div>
-                </div>
-
-                <!-- Card 5: Staff & Classes (Teal) -->
-                <div class="bg-white p-4 rounded-xl border border-slate-200/90 shadow-2xs hover:shadow-md transition-all group">
-                  <div class="flex items-center justify-between mb-2">
-                    <span class="text-[10px] font-bold text-slate-400 tracking-wider uppercase">Faculty &amp; Sections</span>
-                    <div class="w-8 h-8 rounded-lg bg-teal-50 text-teal-600 flex items-center justify-center text-xs group-hover:scale-110 transition-transform">
-                      <i class="fa-solid fa-chalkboard-user"></i>
-                    </div>
-                  </div>
-                  <div class="text-2xl font-black text-slate-900 tracking-tight">48 <span class="text-sm font-semibold text-slate-400">/ 24</span></div>
-                  <div class="mt-1 flex items-center justify-between text-[11px]">
-                    <span class="text-teal-700 font-medium">100% Staff On-duty</span>
-                    <span class="text-slate-400">24 Sections</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- MIDDLE ROW: ANALYTICS & CHARTS (2 COLUMNS) -->
-              <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-                
-                <!-- Chart 1: Fee Collection — Last 6 Months (7 Columns) -->
-                <div class="lg:col-span-7 bg-white p-5 rounded-xl border border-slate-200/90 shadow-2xs flex flex-col justify-between">
-                  <div>
-                    <!-- Chart Header -->
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-100 mb-4">
-                      <div>
-                        <h4 class="font-extrabold text-slate-900 text-sm">Fee Collection Trends &mdash; Last 6 Months</h4>
-                        <p class="text-xs text-slate-500">Monthly bank collection vs budgeted target (PKR in Millions)</p>
-                      </div>
-                      <!-- Legend -->
-                      <div class="flex items-center gap-3 text-xs">
-                        <div class="flex items-center gap-1.5">
-                          <span class="w-3 h-3 rounded-sm bg-gradient-to-t from-emerald-600 to-emerald-400 inline-block"></span>
-                          <span class="text-slate-700 font-medium">Collected</span>
-                        </div>
-                        <div class="flex items-center gap-1.5">
-                          <span class="w-3 h-3 rounded-sm bg-slate-200 border border-slate-300 inline-block"></span>
-                          <span class="text-slate-500 font-medium">Target</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Clean Responsive SVG Bar Chart -->
-                    <div class="relative w-full overflow-x-auto">
-                      <svg viewBox="0 0 540 220" class="w-full h-56 select-none" style="min-width: 440px;">
-                        <defs>
-                          <linearGradient id="feeCollectedGrad" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stop-color="#10b981" />
-                            <stop offset="100%" stop-color="#047857" />
-                          </linearGradient>
-                          <linearGradient id="feeCurrentGrad" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stop-color="#34d399" />
-                            <stop offset="100%" stop-color="#059669" />
-                          </linearGradient>
-                        </defs>
-
-                        <!-- Horizontal Grid Lines with Y-Labels -->
-                        <g class="text-[10px] fill-slate-400 font-mono">
-                          <!-- 4.0M Line -->
-                          <line x1="45" y1="25" x2="525" y2="25" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3" />
-                          <text x="38" y="29" text-anchor="end">4.0M</text>
-
-                          <!-- 3.0M Line -->
-                          <line x1="45" y1="65" x2="525" y2="65" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3" />
-                          <text x="38" y="69" text-anchor="end">3.0M</text>
-
-                          <!-- 2.0M Line -->
-                          <line x1="45" y1="105" x2="525" y2="105" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3" />
-                          <text x="38" y="109" text-anchor="end">2.0M</text>
-
-                          <!-- 1.0M Line -->
-                          <line x1="45" y1="145" x2="525" y2="145" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3" />
-                          <text x="38" y="149" text-anchor="end">1.0M</text>
-
-                          <!-- Base Line (0) -->
-                          <line x1="45" y1="185" x2="525" y2="185" stroke="#cbd5e1" stroke-width="1.5" />
-                          <text x="38" y="189" text-anchor="end">0</text>
-                        </g>
-
-                        <!-- BARS: 6 MONTHS -->
-                        
-                        <!-- 1. MAY 2026: Target 3.4M (h:136, y:49) | Collected 3.10M (h:124, y:61) -->
-                        <g class="cursor-pointer group" onmouseenter="showChartTooltip(event, 'May 2026 &bull; Collected: PKR 3.10M &bull; Target: PKR 3.40M (91.2%)')" onmouseleave="hideChartTooltip()">
-                          <!-- Target Bar -->
-                          <rect x="74" y="49" width="16" height="136" rx="3" fill="#e2e8f0" class="transition-colors group-hover:fill-slate-300" />
-                          <!-- Collected Bar -->
-                          <rect x="94" y="61" width="16" height="124" rx="3" fill="url(#feeCollectedGrad)" class="transition-opacity group-hover:opacity-90" />
-                          <text x="92" y="202" text-anchor="middle" class="text-[11px] font-bold fill-slate-600">May</text>
-                          <text x="92" y="215" text-anchor="middle" class="text-[9px] font-semibold fill-emerald-600">91%</text>
-                        </g>
-
-                        <!-- 2. JUN 2026: Target 3.2M (h:128, y:57) | Collected 2.85M (h:114, y:71) -->
-                        <g class="cursor-pointer group" onmouseenter="showChartTooltip(event, 'Jun 2026 &bull; Collected: PKR 2.85M &bull; Target: PKR 3.20M (89.1%)')" onmouseleave="hideChartTooltip()">
-                          <rect x="154" y="57" width="16" height="128" rx="3" fill="#e2e8f0" class="transition-colors group-hover:fill-slate-300" />
-                          <rect x="174" y="71" width="16" height="114" rx="3" fill="url(#feeCollectedGrad)" class="transition-opacity group-hover:opacity-90" />
-                          <text x="172" y="202" text-anchor="middle" class="text-[11px] font-bold fill-slate-600">Jun</text>
-                          <text x="172" y="215" text-anchor="middle" class="text-[9px] font-semibold fill-emerald-600">89%</text>
-                        </g>
-
-                        <!-- 3. JUL 2026: Target 2.8M (h:112, y:73) | Collected 2.40M (h:96, y:89) - Summer Break -->
-                        <g class="cursor-pointer group" onmouseenter="showChartTooltip(event, 'Jul 2026 (Summer Break) &bull; Collected: PKR 2.40M &bull; Target: PKR 2.80M (85.7%)')" onmouseleave="hideChartTooltip()">
-                          <rect x="234" y="73" width="16" height="112" rx="3" fill="#e2e8f0" class="transition-colors group-hover:fill-slate-300" />
-                          <rect x="254" y="89" width="16" height="96" rx="3" fill="url(#feeCollectedGrad)" class="transition-opacity group-hover:opacity-90" />
-                          <text x="252" y="202" text-anchor="middle" class="text-[11px] font-bold fill-slate-600">Jul</text>
-                          <text x="252" y="215" text-anchor="middle" class="text-[9px] font-semibold fill-emerald-600">86%</text>
-                        </g>
-
-                        <!-- 4. AUG 2026: Target 3.8M (h:152, y:33) | Collected 3.65M (h:146, y:39) - Admissions Peak -->
-                        <g class="cursor-pointer group" onmouseenter="showChartTooltip(event, 'Aug 2026 (Session Start) &bull; Collected: PKR 3.65M &bull; Target: PKR 3.80M (96.1%)')" onmouseleave="hideChartTooltip()">
-                          <rect x="314" y="33" width="16" height="152" rx="3" fill="#e2e8f0" class="transition-colors group-hover:fill-slate-300" />
-                          <rect x="334" y="39" width="16" height="146" rx="3" fill="url(#feeCollectedGrad)" class="transition-opacity group-hover:opacity-90" />
-                          <text x="332" y="202" text-anchor="middle" class="text-[11px] font-bold fill-slate-600">Aug</text>
-                          <text x="332" y="215" text-anchor="middle" class="text-[9px] font-semibold fill-emerald-600 font-bold">96%</text>
-                        </g>
-
-                        <!-- 5. SEP 2026: Target 3.9M (h:156, y:29) | Collected 3.52M (h:141, y:44) -->
-                        <g class="cursor-pointer group" onmouseenter="showChartTooltip(event, 'Sep 2026 &bull; Collected: PKR 3.52M &bull; Target: PKR 3.90M (90.3%)')" onmouseleave="hideChartTooltip()">
-                          <rect x="394" y="29" width="16" height="156" rx="3" fill="#e2e8f0" class="transition-colors group-hover:fill-slate-300" />
-                          <rect x="414" y="44" width="16" height="141" rx="3" fill="url(#feeCollectedGrad)" class="transition-opacity group-hover:opacity-90" />
-                          <text x="412" y="202" text-anchor="middle" class="text-[11px] font-bold fill-slate-600">Sep</text>
-                          <text x="412" y="215" text-anchor="middle" class="text-[9px] font-semibold fill-emerald-600">90%</text>
-                        </g>
-
-                        <!-- 6. OCT 2026 (Current MTD): Target 4.0M (h:160, y:25) | Collected 3.48M (h:139, y:46) -->
-                        <g class="cursor-pointer group" onmouseenter="showChartTooltip(event, 'Oct 2026 (Month-to-Date) &bull; Collected: PKR 3.48M &bull; Target: PKR 4.00M (87.0%)')" onmouseleave="hideChartTooltip()">
-                          <rect x="474" y="25" width="16" height="160" rx="3" fill="#e2e8f0" class="transition-colors group-hover:fill-slate-300" />
-                          <rect x="494" y="46" width="16" height="139" rx="3" fill="url(#feeCurrentGrad)" class="transition-opacity group-hover:opacity-90 ring-1 ring-emerald-400" />
-                          <text x="492" y="202" text-anchor="middle" class="text-[11px] font-extrabold fill-slate-900">Oct</text>
-                          <text x="492" y="215" text-anchor="middle" class="text-[9px] font-bold fill-brand-700">87%</text>
-                        </g>
-                      </svg>
-                    </div>
-
-                    <!-- Interactive Tooltip Overlay Indicator -->
-                    <div id="chart-tooltip" class="mt-2 text-center text-[11px] text-slate-600 font-medium bg-slate-50 py-1.5 px-3 rounded-lg border border-slate-200/80 transition-opacity opacity-0">
-                      Hover over any month bar to inspect detailed collection figures.
-                    </div>
-                  </div>
-
-                  <!-- Bottom Strip Metrics -->
-                  <div class="mt-4 pt-3 border-t border-slate-100 grid grid-cols-3 gap-2 text-center text-xs">
-                    <div>
-                      <div class="text-[10px] text-slate-400 font-semibold uppercase">6-Month Total</div>
-                      <div class="font-extrabold text-slate-900 text-sm">PKR 19.00M</div>
-                    </div>
-                    <div>
-                      <div class="text-[10px] text-slate-400 font-semibold uppercase">Recovery Rate</div>
-                      <div class="font-extrabold text-emerald-600 text-sm">89.6% Avg</div>
-                    </div>
-                    <div>
-                      <div class="text-[10px] text-slate-400 font-semibold uppercase">Monthly Avg</div>
-                      <div class="font-extrabold text-slate-900 text-sm">PKR 3.17M</div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Chart 2: Student Attendance — Last 7 Days (5 Columns) -->
-                <div class="lg:col-span-5 bg-white p-5 rounded-xl border border-slate-200/90 shadow-2xs flex flex-col justify-between">
-                  <div>
-                    <!-- Header -->
-                    <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-3">
-                      <div>
-                        <h4 class="font-extrabold text-slate-900 text-sm">Student Attendance &mdash; Last 7 Days</h4>
-                        <p class="text-xs text-slate-500">Daily campus turnout percentage</p>
-                      </div>
-                      <span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-200">
-                        Avg: 95.1%
-                      </span>
-                    </div>
-
-                    <!-- SVG Area & Trend Line Chart -->
-                    <div class="w-full">
-                      <svg viewBox="0 0 380 150" class="w-full h-36 select-none">
-                        <defs>
-                          <linearGradient id="attendanceAreaGrad" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stop-color="#10b981" stop-opacity="0.3" />
-                            <stop offset="100%" stop-color="#10b981" stop-opacity="0.0" />
-                          </linearGradient>
-                        </defs>
-
-                        <!-- Grid Guidelines -->
-                        <line x1="30" y1="20" x2="360" y2="20" stroke="#f1f5f9" stroke-width="1" />
-                        <text x="25" y="24" text-anchor="end" class="text-[9px] fill-slate-400 font-mono">98%</text>
-
-                        <line x1="30" y1="65" x2="360" y2="65" stroke="#f1f5f9" stroke-width="1" />
-                        <text x="25" y="69" text-anchor="end" class="text-[9px] fill-slate-400 font-mono">95%</text>
-
-                        <line x1="30" y1="110" x2="360" y2="110" stroke="#f1f5f9" stroke-width="1" />
-                        <text x="25" y="114" text-anchor="end" class="text-[9px] fill-slate-400 font-mono">92%</text>
-
-                        <!-- Area Fill -->
-                        <polygon points="50,120 50,62 100,83 150,49 200,77 250,58 300,68 350,61 350,120" fill="url(#attendanceAreaGrad)" />
-
-                        <!-- Trend Polyline -->
-                        <polyline points="50,62 100,83 150,49 200,77 250,58 300,68 350,61" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-
-                        <!-- Data Markers & Day Labels -->
-                        <!-- Thu -->
-                        <circle cx="50" cy="62" r="3.5" fill="#ffffff" stroke="#059669" stroke-width="2" />
-                        <text x="50" y="136" text-anchor="middle" class="text-[10px] fill-slate-500 font-semibold">Thu</text>
-                        <text x="50" y="52" text-anchor="middle" class="text-[8px] fill-emerald-700 font-bold">95.2%</text>
-
-                        <!-- Fri -->
-                        <circle cx="100" cy="83" r="3.5" fill="#ffffff" stroke="#059669" stroke-width="2" />
-                        <text x="100" y="136" text-anchor="middle" class="text-[10px] fill-slate-500 font-semibold">Fri</text>
-                        <text x="100" y="96" text-anchor="middle" class="text-[8px] fill-slate-600 font-bold">93.8%</text>
-
-                        <!-- Sat -->
-                        <circle cx="150" cy="49" r="3.5" fill="#ffffff" stroke="#059669" stroke-width="2" />
-                        <text x="150" y="136" text-anchor="middle" class="text-[10px] fill-slate-500 font-semibold">Sat</text>
-                        <text x="150" y="39" text-anchor="middle" class="text-[8px] fill-emerald-700 font-bold">96.1%</text>
-
-                        <!-- Mon -->
-                        <circle cx="200" cy="77" r="3.5" fill="#ffffff" stroke="#059669" stroke-width="2" />
-                        <text x="200" y="136" text-anchor="middle" class="text-[10px] fill-slate-500 font-semibold">Mon</text>
-                        <text x="200" y="90" text-anchor="middle" class="text-[8px] fill-slate-600 font-bold">94.2%</text>
-
-                        <!-- Tue -->
-                        <circle cx="250" cy="58" r="3.5" fill="#ffffff" stroke="#059669" stroke-width="2" />
-                        <text x="250" y="136" text-anchor="middle" class="text-[10px] fill-slate-500 font-semibold">Tue</text>
-                        <text x="250" y="48" text-anchor="middle" class="text-[8px] fill-emerald-700 font-bold">95.5%</text>
-
-                        <!-- Wed -->
-                        <circle cx="300" cy="68" r="3.5" fill="#ffffff" stroke="#059669" stroke-width="2" />
-                        <text x="300" y="136" text-anchor="middle" class="text-[10px] fill-slate-500 font-semibold">Wed</text>
-                        <text x="300" y="58" text-anchor="middle" class="text-[8px] fill-emerald-700 font-bold">94.8%</text>
-
-                        <!-- Today -->
-                        <circle cx="350" cy="61" r="5" fill="#10b981" stroke="#ffffff" stroke-width="2" class="animate-pulse" />
-                        <text x="350" y="136" text-anchor="middle" class="text-[10px] fill-emerald-700 font-black">Today</text>
-                        <text x="350" y="51" text-anchor="middle" class="text-[8px] fill-emerald-800 font-black">95.3%</text>
-                      </svg>
-                    </div>
-
-                    <!-- Wing Breakdown Stats -->
-                    <div class="mt-3 space-y-2 pt-2 border-t border-slate-100 text-xs">
-                      <div class="flex items-center justify-between text-slate-700">
-                        <span class="flex items-center gap-1.5 font-medium">
-                          <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Primary Wing (Nursery &ndash; 5th)
-                        </span>
-                        <span class="font-bold text-emerald-700">96.4% <span class="text-[11px] text-slate-400 font-normal">(366/380)</span></span>
-                      </div>
-                      <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                        <div class="h-full bg-emerald-500 rounded-full" style="width: 96.4%;"></div>
-                      </div>
-
-                      <div class="flex items-center justify-between text-slate-700 pt-1">
-                        <span class="flex items-center gap-1.5 font-medium">
-                          <span class="w-2 h-2 rounded-full bg-blue-500"></span> Middle Wing (6th &ndash; 8th)
-                        </span>
-                        <span class="font-bold text-blue-700">94.1% <span class="text-[11px] text-slate-400 font-normal">(256/272)</span></span>
-                      </div>
-                      <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                        <div class="h-full bg-blue-500 rounded-full" style="width: 94.1%;"></div>
-                      </div>
-
-                      <div class="flex items-center justify-between text-slate-700 pt-1">
-                        <span class="flex items-center gap-1.5 font-medium">
-                          <span class="w-2 h-2 rounded-full bg-amber-500"></span> High School / Matric (9th &ndash; 10th)
-                        </span>
-                        <span class="font-bold text-amber-700">93.9% <span class="text-[11px] text-slate-400 font-normal">(178/190)</span></span>
-                      </div>
-                      <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                        <div class="h-full bg-amber-500 rounded-full" style="width: 93.9%;"></div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
-                    <span>Biometric ZKTeco Terminal #01</span>
-                    <button onclick="setSimTab('attendance')" class="text-brand-700 font-bold hover:underline flex items-center gap-1">
-                      Manage Gateway &rarr;
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- BOTTOM ROW: RECENT ACTIVITY & CLASS DISTRIBUTION / QUICK ACTIONS -->
-              <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-                
-                <!-- Left: Recent System Activity Feed (7 Columns) -->
-                <div class="lg:col-span-7 bg-white p-5 rounded-xl border border-slate-200/90 shadow-2xs">
-                  <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
-                    <div>
-                      <h4 class="font-extrabold text-slate-900 text-sm">Recent Campus Activity &amp; Audit Log</h4>
-                      <p class="text-xs text-slate-500">Real-time system events, fee receipts, and automated triggers</p>
-                    </div>
-                    <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200 flex items-center gap-1">
-                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Live Stream
-                    </span>
-                  </div>
-
-                  <!-- Activity Records List -->
-                  <div class="space-y-3">
-                    
-                    <!-- Record 1: Fee Payment -->
-                    <div class="p-3 rounded-lg bg-slate-50 hover:bg-slate-100/80 border border-slate-200/70 flex items-start justify-between gap-3 transition-colors">
-                      <div class="flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs shrink-0 mt-0.5">
-                          <i class="fa-solid fa-file-invoice-dollar"></i>
-                        </div>
-                        <div>
-                          <div class="text-xs font-bold text-slate-900">
-                            Fee Voucher Cleared: <span class="text-emerald-700">PKR 5,300</span>
-                          </div>
-                          <div class="text-[11px] text-slate-600 mt-0.5">
-                            Hamza Ali Khan &bull; Roll #24-B (Class 9-A) &bull; Challan #2026-09412
-                          </div>
-                          <div class="text-[10px] text-slate-400 mt-0.5">Cleared via Meezan Bank 1Link Gateway</div>
-                        </div>
-                      </div>
-                      <div class="text-right shrink-0">
-                        <span class="px-1.5 py-0.2 rounded bg-emerald-100 text-emerald-800 text-[9px] font-bold">12 mins ago</span>
-                      </div>
-                    </div>
-
-                    <!-- Record 2: Student Admission -->
-                    <div class="p-3 rounded-lg bg-slate-50 hover:bg-slate-100/80 border border-slate-200/70 flex items-start justify-between gap-3 transition-colors">
-                      <div class="flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center text-xs shrink-0 mt-0.5">
-                          <i class="fa-solid fa-user-plus"></i>
-                        </div>
-                        <div>
-                          <div class="text-xs font-bold text-slate-900">
-                            New Student Enrolled: <span class="text-blue-700">Ayesha Siddiqui</span>
-                          </div>
-                          <div class="text-[11px] text-slate-600 mt-0.5">
-                            Class 10th - Science (Pre-Med) &bull; Assigned Roll #10482
-                          </div>
-                          <div class="text-[10px] text-slate-400 mt-0.5">Biometric profile and DMC ledger initialized</div>
-                        </div>
-                      </div>
-                      <div class="text-right shrink-0">
-                        <span class="px-1.5 py-0.2 rounded bg-blue-100 text-blue-800 text-[9px] font-bold">45 mins ago</span>
-                      </div>
-                    </div>
-
-                    <!-- Record 3: Biometric Absence SMS -->
-                    <div class="p-3 rounded-lg bg-slate-50 hover:bg-slate-100/80 border border-slate-200/70 flex items-start justify-between gap-3 transition-colors">
-                      <div class="flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs shrink-0 mt-0.5">
-                          <i class="fa-brands fa-whatsapp"></i>
-                        </div>
-                        <div>
-                          <div class="text-xs font-bold text-slate-900">
-                            Automated Biometric SMS Alerts: <span class="text-emerald-700">44 Dispatched</span>
-                          </div>
-                          <div class="text-[11px] text-slate-600 mt-0.5">
-                            Sent to emergency contacts of absent students across 24 sections
-                          </div>
-                          <div class="text-[10px] text-slate-400 mt-0.5">Delivered via Jazz SMS Gateway (100% Delivery Rate)</div>
-                        </div>
-                      </div>
-                      <div class="text-right shrink-0">
-                        <span class="px-1.5 py-0.2 rounded bg-slate-200 text-slate-700 text-[9px] font-bold">Today 08:30 AM</span>
-                      </div>
-                    </div>
-
-                    <!-- Record 4: Staff Biometric Check-in -->
-                    <div class="p-3 rounded-lg bg-slate-50 hover:bg-slate-100/80 border border-slate-200/70 flex items-start justify-between gap-3 transition-colors">
-                      <div class="flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-purple-100 text-purple-800 flex items-center justify-center text-xs shrink-0 mt-0.5">
-                          <i class="fa-solid fa-fingerprint"></i>
-                        </div>
-                        <div>
-                          <div class="text-xs font-bold text-slate-900">
-                            Faculty Attendance Reconciled: <span class="text-purple-700">48 / 48 On Duty</span>
-                          </div>
-                          <div class="text-[11px] text-slate-600 mt-0.5">
-                            All teaching &amp; non-teaching staff clocked in before 08:00 AM assembly
-                          </div>
-                          <div class="text-[10px] text-slate-400 mt-0.5">Main Gate Terminal #01 &bull; 0 Overdue Late Marks</div>
-                        </div>
-                      </div>
-                      <div class="text-right shrink-0">
-                        <span class="px-1.5 py-0.2 rounded bg-slate-200 text-slate-700 text-[9px] font-bold">Today 07:58 AM</span>
-                      </div>
-                    </div>
-
-                    <!-- Record 5: Fee Challan Batch Generation -->
-                    <div class="p-3 rounded-lg bg-slate-50 hover:bg-slate-100/80 border border-slate-200/70 flex items-start justify-between gap-3 transition-colors">
-                      <div class="flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center text-xs shrink-0 mt-0.5">
-                          <i class="fa-solid fa-print"></i>
-                        </div>
-                        <div>
-                          <div class="text-xs font-bold text-slate-900">
-                            Monthly Challan Run: <span class="text-amber-800">842 Challans Generated</span>
-                          </div>
-                          <div class="text-[11px] text-slate-600 mt-0.5">
-                            October 2026 tuition &amp; exam fees batch finalized for all classes
-                          </div>
-                          <div class="text-[10px] text-slate-400 mt-0.5">Mapped with 3-Part Bank Copy layout (Bank, School, Student)</div>
-                        </div>
-                      </div>
-                      <div class="text-right shrink-0">
-                        <span class="px-1.5 py-0.2 rounded bg-slate-200 text-slate-700 text-[9px] font-bold">Yesterday 04:30 PM</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Clean Semantic Empty State (for zero-record conditions) -->
-                  <div id="sim-empty-state" class="hidden text-center py-8 text-slate-400">
-                    <i class="fa-regular fa-folder-open text-3xl mb-2 text-slate-300"></i>
-                    <p class="text-xs font-semibold text-slate-600">No activity records found</p>
-                    <p class="text-[11px] text-slate-400">System events will automatically appear here in real time.</p>
-                  </div>
-
-                  <!-- Footer -->
-                  <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-                    <span>Showing 5 of 142 logged campus events today</span>
-                    <button onclick="showSimNotice('Full Audit Log: 142 events logged across admissions, biometric machines, and bank reconciliation.')" class="text-brand-700 font-bold hover:underline">
-                      View Full Audit Trail &rarr;
-                    </button>
-                  </div>
-                </div>
-
-                <!-- Right: Class-wise Enrollment & Quick Principal Actions (5 Columns) -->
-                <div class="lg:col-span-5 bg-white p-5 rounded-xl border border-slate-200/90 shadow-2xs flex flex-col justify-between">
-                  <div>
-                    <!-- Header -->
-                    <div class="pb-3 border-b border-slate-100 mb-4">
-                      <h4 class="font-extrabold text-slate-900 text-sm">Class-wise Enrollment &amp; Capacity</h4>
-                      <p class="text-xs text-slate-500">Distribution across 24 active sections (842 / 900 Seats &bull; 93.6%)</p>
-                    </div>
-
-                    <!-- Enrollment Breakdown Bars -->
-                    <div class="space-y-3.5 mb-6">
-                      <!-- Primary Wing -->
-                      <div>
-                        <div class="flex items-center justify-between text-xs font-bold text-slate-800 mb-1">
-                          <span class="flex items-center gap-1.5">
-                            <i class="fa-solid fa-shapes text-emerald-600 text-[11px]"></i> Primary Wing (Nursery &ndash; Class 5)
-                          </span>
-                          <span class="text-emerald-700 font-black">380 <span class="text-[11px] font-normal text-slate-400">/ 400 (95.0%)</span></span>
-                        </div>
-                        <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
-                          <div class="h-full bg-gradient-to-r from-emerald-500 to-brand-600 rounded-full" style="width: 95.0%;"></div>
-                        </div>
-                        <div class="flex justify-between text-[10px] text-slate-400 mt-0.5">
-                          <span>12 Sections &bull; Avg 31.6 students/class</span>
-                          <span>20 Available Seats</span>
-                        </div>
-                      </div>
-
-                      <!-- Middle Wing -->
-                      <div>
-                        <div class="flex items-center justify-between text-xs font-bold text-slate-800 mb-1">
-                          <span class="flex items-center gap-1.5">
-                            <i class="fa-solid fa-book-open text-blue-600 text-[11px]"></i> Middle Wing (Class 6 &ndash; 8)
-                          </span>
-                          <span class="text-blue-700 font-black">272 <span class="text-[11px] font-normal text-slate-400">/ 300 (90.7%)</span></span>
-                        </div>
-                        <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
-                          <div class="h-full bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full" style="width: 90.7%;"></div>
-                        </div>
-                        <div class="flex justify-between text-[10px] text-slate-400 mt-0.5">
-                          <span>6 Sections &bull; Avg 45.3 students/class</span>
-                          <span>28 Available Seats</span>
-                        </div>
-                      </div>
-
-                      <!-- Matric Wing -->
-                      <div>
-                        <div class="flex items-center justify-between text-xs font-bold text-slate-800 mb-1">
-                          <span class="flex items-center gap-1.5">
-                            <i class="fa-solid fa-atom text-purple-600 text-[11px]"></i> High School / Matric (9th &ndash; 10th)
-                          </span>
-                          <span class="text-purple-700 font-black">190 <span class="text-[11px] font-normal text-slate-400">/ 200 (95.0%)</span></span>
-                        </div>
-                        <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
-                          <div class="h-full bg-gradient-to-r from-purple-500 to-brand-700 rounded-full" style="width: 95.0%;"></div>
-                        </div>
-                        <div class="flex justify-between text-[10px] text-slate-400 mt-0.5">
-                          <span>6 Sections (Science Pre-Med &amp; Eng)</span>
-                          <span>10 Available Seats</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Quick Executive Actions Box -->
-                    <div class="pt-3 border-t border-slate-100">
-                      <div class="text-xs font-bold text-slate-900 mb-2 flex items-center justify-between">
-                        <span>Principal 1-Click Operations</span>
-                        <span class="text-[10px] text-slate-400 font-medium">Quick Launcher</span>
-                      </div>
-                      <div class="space-y-2">
-                        <button onclick="setSimTab('challan')" class="w-full text-left px-3 py-2 rounded-lg bg-slate-50 hover:bg-brand-50 border border-slate-200 hover:border-brand-300 text-xs font-bold text-slate-800 flex items-center justify-between transition-colors group">
-                          <span class="flex items-center gap-2">
-                            <i class="fa-solid fa-print text-brand-600 group-hover:scale-110 transition-transform"></i>
-                            <span>Generate 3-Part Fee Challan</span>
-                          </span>
-                          <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
-                        </button>
-                        <button onclick="setSimTab('attendance')" class="w-full text-left px-3 py-2 rounded-lg bg-slate-50 hover:bg-brand-50 border border-slate-200 hover:border-brand-300 text-xs font-bold text-slate-800 flex items-center justify-between transition-colors group">
-                          <span class="flex items-center gap-2">
-                            <i class="fa-brands fa-whatsapp text-emerald-500 group-hover:scale-110 transition-transform"></i>
-                            <span>Send WhatsApp Absentee SMS Blast</span>
-                          </span>
-                          <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
-                        </button>
-                        <button onclick="setSimTab('exam')" class="w-full text-left px-3 py-2 rounded-lg bg-slate-50 hover:bg-brand-50 border border-slate-200 hover:border-brand-300 text-xs font-bold text-slate-800 flex items-center justify-between transition-colors group">
-                          <span class="flex items-center gap-2">
-                            <i class="fa-solid fa-award text-amber-500 group-hover:scale-110 transition-transform"></i>
-                            <span>Print Student DMCs &amp; Report Cards</span>
-                          </span>
-                          <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Security Badge -->
-                  <div class="mt-4 p-3 bg-brand-50/70 border border-brand-200 rounded-lg text-[11px] text-brand-900 flex items-center gap-2.5">
-                    <i class="fa-solid fa-shield-halved text-brand-600 text-sm shrink-0"></i>
-                    <div>
-                      <strong>Principal Authorization:</strong> Full administrative privileges &bull; Biometric &amp; financial records secured with SSL &amp; 2FA.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- FLOATING NOTIFICATION TOAST (SIMULATOR FEEDBACK) -->
-          <div id="sim-toast" class="fixed sm:absolute bottom-5 right-5 z-50 bg-slate-900 text-white px-4 py-2.5 rounded-xl shadow-xl text-xs flex items-center gap-2.5 opacity-0 pointer-events-none translate-y-2 transition-all duration-300 border border-slate-700">
-            <i class="fa-solid fa-circle-check text-emerald-400"></i>
-            <span id="sim-toast-msg">Action performed</span>
-          </div>
+        <!-- SIMULATOR SCREEN 1: SCHOOL OVERVIEW DASHBOARD -->
+        <div id="sim-screen-overview" class="w-full bg-[#f0f6fb] flex items-center justify-center p-3 sm:p-5 lg:p-6 overflow-hidden">
+          <img src="assets/studentxces-school-dashboard.png" alt="StudentXcess School Dashboard Design" width="1672" height="941" loading="lazy" class="w-full h-auto max-w-full object-contain rounded-xl shadow-md border border-slate-200/80 transition-all duration-300">
         </div>
 
         <!-- SIMULATOR SCREEN 2: 3-PART BANK CHALLAN (PAKISTAN STANDARD) -->
@@ -1225,7 +398,7 @@
                     <span>1. Attendance Trigger</span>
                     <span class="text-emerald-600 font-mono text-[10px]">ENABLED</span>
                   </div>
-                  <div class="text-slate-500 text-[11px] mt-0.5">Automatically trigger message if student not punched by 08:30 AM</div>
+                  <div class="text-slate-500 text-[11px] mt-0.5">Automatically trigger message if student marked absent by 08:30 AM</div>
                 </div>
 
                 <div class="p-3 rounded-lg bg-slate-50 border border-slate-200 text-xs">
@@ -1525,9 +698,9 @@
               </div>
               <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-slate-100 text-slate-600">Daily</span>
             </div>
-            <h3 class="text-base font-bold text-slate-900 mb-2">Attendance &amp; Biometrics</h3>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Cloud-Based Attendance</h3>
             <p class="text-xs text-slate-500 leading-relaxed">
-              Section-wise teacher attendance or automated biometric finger/facial machine sync with instant WhatsApp alerts for absentees.
+              Section-wise teacher attendance marked from any device with automated real-time WhatsApp &amp; SMS alerts for absentees.
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-brand-700 flex items-center gap-1">
@@ -1845,7 +1018,7 @@
           </div>
           <h3 class="text-lg font-bold text-white mb-2">Print Challans &amp; Launch</h3>
           <p class="text-xs text-slate-300 leading-relaxed">
-            Print 3-Part Bank fee challans in 1 click, launch RFID/biometric attendance tracking, and start broadcasting instant WhatsApp notices to parents immediately.
+            Print 3-Part Bank fee challans in 1 click, launch Cloud-Based Attendance tracking, and start broadcasting instant WhatsApp notices to parents immediately.
           </p>
           <div class="mt-4 pt-3 border-t border-white/10 text-[11px] text-purple-400 flex items-center gap-1.5 font-semibold">
             <i class="fa-solid fa-circle-check"></i> Effortless &amp; Reliable Launch
@@ -1987,11 +1160,150 @@
             Speak directly with our technical onboarding specialists on WhatsApp.
           </p>
         </div>
-        <a href="https://wa.me/923094141972?text=Hello!%20I%20would%20like%20to%20inquire%20about%20onboarding%20and%20request%20a%20demo%20for%20my%20school." target="_blank" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs sm:text-sm shadow-md shadow-brand-600/20 transition-all flex items-center gap-2 whitespace-nowrap shrink-0">
-          <i class="fa-brands fa-whatsapp text-base"></i> Talk to Us: +92 309 4141972
+        <a href="https://wa.me/923066589195?text=Hello!%20I%20would%20like%20to%20inquire%20about%20onboarding%20and%20request%20a%20demo%20for%20my%20school." target="_blank" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs sm:text-sm shadow-md shadow-brand-600/20 transition-all flex items-center gap-2 whitespace-nowrap shrink-0">
+          <i class="fa-brands fa-whatsapp text-base"></i> Talk to Us: +92 306 6589195
         </a>
       </div>
 
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS / REVIEWS SECTION -->
+  <section id="reviews" class="py-20 bg-white border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-brand-600 font-extrabold uppercase text-xs tracking-wider">Trusted by Schools Across Pakistan</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 mb-4 tracking-tight">
+          What School Leaders Say About StudentXces
+        </h2>
+        <p class="text-slate-600 text-base leading-relaxed">
+          Real feedback from campus directors and principals managing daily admissions, fee collections, and exams on StudentXces.
+        </p>
+      </div>
+
+      <!-- Reviews Grid (2 active cards centered, expandable to 3 columns) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-8 items-stretch">
+        
+        <!-- Review Card 1 -->
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <!-- Quote Icon & Stars -->
+            <div class="flex items-center justify-between mb-5">
+              <div class="text-brand-600 text-2xl">
+                <i class="fa-solid fa-quote-left"></i>
+              </div>
+              <div class="flex items-center gap-1 text-amber-400 text-sm">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+
+            <!-- Review Body -->
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-8">
+              &ldquo;Before StudentXces our accounts team spent days preparing fee challans and chasing defaulters. Now 3-part bank challans are generated in one click and parents get WhatsApp reminders automatically. Fee recovery has become noticeably smoother and our staff saves hours every week.&rdquo;
+            </p>
+          </div>
+
+          <!-- Reviewer Footer -->
+          <div class="pt-5 border-t border-slate-100 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white border border-slate-200 p-1 flex items-center justify-center shrink-0">
+                <img src="assets/images/lcs-logo.png" alt="The Lahore Cambridge School logo" width="56" height="56" loading="lazy" class="w-full h-full object-contain rounded-lg">
+              </div>
+              <div>
+                <div class="font-bold text-slate-900 text-sm">Miss Shazia Dar</div>
+                <div class="text-xs text-slate-500">Principal, The Lahore Cambridge School, Gujrat</div>
+              </div>
+            </div>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[11px] font-bold shrink-0">
+              <i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i> Verified School
+            </div>
+          </div>
+        </div>
+
+        <!-- Review Card 2 -->
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <!-- Quote Icon & Stars -->
+            <div class="flex items-center justify-between mb-5">
+              <div class="text-brand-600 text-2xl">
+                <i class="fa-solid fa-quote-left"></i>
+              </div>
+              <div class="flex items-center gap-1 text-amber-400 text-sm">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+
+            <!-- Review Body -->
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-8">
+              &ldquo;The migration was handled entirely by the StudentXces team and we were up and running without any technical headache. Cloud-Based Attendance, exam results and parent notifications now work from a single dashboard, and the support on WhatsApp is quick and professional.&rdquo;
+            </p>
+          </div>
+
+          <!-- Reviewer Footer -->
+          <div class="pt-5 border-t border-slate-100 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white border border-slate-200 p-1 flex items-center justify-center shrink-0">
+                <img src="assets/images/AMS logo.jfif" alt="Academy of Modern Science logo" width="56" height="56" loading="lazy" class="w-full h-full object-contain rounded-lg">
+              </div>
+              <div>
+                <div class="font-bold text-slate-900 text-sm">Sir Ali Mehran</div>
+                <div class="text-xs text-slate-500">Principal, Academy of Modern Science, Lahore</div>
+              </div>
+            </div>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[11px] font-bold shrink-0">
+              <i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i> Verified School
+            </div>
+          </div>
+        </div>
+
+        <!-- TODO: add a real client review here: [Designation], [School Name], [City] -->
+        <!--
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-5">
+              <div class="text-brand-600 text-2xl">
+                <i class="fa-solid fa-quote-left"></i>
+              </div>
+              <div class="flex items-center gap-1 text-amber-400 text-sm">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-8">
+              &ldquo;Review text goes here.&rdquo;
+            </p>
+          </div>
+          <div class="pt-5 border-t border-slate-100 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white border border-slate-200 p-1 flex items-center justify-center shrink-0">
+                <img src="assets/images/icon.png" alt="[School Name] logo" width="56" height="56" loading="lazy" class="w-full h-full object-contain rounded-lg">
+              </div>
+              <div>
+                <div class="font-bold text-slate-900 text-sm">[Principal Name]</div>
+                <div class="text-xs text-slate-500">Principal, [School Name], [City]</div>
+              </div>
+            </div>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[11px] font-bold shrink-0">
+              <i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i> Verified School
+            </div>
+          </div>
+        </div>
+        -->
+
+      </div>
     </div>
   </section>
 
@@ -2029,19 +1341,30 @@
           <div>
             <div class="text-sm font-extrabold uppercase text-slate-500 tracking-wider mb-2">Starter Campus</div>
             <h3 class="text-2xl font-black text-slate-900">Primary / Branch</h3>
-            <p class="text-xs text-slate-500 mt-1 mb-6">Ideal for standalone primary schools, academies, or new preschool branches.</p>
+            <p class="text-xs text-slate-500 mt-1 mb-5">Ideal for standalone primary schools, academies, or new preschool branches.</p>
+
+            <!-- Limited Time Discount & Old Price -->
+            <div class="flex items-center gap-2 mb-2 flex-wrap">
+              <span class="text-sm text-slate-400 font-bold line-through" id="old-starter">PKR 12,000</span>
+              <span class="inline-flex items-center gap-1 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 border border-amber-300">
+                <i class="fa-solid fa-bolt text-[9px] text-amber-600"></i> Limited Time Discount
+              </span>
+            </div>
 
             <!-- Price -->
             <div class="flex items-baseline gap-1.5 mb-1">
               <span class="text-3xl sm:text-4xl font-extrabold text-slate-900" id="price-starter">PKR 9,000</span>
               <span class="text-xs text-slate-500 font-semibold" id="period-starter">/ 3 Months</span>
             </div>
-            <div class="text-[11px] text-slate-400 mb-6" id="subtext-starter">Equivalent to PKR 3,000 / month</div>
+            <div class="text-[11px] text-slate-400 mb-2" id="subtext-starter">Equivalent to PKR 3,000 / month</div>
+            <div class="text-[11px] font-medium text-emerald-700 bg-emerald-50 border border-emerald-200/80 rounded-lg px-2.5 py-1 mb-6" id="discount-note-starter">
+              Discounted price PKR 9,000 is valid for a limited time only
+            </div>
 
             <!-- Capacity Badges -->
             <div class="grid grid-cols-3 gap-2 py-3 border-y border-slate-100 text-center text-xs mb-6">
               <div class="bg-slate-50 p-2 rounded-lg">
-                <div class="font-bold text-slate-800">300</div>
+                <div class="font-bold text-slate-800">100</div>
                 <div class="text-[10px] text-slate-400">Students</div>
               </div>
               <div class="bg-slate-50 p-2 rounded-lg">
@@ -2079,7 +1402,7 @@
             </ul>
           </div>
 
-          <a href="https://wa.me/923094141972?text=Hello!%20I%20am%20interested%20in%20the%20Starter%20Plan%20(PKR%203,000/mo)." target="_blank" class="w-full py-3.5 rounded-xl border-2 border-brand-600 hover:bg-brand-50 text-brand-700 font-extrabold text-sm text-center transition-all block">
+          <a href="https://wa.me/923066589195?text=Hello!%20I%20am%20interested%20in%20the%20Starter%20Plan%20(PKR%203,000/mo)." target="_blank" class="w-full py-3.5 rounded-xl border-2 border-brand-600 hover:bg-brand-50 text-brand-700 font-extrabold text-sm text-center transition-all block">
             Select Starter Plan
           </a>
         </div>
@@ -2094,23 +1417,34 @@
           <div>
             <div class="text-sm font-extrabold uppercase text-brand-700 tracking-wider mb-2">Comprehensive Campus</div>
             <h3 class="text-2xl font-black text-slate-900">Standard School</h3>
-            <p class="text-xs text-slate-500 mt-1 mb-6">Designed for established matriculation &amp; O-Level private schools.</p>
+            <p class="text-xs text-slate-500 mt-1 mb-5">Designed for established matriculation &amp; O-Level private schools.</p>
+
+            <!-- Limited Time Discount & Old Price -->
+            <div class="flex items-center gap-2 mb-2 flex-wrap">
+              <span class="text-sm text-slate-400 font-bold line-through" id="old-standard">PKR 20,000</span>
+              <span class="inline-flex items-center gap-1 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 border border-amber-300">
+                <i class="fa-solid fa-bolt text-[9px] text-amber-600"></i> Limited Time Discount
+              </span>
+            </div>
 
             <!-- Price -->
             <div class="flex items-baseline gap-1.5 mb-1">
               <span class="text-3xl sm:text-4xl font-extrabold text-slate-900" id="price-standard">PKR 15,000</span>
               <span class="text-xs text-slate-500 font-semibold" id="period-standard">/ 3 Months</span>
             </div>
-            <div class="text-[11px] text-emerald-700 font-semibold mb-6" id="subtext-standard">Equivalent to PKR 5,000 / month</div>
+            <div class="text-[11px] text-emerald-700 font-semibold mb-2" id="subtext-standard">Equivalent to PKR 5,000 / month</div>
+            <div class="text-[11px] font-medium text-emerald-800 bg-emerald-100/70 border border-emerald-300 rounded-lg px-2.5 py-1 mb-6" id="discount-note-standard">
+              Discounted price PKR 15,000 is valid for a limited time only
+            </div>
 
             <!-- Capacity Badges -->
             <div class="grid grid-cols-3 gap-2 py-3 border-y border-brand-200 text-center text-xs mb-6 bg-white/60 rounded-xl">
               <div class="p-2 rounded-lg">
-                <div class="font-bold text-slate-900">800</div>
+                <div class="font-bold text-slate-900">200</div>
                 <div class="text-[10px] text-slate-500">Students</div>
               </div>
               <div class="p-2 rounded-lg">
-                <div class="font-bold text-slate-900">75</div>
+                <div class="font-bold text-slate-900">50</div>
                 <div class="text-[10px] text-slate-500">Staff</div>
               </div>
               <div class="p-2 rounded-lg">
@@ -2135,7 +1469,7 @@
               </li>
               <li class="flex items-center gap-2.5">
                 <i class="fa-solid fa-circle-check text-brand-600"></i>
-                <span>Biometric Machine Real-time Attendance Integration</span>
+                <span>Cloud-Based Real-time Attendance &amp; Parent Alerts</span>
               </li>
               <li class="flex items-center gap-2.5">
                 <i class="fa-solid fa-circle-check text-brand-600"></i>
@@ -2144,7 +1478,7 @@
             </ul>
           </div>
 
-          <a href="https://wa.me/923094141972?text=Hello!%20I%20am%20interested%20in%20the%20Standard%20Plan%20(PKR%205,000/mo)." target="_blank" class="w-full py-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-extrabold text-sm text-center shadow-md shadow-brand-600/30 transition-all block">
+          <a href="https://wa.me/923066589195?text=Hello!%20I%20am%20interested%20in%20the%20Standard%20Plan%20(PKR%205,000/mo)." target="_blank" class="w-full py-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-extrabold text-sm text-center shadow-md shadow-brand-600/30 transition-all block">
             Select Standard Plan
           </a>
         </div>
@@ -2154,23 +1488,34 @@
           <div>
             <div class="text-sm font-extrabold uppercase text-slate-500 tracking-wider mb-2">School Network</div>
             <h3 class="text-2xl font-black text-slate-900">Pro Enterprise</h3>
-            <p class="text-xs text-slate-500 mt-1 mb-6">For large colleges, high schools, and multi-campus school chains.</p>
+            <p class="text-xs text-slate-500 mt-1 mb-5">For large colleges, high schools, and multi-campus school chains.</p>
+
+            <!-- Limited Time Discount & Old Price -->
+            <div class="flex items-center gap-2 mb-2 flex-wrap">
+              <span class="text-sm text-slate-400 font-bold line-through" id="old-pro">PKR 32,000</span>
+              <span class="inline-flex items-center gap-1 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 border border-amber-300">
+                <i class="fa-solid fa-bolt text-[9px] text-amber-600"></i> Limited Time Discount
+              </span>
+            </div>
 
             <!-- Price -->
             <div class="flex items-baseline gap-1.5 mb-1">
               <span class="text-3xl sm:text-4xl font-extrabold text-slate-900" id="price-pro">PKR 24,000</span>
               <span class="text-xs text-slate-500 font-semibold" id="period-pro">/ 3 Months</span>
             </div>
-            <div class="text-[11px] text-slate-400 mb-6" id="subtext-pro">Equivalent to PKR 8,000 / month</div>
+            <div class="text-[11px] text-slate-400 mb-2" id="subtext-pro">Equivalent to PKR 8,000 / month</div>
+            <div class="text-[11px] font-medium text-emerald-700 bg-emerald-50 border border-emerald-200/80 rounded-lg px-2.5 py-1 mb-6" id="discount-note-pro">
+              Discounted price PKR 24,000 is valid for a limited time only
+            </div>
 
             <!-- Capacity Badges -->
             <div class="grid grid-cols-3 gap-2 py-3 border-y border-slate-100 text-center text-xs mb-6">
               <div class="bg-slate-50 p-2 rounded-lg">
-                <div class="font-bold text-slate-800">2,000</div>
+                <div class="font-bold text-slate-800">400</div>
                 <div class="text-[10px] text-slate-400">Students</div>
               </div>
               <div class="bg-slate-50 p-2 rounded-lg">
-                <div class="font-bold text-slate-800">200</div>
+                <div class="font-bold text-slate-800">75</div>
                 <div class="text-[10px] text-slate-400">Staff</div>
               </div>
               <div class="bg-slate-50 p-2 rounded-lg">
@@ -2200,11 +1545,38 @@
             </ul>
           </div>
 
-          <a href="https://wa.me/923094141972?text=Hello!%20I%20am%20interested%20in%20the%20Pro%20Plan%20(PKR%208,000/mo)." target="_blank" class="w-full py-3.5 rounded-xl border-2 border-brand-600 hover:bg-brand-50 text-brand-700 font-extrabold text-sm text-center transition-all block">
+          <a href="https://wa.me/923066589195?text=Hello!%20I%20am%20interested%20in%20the%20Pro%20Plan%20(PKR%208,000/mo)." target="_blank" class="w-full py-3.5 rounded-xl border-2 border-brand-600 hover:bg-brand-50 text-brand-700 font-extrabold text-sm text-center transition-all block">
             Select Pro Enterprise
           </a>
         </div>
 
+      </div>
+
+      <!-- Trust Strip (Task 5) -->
+      <div class="mt-14 max-w-5xl mx-auto">
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 sm:p-6 shadow-xs">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
+            <div class="flex items-center justify-center gap-2 text-slate-800 text-xs sm:text-sm font-bold">
+              <i class="fa-solid fa-shield-halved text-brand-600 text-base shrink-0"></i>
+              <span>Free Data Migration</span>
+            </div>
+            <div class="flex items-center justify-center gap-2 text-slate-800 text-xs sm:text-sm font-bold">
+              <i class="fa-solid fa-circle-check text-brand-600 text-base shrink-0"></i>
+              <span>Zero Hidden Costs</span>
+            </div>
+            <div class="flex items-center justify-center gap-2 text-slate-800 text-xs sm:text-sm font-bold">
+              <i class="fa-solid fa-cloud-arrow-up text-brand-600 text-base shrink-0"></i>
+              <span>Daily Cloud Backup</span>
+            </div>
+            <div class="flex items-center justify-center gap-2 text-slate-800 text-xs sm:text-sm font-bold">
+              <i class="fa-brands fa-whatsapp text-brand-600 text-base shrink-0"></i>
+              <span>Dedicated WhatsApp Support</span>
+            </div>
+          </div>
+        </div>
+        <p class="text-center text-xs text-slate-500 mt-4 leading-relaxed">
+          Trusted by schools across Pakistan. Prices are in PKR and the limited-time discount may end without notice.
+        </p>
       </div>
     </div>
   </section>
@@ -2216,7 +1588,7 @@
         
         <div>
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-800 text-xs font-bold mb-3">
-            <img src="assets/images/studentxces-icon.png" alt="StudentXces" class="w-4 h-4 object-contain">
+            <img src="assets/icon.png" alt="StudentXces" class="w-4 h-4 object-contain">
             <span>StudentXces School ERP</span>
           </div>
           <span class="block text-xs font-extrabold uppercase text-brand-600 tracking-wider">Fast Onboarding</span>
@@ -2234,7 +1606,7 @@
               </div>
               <div>
                 <div class="font-bold text-slate-900">Direct Contact:</div>
-                <div>+92 309 4141972 (WhatsApp &amp; Voice)</div>
+                <div>+92 306 6589195 (WhatsApp &amp; Voice)</div>
               </div>
             </div>
 
@@ -2265,10 +1637,10 @@
             <div>
               <label class="block text-xs font-bold text-slate-700 mb-1">Approx Students</label>
               <select id="demo-students" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all">
-                <option value="Under 300">Under 300</option>
-                <option value="300 - 800" selected>300 - 800</option>
-                <option value="800 - 1500">800 - 1,500</option>
-                <option value="1500+">1,500+</option>
+                <option value="Under 100">Under 100</option>
+                <option value="100 - 200" selected>100 - 200</option>
+                <option value="200 - 400">200 - 400</option>
+                <option value="400+">400+</option>
               </select>
             </div>
           </div>
@@ -2359,23 +1731,15 @@
         
         <!-- Col 1 -->
         <div class="space-y-4">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 p-2 flex items-center justify-center shadow-inner">
-              <img src="assets/images/studentxces-icon-light.png" alt="StudentXces Emblem" class="w-full h-full object-contain">
-            </div>
-            <div class="flex flex-col">
-              <div class="flex items-center gap-1.5">
-                <span class="text-xl font-black text-white">Student<span class="text-brand-400">Xces</span></span>
-                <span class="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-brand-500/20 text-brand-300 border border-brand-500/30">ERP</span>
-              </div>
-              <span class="text-[10px] text-slate-400">Cloud School Operating System</span>
-            </div>
+          <div class="flex items-center gap-2.5">
+            <img src="assets/studentxces_logo_white.png" alt="StudentXces ERP" class="h-9 sm:h-10 w-auto object-contain">
+            <span class="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-brand-500/20 text-brand-300 border border-brand-500/30 shrink-0">ERP</span>
           </div>
           <p class="leading-relaxed text-slate-400 text-xs">
             StudentXces is Pakistan's leading cloud-hosted school management ERP. Engineered for reliability, financial accuracy, and seamless parent-teacher communication.
           </p>
           <div class="flex items-center gap-3 text-slate-400 pt-2">
-            <a href="https://wa.me/923094141972" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition-colors">
+            <a href="https://wa.me/923066589195" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition-colors">
               <i class="fa-brands fa-whatsapp text-sm"></i>
             </a>
             <a href="#" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-colors">
@@ -2387,28 +1751,28 @@
           </div>
         </div>
 
-        <!-- Col 2: Navigation -->
+        <!-- Col 2: Main Modules -->
         <div>
-          <div class="font-bold text-white uppercase tracking-wider text-xs mb-4">Core Modules</div>
+          <div class="font-bold text-white uppercase tracking-wider text-xs mb-4">Main Modules</div>
           <ul class="space-y-2">
-            <li><a href="#modules" class="hover:text-brand-400 transition-colors">Student Admission &amp; SIS</a></li>
-            <li><a href="#modules" class="hover:text-brand-400 transition-colors">3-Part Fee Challans</a></li>
-            <li><a href="#modules" class="hover:text-brand-400 transition-colors">Daily Biometric Attendance</a></li>
-            <li><a href="#modules" class="hover:text-brand-400 transition-colors">Exams &amp; Board DMCs</a></li>
-            <li><a href="#modules" class="hover:text-brand-400 transition-colors">Staff HR &amp; Payroll</a></li>
-            <li><a href="#modules" class="hover:text-brand-400 transition-colors">Transport &amp; Van Routes</a></li>
+            <li><a href="#modules" class="hover:text-brand-400 transition-colors">Student Management &amp; Admissions</a></li>
+            <li><a href="#modules" class="hover:text-brand-400 transition-colors">Attendance Management</a></li>
+            <li><a href="#modules" class="hover:text-brand-400 transition-colors">Fee &amp; Finance Management</a></li>
+            <li><a href="#modules" class="hover:text-brand-400 transition-colors">Examination &amp; Results</a></li>
+            <li><a href="#modules" class="hover:text-brand-400 transition-colors">Staff &amp; HR Management</a></li>
+            <li><a href="#modules" class="hover:text-brand-400 transition-colors">Timetable &amp; Class Management</a></li>
+            <li><a href="#modules" class="hover:text-brand-400 transition-colors">Parent &amp; Student Portal</a></li>
+            <li><a href="#modules" class="hover:text-brand-400 transition-colors">WhatsApp Notifications</a></li>
+            <li><a href="#modules" class="hover:text-brand-400 transition-colors">Transport Management</a></li>
+            <li><a href="#modules" class="hover:text-brand-400 transition-colors">Reports &amp; Analytics</a></li>
           </ul>
         </div>
 
-        <!-- Col 3: Coverage -->
+        <!-- Col 3: Physical Office -->
         <div>
-          <div class="font-bold text-white uppercase tracking-wider text-xs mb-4">Regional Presence</div>
-          <ul class="space-y-2 text-slate-400">
-            <li><span>📍 Lahore Regional Office (Punjab)</span></li>
-            <li><span>📍 Karachi Customer Center (Sindh)</span></li>
-            <li><span>📍 Islamabad &amp; Rawalpindi Desk</span></li>
-            <li><span>📍 Peshawar &amp; Northern Region</span></li>
-            <li><span>🌐 Serving 150+ Schools Nationally</span></li>
+          <div class="font-bold text-white uppercase tracking-wider text-xs mb-4">Our Office</div>
+          <ul class="space-y-2.5 text-slate-400">
+            <li class="leading-relaxed"><span>📍 Devis Road, Lahore, Pakistan</span></li>
           </ul>
         </div>
 
@@ -2418,7 +1782,7 @@
           <div class="space-y-2.5">
             <div>
               <div class="text-[11px] text-slate-500 font-semibold">WHATSAPP HELPLINE:</div>
-              <a href="https://wa.me/923094141972" class="text-sm font-extrabold text-emerald-400 hover:underline">+92 309 4141972</a>
+              <a href="https://wa.me/923066589195" class="text-sm font-extrabold text-emerald-400 hover:underline">+92 306 6589195</a>
             </div>
             <div>
               <div class="text-[11px] text-slate-500 font-semibold">EMAIL INQUIRIES:</div>
@@ -2451,7 +1815,7 @@
   </footer>
 
   <!-- FLOATING WHATSAPP BUTTON -->
-  <a href="https://wa.me/923094141972?text=Hello%20StudentXces%20Team!%20I%20would%20like%20more%20information%20regarding%20the%20School%20ERP." target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center text-3xl shadow-xl hover:scale-110 active:scale-95 transition-all duration-300" title="Chat with Support Team">
+  <a href="https://wa.me/923066589195?text=Hello%20StudentXces%20Team!%20I%20would%20like%20more%20information%20regarding%20the%20School%20ERP." target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center text-3xl shadow-xl hover:scale-110 active:scale-95 transition-all duration-300" title="Chat with Support Team">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
@@ -2463,8 +1827,8 @@
       </button>
 
       <div class="text-center mb-6">
-        <div class="w-14 h-14 rounded-2xl bg-white border border-slate-200/90 shadow-sm flex items-center justify-center p-2 mx-auto mb-3">
-          <img src="assets/images/studentxces-icon.png" alt="StudentXces Brand Logo" class="w-full h-full object-contain">
+        <div class="flex items-center justify-center mx-auto mb-3">
+          <img src="assets/studentxces_logo.png" alt="StudentXces Brand Logo" class="h-11 sm:h-12 w-auto object-contain">
         </div>
         <h3 class="text-2xl font-black text-slate-900">Request Custom School Demo</h3>
         <p class="text-xs text-slate-500 mt-1">Free 15-minute screen share walkthrough tailored to your syllabus &amp; fee structure.</p>
@@ -2489,7 +1853,7 @@
 
         <div>
           <label class="block text-xs font-bold text-slate-700 mb-1">Your Mobile / WhatsApp Number</label>
-          <input type="tel" id="modal-phone" required placeholder="0309 4141972" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none">
+          <input type="tel" id="modal-phone" required placeholder="0306 6589195" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none">
         </div>
 
         <button type="submit" class="w-full py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-extrabold text-sm transition-all shadow-md flex items-center justify-center gap-2 mt-4">
@@ -2541,7 +1905,7 @@
       if (tabId === 'exam') urlBar.textContent = 'portal.alliedmodel.edu.pk/examinations/dmc-report-card';
     }
 
-    // Principal Dashboard Simulator Helpers
+    // School Dashboard Simulator Helpers
     function toggleSimSidebar() {
       const sidebar = document.getElementById('principal-sim-sidebar');
       if (sidebar) {
@@ -2608,41 +1972,65 @@
       });
     }
 
-    // 4. Billing Period Toggle (Quarterly, 6-Month with 5% off, Annual with 10% off)
+    // 4. Billing Period Toggle with Limited-Time Discount
     let currentTerm = 'quarterly';
     const pricingData = {
       quarterly: {
+        starterOld: 'PKR 12,000',
         starter: 'PKR 9,000',
         starterPeriod: '/ 3 Months',
         starterSub: 'Equivalent to PKR 3,000 / month',
+        starterNote: 'Discounted price PKR 9,000 is valid for a limited time only',
+
+        standardOld: 'PKR 20,000',
         standard: 'PKR 15,000',
         standardPeriod: '/ 3 Months',
         standardSub: 'Equivalent to PKR 5,000 / month',
+        standardNote: 'Discounted price PKR 15,000 is valid for a limited time only',
+
+        proOld: 'PKR 32,000',
         pro: 'PKR 24,000',
         proPeriod: '/ 3 Months',
-        proSub: 'Equivalent to PKR 8,000 / month'
+        proSub: 'Equivalent to PKR 8,000 / month',
+        proNote: 'Discounted price PKR 24,000 is valid for a limited time only'
       },
       halfyearly: {
+        starterOld: 'PKR 22,800',
         starter: 'PKR 17,100',
         starterPeriod: '/ 6 Months',
         starterSub: '5% Saved (PKR 2,850 / month)',
+        starterNote: 'Discounted price PKR 17,100 is valid for a limited time only',
+
+        standardOld: 'PKR 38,000',
         standard: 'PKR 28,500',
         standardPeriod: '/ 6 Months',
         standardSub: '5% Saved (PKR 4,750 / month)',
+        standardNote: 'Discounted price PKR 28,500 is valid for a limited time only',
+
+        proOld: 'PKR 60,800',
         pro: 'PKR 45,600',
         proPeriod: '/ 6 Months',
-        proSub: '5% Saved (PKR 7,600 / month)'
+        proSub: '5% Saved (PKR 7,600 / month)',
+        proNote: 'Discounted price PKR 45,600 is valid for a limited time only'
       },
       annual: {
+        starterOld: 'PKR 43,200',
         starter: 'PKR 32,400',
         starterPeriod: '/ 12 Months',
         starterSub: '10% Saved (PKR 2,700 / month)',
+        starterNote: 'Discounted price PKR 32,400 is valid for a limited time only',
+
+        standardOld: 'PKR 72,000',
         standard: 'PKR 54,000',
         standardPeriod: '/ 12 Months',
         standardSub: '10% Saved (PKR 4,500 / month)',
+        standardNote: 'Discounted price PKR 54,000 is valid for a limited time only',
+
+        proOld: 'PKR 115,200',
         pro: 'PKR 86,400',
         proPeriod: '/ 12 Months',
-        proSub: '10% Saved (PKR 7,200 / month)'
+        proSub: '10% Saved (PKR 7,200 / month)',
+        proNote: 'Discounted price PKR 86,400 is valid for a limited time only'
       }
     };
 
@@ -2655,22 +2043,52 @@
       });
 
       const activeBtn = document.getElementById(`btn-term-${term}`);
-      activeBtn.classList.add('bg-white', 'text-slate-800', 'shadow-sm');
-      activeBtn.classList.remove('text-slate-600');
+      if (activeBtn) {
+        activeBtn.classList.add('bg-white', 'text-slate-800', 'shadow-sm');
+        activeBtn.classList.remove('text-slate-600');
+      }
 
       const data = pricingData[term];
-      document.getElementById('price-starter').textContent = data.starter;
-      document.getElementById('period-starter').textContent = data.starterPeriod;
-      document.getElementById('subtext-starter').textContent = data.starterSub;
+      if (!data) return;
 
-      document.getElementById('price-standard').textContent = data.standard;
-      document.getElementById('period-standard').textContent = data.standardPeriod;
-      document.getElementById('subtext-standard').textContent = data.standardSub;
+      const oldStarter = document.getElementById('old-starter');
+      if (oldStarter) oldStarter.textContent = data.starterOld;
+      const priceStarter = document.getElementById('price-starter');
+      if (priceStarter) priceStarter.textContent = data.starter;
+      const periodStarter = document.getElementById('period-starter');
+      if (periodStarter) periodStarter.textContent = data.starterPeriod;
+      const subStarter = document.getElementById('subtext-starter');
+      if (subStarter) subStarter.textContent = data.starterSub;
+      const noteStarter = document.getElementById('discount-note-starter');
+      if (noteStarter) noteStarter.textContent = data.starterNote;
 
-      document.getElementById('price-pro').textContent = data.pro;
-      document.getElementById('period-pro').textContent = data.proPeriod;
-      document.getElementById('subtext-pro').textContent = data.proSub;
+      const oldStandard = document.getElementById('old-standard');
+      if (oldStandard) oldStandard.textContent = data.standardOld;
+      const priceStandard = document.getElementById('price-standard');
+      if (priceStandard) priceStandard.textContent = data.standard;
+      const periodStandard = document.getElementById('period-standard');
+      if (periodStandard) periodStandard.textContent = data.standardPeriod;
+      const subStandard = document.getElementById('subtext-standard');
+      if (subStandard) subStandard.textContent = data.standardSub;
+      const noteStandard = document.getElementById('discount-note-standard');
+      if (noteStandard) noteStandard.textContent = data.standardNote;
+
+      const oldPro = document.getElementById('old-pro');
+      if (oldPro) oldPro.textContent = data.proOld;
+      const pricePro = document.getElementById('price-pro');
+      if (pricePro) pricePro.textContent = data.pro;
+      const periodPro = document.getElementById('period-pro');
+      if (periodPro) periodPro.textContent = data.proPeriod;
+      const subPro = document.getElementById('subtext-pro');
+      if (subPro) subPro.textContent = data.proSub;
+      const notePro = document.getElementById('discount-note-pro');
+      if (notePro) notePro.textContent = data.proNote;
     }
+
+    // Initialize pricing on load
+    document.addEventListener('DOMContentLoaded', () => {
+      setBillingTerm('quarterly');
+    });
 
     // 6. FAQ Accordion Toggle
     function toggleFaq(button) {
@@ -2720,7 +2138,7 @@
       const phone = document.getElementById('demo-phone').value;
 
       const message = `Hello! I would like to schedule a live demo of StudentXces School ERP.\n\n🏫 School: ${school}\n📍 City: ${city}\n👥 Students: ${students}\n📱 Phone: ${phone}`;
-      const url = `https://wa.me/923094141972?text=${encodeURIComponent(message)}`;
+      const url = `https://wa.me/923066589195?text=${encodeURIComponent(message)}`;
       window.open(url, '_blank');
     }
 
@@ -2732,7 +2150,7 @@
       const phone = document.getElementById('modal-phone').value;
 
       const message = `Hello StudentXces Team, here is my demo request:\n\n🏫 School: ${school}\n📍 City: ${city}\n👥 Enrolled: ${students}\n📱 WhatsApp: ${phone}`;
-      const url = `https://wa.me/923094141972?text=${encodeURIComponent(message)}`;
+      const url = `https://wa.me/923066589195?text=${encodeURIComponent(message)}`;
       closeDemoModal();
       window.open(url, '_blank');
     }
