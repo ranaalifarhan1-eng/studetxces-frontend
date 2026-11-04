@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Protection Policy & Technical Measures — StudentXces ERP</title>
+  <meta name="description" content="Technical and organizational measures (TOMs) safeguarding school records, AES-256 encryption, tenant isolation, and automated cloud backups for StudentXces.">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              200: '#a7f3d0',
+              300: '#6ee7b7',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+              950: '#022c22',
+            },
+            navy: {
+              800: '#0f172a',
+              900: '#0b1324',
+              950: '#060c18',
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Font Awesome 6 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans selection:bg-brand-500 selection:text-white">
+
+  <!-- TOP TICKER ANNOUNCEMENT -->
+  <div class="bg-navy-950 text-slate-300 py-2.5 px-4 text-xs font-medium border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-brand-500/20 text-brand-400 border border-brand-500/30 shrink-0">
+          <i class="fa-solid fa-lock text-[10px]"></i> Bank-Grade Security
+        </span>
+        <span class="text-slate-300 leading-snug">AES-256 Cloud Encryption &bull; Automated Geo-Redundant Backups</span>
+      </div>
+      <div class="flex items-center justify-center gap-4 text-slate-300 text-xs shrink-0">
+        <a href="index.html#pricing" class="hover:text-brand-400 transition-colors flex items-center gap-1">
+          <i class="fa-solid fa-tag text-brand-400"></i> Packages
+        </a>
+        <span class="text-slate-700">|</span>
+        <a href="https://wa.me/923066589195" target="_blank" rel="noopener" class="hover:text-emerald-400 transition-colors font-semibold text-emerald-400 flex items-center gap-1.5">
+          <i class="fa-brands fa-whatsapp text-sm text-emerald-400"></i> +92 306 6589195
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 transition-all duration-300 shadow-sm" id="main-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center group shrink-0" aria-label="StudentXces Home">
+        <img src="assets/studentxces_logo.png" alt="StudentXces" class="h-10 sm:h-11 lg:h-12 w-auto object-contain group-hover:opacity-90 transition-opacity">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-xs lg:text-sm font-semibold text-slate-600">
+        <a href="index.html#features" class="hover:text-brand-600 transition-colors">Features</a>
+        <a href="index.html#simulator" class="hover:text-brand-600 transition-colors">Interactive Demo</a>
+        <a href="index.html#modules" class="hover:text-brand-600 transition-colors">14 Modules</a>
+        <a href="index.html#pricing" class="hover:text-brand-600 transition-colors">Pricing</a>
+        <a href="index.html#faq" class="hover:text-brand-600 transition-colors">FAQ</a>
+      </nav>
+
+      <!-- CTA Buttons -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="index.html" class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex items-center gap-2">
+          <i class="fa-solid fa-arrow-left text-xs"></i> Back to Main Site
+        </a>
+        <a href="index.html#demo" class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-brand-600 hover:bg-brand-700 text-white shadow-md shadow-brand-600/30 transition-all flex items-center gap-2">
+          <i class="fa-solid fa-calendar-check text-xs"></i> Book Demo
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button onclick="toggleMobileNav()" class="md:hidden p-2 text-slate-700 hover:text-brand-600 focus:outline-none shrink-0" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars text-2xl" id="nav-toggle-icon"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-5 space-y-4 shadow-xl">
+      <div class="flex items-center pb-3 border-b border-slate-100">
+        <img src="assets/studentxces_logo.png" alt="StudentXces" class="h-9 w-auto object-contain">
+      </div>
+      <a href="index.html" class="block text-base font-semibold text-slate-700 hover:text-brand-600">Home Page</a>
+      <a href="index.html#features" class="block text-base font-semibold text-slate-700 hover:text-brand-600">Features</a>
+      <a href="index.html#pricing" class="block text-base font-semibold text-slate-700 hover:text-brand-600">Pricing</a>
+      <a href="index.html#faq" class="block text-base font-semibold text-slate-700 hover:text-brand-600">FAQ</a>
+      <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+        <a href="index.html" class="w-full text-center py-2.5 rounded-xl bg-slate-100 text-slate-800 font-bold text-sm">
+          Back to Main Site
+        </a>
+        <a href="https://wa.me/923066589195" target="_blank" class="w-full text-center py-2.5 rounded-xl bg-emerald-50 text-emerald-700 font-semibold border border-emerald-200 flex items-center justify-center gap-2 text-sm">
+          <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Support
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMBS & HERO BANNER -->
+  <div class="bg-gradient-to-b from-slate-100/80 to-slate-50 border-b border-slate-200/80 py-10 sm:py-14">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-3">
+        <a href="index.html" class="hover:text-brand-600 transition-colors">Home</a>
+        <span class="text-slate-300">/</span>
+        <span class="text-slate-400">Legal &amp; Compliance</span>
+        <span class="text-slate-300">/</span>
+        <span class="text-brand-700">Data Protection Policy</span>
+      </div>
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold mb-3">
+        <i class="fa-solid fa-server text-xs"></i>
+        <span>Technical &amp; Organizational Measures (TOMs)</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+        Data Protection Policy
+      </h1>
+      <p class="mt-2 text-sm sm:text-base text-slate-600 max-w-3xl leading-relaxed">
+        Technical architecture, multi-tenant isolation, cryptographic standards, backup protocols, and disaster recovery procedures protecting school records on StudentXces.
+      </p>
+      <div class="flex flex-wrap items-center gap-4 text-xs text-slate-500 mt-4 pt-4 border-t border-slate-200/60">
+        <span><strong>Effective Date:</strong> November 1, 2026</span>
+        <span>&bull;</span>
+        <span><strong>Document Version:</strong> 2.4</span>
+        <span>&bull;</span>
+        <span><strong>Standard:</strong> Enterprise SaaS Data Protection</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN DOCUMENT BODY -->
+  <main class="py-12 sm:py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Highlight Box -->
+      <div class="mb-10 p-6 rounded-2xl bg-brand-50/70 border border-brand-200 text-brand-950 flex flex-col sm:flex-row items-start gap-4">
+        <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+          <i class="fa-solid fa-shield-halved text-lg"></i>
+        </div>
+        <div class="text-xs sm:text-sm leading-relaxed">
+          <div class="font-bold text-brand-900 mb-1 text-sm sm:text-base">Robust Cloud Security Architecture</div>
+          Traditional desktop-based school software leaves records vulnerable to local hard drive failure, malware, and physical theft. StudentXces replaces local server risk with <strong>AES-256 database encryption, automated daily off-site backups, and strict role-based access control</strong>.
+        </div>
+      </div>
+
+      <!-- Content Container -->
+      <div class="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 sm:p-10 lg:p-12 space-y-10 text-xs sm:text-sm text-slate-700 leading-relaxed">
+
+        <!-- 1. Multi-Tenant Architecture & Database Isolation -->
+        <section class="space-y-3">
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-2.5">
+            <span class="w-7 h-7 rounded-lg bg-slate-100 text-slate-700 font-mono text-xs flex items-center justify-center shrink-0 font-bold">1</span>
+            Multi-Tenant Isolation &amp; Architectural Partitioning
+          </h2>
+          <p>
+            StudentXces employs an enterprise multi-tenant cloud architecture engineered to guarantee zero cross-institutional data bleed:
+          </p>
+          <ul class="list-disc list-inside space-y-1.5 pl-2 text-slate-600">
+            <li><strong>Logical Schema Partitioning:</strong> Every participating school is assigned an immutable cryptographic tenant identifier. All database queries are filtered through mandatory tenant validation gates at the ORM layer.</li>
+            <li><strong>Separate Storage Buckets:</strong> School logos, student photos, and generated PDF fee challans are stored in tenant-isolated cloud storage vaults with unique access keys.</li>
+            <li><strong>Session Scoping:</strong> Login tokens are strictly bound to the subscriber's tenant context. An administrator at Campus A has zero cryptographic capability to query records belonging to Campus B.</li>
+          </ul>
+        </section>
+
+        <!-- 2. Cryptographic Controls & Encryption Standards -->
+        <section class="space-y-3">
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-2.5">
+            <span class="w-7 h-7 rounded-lg bg-slate-100 text-slate-700 font-mono text-xs flex items-center justify-center shrink-0 font-bold">2</span>
+            Cryptographic Controls &amp; Cipher Standards
+          </h2>
+          <p>StudentXces enforces industry-standard encryption protocols across every layer of the platform stack:</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-xl border border-slate-100 bg-slate-50/60">
+              <div class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+                <i class="fa-solid fa-network-wired text-brand-600"></i> Data in Transit (TLS 1.3)
+              </div>
+              <p class="text-xs text-slate-600">All traffic between user web browsers and StudentXces servers is encrypted via TLS 1.3 / HTTPS using 256-bit elliptic-curve ciphers. Insecure HTTP connections are automatically rejected.</p>
+            </div>
+            <div class="p-4 rounded-xl border border-slate-100 bg-slate-50/60">
+              <div class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+                <i class="fa-solid fa-database text-brand-600"></i> Data at Rest (AES-256)
+              </div>
+              <p class="text-xs text-slate-600">All primary databases, cache clusters, and file archives are encrypted at rest using Advanced Encryption Standard (AES) with 256-bit keys managed through dedicated key management systems (KMS).</p>
+            </div>
+            <div class="p-4 rounded-xl border border-slate-100 bg-slate-50/60">
+              <div class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+                <i class="fa-solid fa-key text-brand-600"></i> Password &amp; Secret Hashing
+              </div>
+              <p class="text-xs text-slate-600">User credentials are salted and hashed using adaptive Argon2id / bcrypt cryptographic functions. Plaintext passwords are never stored in memory, logs, or databases.</p>
+            </div>
+            <div class="p-4 rounded-xl border border-slate-100 bg-slate-50/60">
+              <div class="font-bold text-slate-900 mb-1 flex items-center gap-2">
+                <i class="fa-solid fa-receipt text-brand-600"></i> Challan Hashing &amp; Verification
+              </div>
+              <p class="text-xs text-slate-600">Bank challan barcodes and KuickPay consumer tokens incorporate cryptographic hash sums to prevent voucher alteration or unauthorized fee tampering.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. Role-Based Access Control (RBAC) -->
+        <section class="space-y-3">
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-2.5">
+            <span class="w-7 h-7 rounded-lg bg-slate-100 text-slate-700 font-mono text-xs flex items-center justify-center shrink-0 font-bold">3</span>
+            Role-Based Access Control (RBAC) &amp; Least Privilege
+          </h2>
+          <p>
+            Internal platform security is anchored in strict compartmentalization so campus staff access only the data necessary to perform their specific duties:
+          </p>
+          <ul class="list-disc list-inside space-y-1.5 pl-2 text-slate-600">
+            <li><strong>Principal / Super Admin:</strong> Unrestricted visibility across campus metrics, financial summaries, audit logs, and system settings.</li>
+            <li><strong>Accounts / Cashier:</strong> Authorized to create fee vouchers, register bank payments, and view tuition arrears; zero permission to alter student examination grades.</li>
+            <li><strong>Teacher:</strong> Restricted strictly to classes and sections assigned to them. Teachers can enter attendance and marks, but cannot access financial records or other classes' sensitive files.</li>
+            <li><strong>Parent / Student:</strong> Read-only access restricted strictly to their registered family account, fee receipts, and report cards.</li>
+          </ul>
+        </section>
+
+        <!-- 4. Automated Backups & Disaster Recovery -->
+        <section class="space-y-3">
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-2.5">
+            <span class="w-7 h-7 rounded-lg bg-slate-100 text-slate-700 font-mono text-xs flex items-center justify-center shrink-0 font-bold">4</span>
+            Automated Backups &amp; Disaster Recovery Protocols
+          </h2>
+          <p>
+            To protect educational institutions from devastating data loss, StudentXces maintains a multi-tiered disaster recovery pipeline:
+          </p>
+          <div class="overflow-x-auto pt-2">
+            <table class="w-full text-left border border-slate-200 rounded-xl overflow-hidden text-xs">
+              <thead class="bg-slate-100 text-slate-700 font-bold">
+                <tr>
+                  <th class="p-3 border-b border-slate-200">Backup Type</th>
+                  <th class="p-3 border-b border-slate-200">Frequency</th>
+                  <th class="p-3 border-b border-slate-200">Retention Period</th>
+                  <th class="p-3 border-b border-slate-200">Storage Location</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 text-slate-600">
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">Continuous WAL / Transaction Logs</td>
+                  <td class="p-3">Every 5 minutes</td>
+                  <td class="p-3">7 Days Point-in-Time Recovery</td>
+                  <td class="p-3">Replicated primary cloud storage cluster.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">Automated Full Database Snapshot</td>
+                  <td class="p-3">Daily (02:00 AM PKT)</td>
+                  <td class="p-3">30 Days Rolling Window</td>
+                  <td class="p-3">Encrypted off-site geo-redundant storage.</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-slate-900">Weekly Archive Snapshots</td>
+                  <td class="p-3">Weekly (Sunday)</td>
+                  <td class="p-3">90 Days</td>
+                  <td class="p-3">Cold encrypted immutable vault.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-xs text-slate-600 mt-2">
+            <strong>Target Disaster Recovery Metrics:</strong> Recovery Point Objective (RPO) &lt; 1 hour; Recovery Time Objective (RTO) &lt; 4 hours under severe infrastructure outage scenarios.
+          </p>
+        </section>
+
+        <!-- 5. Incident Response & Breach Notification -->
+        <section class="space-y-3">
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-2.5">
+            <span class="w-7 h-7 rounded-lg bg-slate-100 text-slate-700 font-mono text-xs flex items-center justify-center shrink-0 font-bold">5</span>
+            Security Incident Response &amp; Institutional Notification
+          </h2>
+          <p>
+            StudentXces maintains continuous monitoring for anomalous login velocity, brute-force attempts, and unauthorized API queries. In the unlikely event of a confirmed security breach impacting school or student records:
+          </p>
+          <ul class="list-disc list-inside space-y-1.5 pl-2 text-slate-600">
+            <li><strong>48-Hour Notification:</strong> StudentXces will notify the affected institution's authorized administration within forty-eight (48) hours of breach confirmation.</li>
+            <li><strong>Forensic Transparency:</strong> We provide a comprehensive forensic brief outlining the nature of the incident, categories of records impacted, immediate containment steps taken, and recommendations for credential rotation.</li>
+            <li><strong>Remediation:</strong> Immediate invalidation of all compromised sessions, password resets, and deployment of defensive code hotfixes.</li>
+          </ul>
+        </section>
+
+        <!-- 6. Physical & Employee Controls -->
+        <section class="space-y-3">
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-2.5">
+            <span class="w-7 h-7 rounded-lg bg-slate-100 text-slate-700 font-mono text-xs flex items-center justify-center shrink-0 font-bold">6</span>
+            Infrastructure &amp; Personnel Controls
+          </h2>
+          <p>
+            Production servers are deployed exclusively within certified Tier-3 enterprise data centers equipped with multi-stage biometric access control, video surveillance, redundant diesel power generators, and automated fire suppression.
+          </p>
+          <p>
+            StudentXces engineering staff undergo rigorous background screening and sign binding non-disclosure agreements. Direct production database access requires multi-factor authentication through hardened bastion jumpboxes with session recording.
+          </p>
+        </section>
+
+        <!-- 7. Security Contact -->
+        <section class="space-y-3 pt-4 border-t border-slate-100">
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 flex items-center gap-2.5">
+            <span class="w-7 h-7 rounded-lg bg-slate-100 text-slate-700 font-mono text-xs flex items-center justify-center shrink-0 font-bold">7</span>
+            Security Team &amp; Vulnerability Disclosure
+          </h2>
+          <p>
+            If you are an academic IT administrator conducting a security audit or a security researcher who has identified a potential vulnerability, please reach out to our engineering security team:
+          </p>
+          <div class="mt-4 p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-2 text-xs">
+            <div><strong>Operating Entity:</strong> [StudentXces Technologies Pakistan (Pvt.) Ltd.]</div>
+            <div><strong>Location:</strong> Devis Road, Lahore, Punjab, Pakistan</div>
+            <div><strong>Security Desk:</strong> <a href="mailto:support@studentxces.com" class="text-brand-600 hover:underline">support@studentxces.com</a></div>
+            <div><strong>Emergency Hotline:</strong> <a href="https://wa.me/923066589195" class="text-brand-600 hover:underline">+92 306 6589195</a> (WhatsApp)</div>
+          </div>
+        </section>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-navy-950 text-slate-400 py-16 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-800/80">
+        
+        <!-- Col 1 -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2.5">
+            <img src="assets/studentxces_logo_white.png" alt="StudentXces ERP" class="h-9 sm:h-10 w-auto object-contain">
+            <span class="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-brand-500/20 text-brand-300 border border-brand-500/30 shrink-0">ERP</span>
+          </div>
+          <p class="leading-relaxed text-slate-400 text-xs">
+            StudentXces is Pakistan's leading cloud-hosted school management ERP. Engineered for reliability, financial accuracy, and seamless parent-teacher communication.
+          </p>
+          <div class="flex items-center gap-3 text-slate-400 pt-2">
+            <a href="https://wa.me/923066589195" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition-colors">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-colors">
+              <i class="fa-brands fa-facebook-f text-sm"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-sky-500 hover:text-white flex items-center justify-center transition-colors">
+              <i class="fa-brands fa-linkedin-in text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Main Modules -->
+        <div>
+          <div class="font-bold text-white uppercase tracking-wider text-xs mb-4">Main Modules</div>
+          <ul class="space-y-2">
+            <li><a href="index.html#modules" class="hover:text-brand-400 transition-colors">Student Management &amp; Admissions</a></li>
+            <li><a href="index.html#modules" class="hover:text-brand-400 transition-colors">Attendance Management</a></li>
+            <li><a href="index.html#modules" class="hover:text-brand-400 transition-colors">Fee &amp; Finance Management</a></li>
+            <li><a href="index.html#modules" class="hover:text-brand-400 transition-colors">Examination &amp; Results</a></li>
+            <li><a href="index.html#modules" class="hover:text-brand-400 transition-colors">Staff &amp; HR Management</a></li>
+            <li><a href="index.html#modules" class="hover:text-brand-400 transition-colors">Timetable &amp; Class Management</a></li>
+            <li><a href="index.html#modules" class="hover:text-brand-400 transition-colors">Parent &amp; Student Portal</a></li>
+            <li><a href="index.html#modules" class="hover:text-brand-400 transition-colors">WhatsApp Notifications</a></li>
+            <li><a href="index.html#modules" class="hover:text-brand-400 transition-colors">Transport Management</a></li>
+            <li><a href="index.html#modules" class="hover:text-brand-400 transition-colors">Reports &amp; Analytics</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Physical Office -->
+        <div>
+          <div class="font-bold text-white uppercase tracking-wider text-xs mb-4">Our Office</div>
+          <ul class="space-y-2.5 text-slate-400">
+            <li class="leading-relaxed"><span>📍 Devis Road, Lahore, Pakistan</span></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Direct Contacts -->
+        <div>
+          <div class="font-bold text-white uppercase tracking-wider text-xs mb-4">Support &amp; Sales</div>
+          <div class="space-y-2.5">
+            <div>
+              <div class="text-[11px] text-slate-500 font-semibold">WHATSAPP HELPLINE:</div>
+              <a href="https://wa.me/923066589195" class="text-sm font-extrabold text-emerald-400 hover:underline">+92 306 6589195</a>
+            </div>
+            <div>
+              <div class="text-[11px] text-slate-500 font-semibold">EMAIL INQUIRIES:</div>
+              <span class="text-slate-300">support@studentxces.com</span>
+            </div>
+            <div>
+              <div class="text-[11px] text-slate-500 font-semibold">ACTIVE UPTIME:</div>
+              <span class="inline-flex items-center gap-1.5 text-emerald-400 font-bold">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> 99.98% Cloud SLA
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col lg:flex-row items-center justify-between gap-4 text-slate-500 text-[11px] text-center lg:text-left">
+        <div>
+          &copy; 2026 StudentXces Technologies Pakistan. All rights reserved. Built for school excellence.
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-x-3.5 gap-y-2 text-slate-400">
+          <a href="privacy-policy.html" class="hover:text-brand-400 hover:underline transition-colors">Privacy Policy</a>
+          <span class="text-slate-700 hidden sm:inline">&bull;</span>
+          <a href="terms-and-conditions.html" class="hover:text-brand-400 hover:underline transition-colors">Terms &amp; Conditions</a>
+          <span class="text-slate-700 hidden sm:inline">&bull;</span>
+          <a href="cookie-policy.html" class="hover:text-brand-400 hover:underline transition-colors">Cookie Policy</a>
+          <span class="text-slate-700 hidden sm:inline">&bull;</span>
+          <a href="data-protection-policy.html" class="text-brand-400 font-bold underline transition-colors">Data Protection Policy</a>
+          <span class="text-slate-700 hidden sm:inline">&bull;</span>
+          <a href="refund-cancellation-policy.html" class="hover:text-brand-400 hover:underline transition-colors">Refund &amp; Cancellation</a>
+          <span class="text-slate-700 hidden sm:inline">&bull;</span>
+          <a href="security-whitepaper.html" class="hover:text-brand-400 hover:underline transition-colors">Security Whitepaper</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/923066589195?text=Hello%20StudentXces%20Team!%20I%20have%20a%20question%20regarding%20Data%20Protection." target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center text-3xl shadow-xl hover:scale-110 active:scale-95 transition-all duration-300" title="Chat with Support Team">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Mobile Nav Script -->
+  <script>
+    function toggleMobileNav() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>

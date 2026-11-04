@@ -82,6 +82,18 @@
       backdrop-filter: blur(12px);
       border: 1px solid rgba(226, 232, 240, 0.8);
     }
+    /* Smooth FAQ Accordion Transition */
+    .faq-content {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .faq-content.open {
+      grid-template-rows: 1fr;
+    }
+    .faq-content-inner {
+      overflow: hidden;
+    }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased font-sans selection:bg-brand-500 selection:text-white overflow-x-hidden">
@@ -1661,66 +1673,130 @@
   </section>
 
   <!-- FREQUENTLY ASKED QUESTIONS (ACCORDION) -->
-  <section id="faq" class="py-20 bg-white">
+  <section id="faq" class="py-20 sm:py-24 bg-white relative">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <span class="text-brand-600 font-extrabold uppercase text-xs tracking-wider">Clarity &amp; Assurance</span>
-        <h2 class="text-3xl font-extrabold text-slate-900 mt-2 tracking-tight">Frequently Asked Questions</h2>
+      
+      <!-- Section Header -->
+      <div class="text-center mb-12 sm:mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-200/80 text-brand-700 text-xs font-bold uppercase tracking-wider mb-3 shadow-sm">
+          <i class="fa-solid fa-circle-question text-brand-600 text-xs"></i>
+          <span>Clarity &amp; Assurance</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+          Frequently Asked Questions
+        </h2>
+        <p class="mt-3 text-sm sm:text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
+          Everything school administrators, principals, and IT directors need to know about adopting StudentXces for their campus.
+        </p>
       </div>
 
-      <div class="space-y-3.5">
+      <!-- Accordion List -->
+      <div class="space-y-4">
         
-        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all bg-slate-50/50">
-          <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
-            <span>Do we need to buy local physical servers or high-end office computers?</span>
-            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+        <!-- Q1 -->
+        <div class="faq-item bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:border-brand-300 hover:shadow-md transition-all duration-300 overflow-hidden">
+          <button type="button" onclick="toggleFaq(this)" class="w-full p-5 sm:p-6 text-left font-bold text-slate-900 flex justify-between items-center gap-4 text-sm sm:text-base focus:outline-none transition-colors group cursor-pointer" aria-expanded="false">
+            <span class="group-hover:text-brand-700 transition-colors leading-snug">Do we need to buy local physical servers or high-end office computers?</span>
+            <span class="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-brand-50 text-slate-500 group-hover:text-brand-600 flex items-center justify-center shrink-0 faq-icon transition-all duration-300">
+              <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </span>
           </button>
-          <div class="faq-answer px-5 pb-5 text-xs sm:text-sm text-slate-600 hidden leading-relaxed border-t border-slate-200/60 pt-3">
-            Not at all. StudentXces is 100% cloud-hosted. You do not need to invest in expensive hardware or local database servers. You can operate and monitor your entire campus 24/7 through any modern web browser on a laptop, tablet, or mobile phone.
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              <div class="px-5 sm:px-6 pb-6 pt-2 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                Not at all. StudentXces is 100% cloud-hosted. You do not need to invest in expensive hardware or local database servers. You can operate and monitor your entire campus 24/7 through any modern web browser on a laptop, tablet, or mobile phone.
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all bg-slate-50/50">
-          <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
-            <span>Can we use our own custom school domain (e.g. portal.myschool.edu.pk)?</span>
-            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+        <!-- Q2 -->
+        <div class="faq-item bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:border-brand-300 hover:shadow-md transition-all duration-300 overflow-hidden">
+          <button type="button" onclick="toggleFaq(this)" class="w-full p-5 sm:p-6 text-left font-bold text-slate-900 flex justify-between items-center gap-4 text-sm sm:text-base focus:outline-none transition-colors group cursor-pointer" aria-expanded="false">
+            <span class="group-hover:text-brand-700 transition-colors leading-snug">Can we use our own custom school domain (e.g. portal.myschool.edu.pk)?</span>
+            <span class="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-brand-50 text-slate-500 group-hover:text-brand-600 flex items-center justify-center shrink-0 faq-icon transition-all duration-300">
+              <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </span>
           </button>
-          <div class="faq-answer px-5 pb-5 text-xs sm:text-sm text-slate-600 hidden leading-relaxed border-t border-slate-200/60 pt-3">
-            Yes! Our Standard and Pro plans include full custom domain mapping (CNAME) and comprehensive white-labeling. Your school logo, branding colors, and official seal appear across all login portals, parent dashboards, and generated reports.
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              <div class="px-5 sm:px-6 pb-6 pt-2 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                Yes! Our Standard and Pro plans include full custom domain mapping (CNAME) and comprehensive white-labeling. Your school logo, branding colors, and official seal appear across all login portals, parent dashboards, and generated reports.
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all bg-slate-50/50">
-          <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
-            <span>How do the 3-part bank challans and online fee collection work?</span>
-            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+        <!-- Q3 -->
+        <div class="faq-item bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:border-brand-300 hover:shadow-md transition-all duration-300 overflow-hidden">
+          <button type="button" onclick="toggleFaq(this)" class="w-full p-5 sm:p-6 text-left font-bold text-slate-900 flex justify-between items-center gap-4 text-sm sm:text-base focus:outline-none transition-colors group cursor-pointer" aria-expanded="false">
+            <span class="group-hover:text-brand-700 transition-colors leading-snug">How do the 3-part bank challans and online fee collection work?</span>
+            <span class="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-brand-50 text-slate-500 group-hover:text-brand-600 flex items-center justify-center shrink-0 faq-icon transition-all duration-300">
+              <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </span>
           </button>
-          <div class="faq-answer px-5 pb-5 text-xs sm:text-sm text-slate-600 hidden leading-relaxed border-t border-slate-200/60 pt-3">
-            StudentXces produces standardized 3-part challans (Bank Copy, School Copy, Student Copy) compatible with major Pakistani commercial banks (such as Meezan, HBL, Bank Alfalah, and Bank Al Habib) in a single click. It also supports digital collection integrations via 1Link, KuickPay, JazzCash, and Easypaisa.
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              <div class="px-5 sm:px-6 pb-6 pt-2 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                StudentXces produces standardized 3-part challans (Bank Copy, School Copy, Student Copy) compatible with major Pakistani commercial banks (such as Meezan, HBL, Bank Alfalah, and Bank Al Habib) in a single click. It also supports digital collection integrations via 1Link, KuickPay, JazzCash, and Easypaisa.
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all bg-slate-50/50">
-          <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
-            <span>Can our existing student and staff records be imported from Excel?</span>
-            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+        <!-- Q4 -->
+        <div class="faq-item bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:border-brand-300 hover:shadow-md transition-all duration-300 overflow-hidden">
+          <button type="button" onclick="toggleFaq(this)" class="w-full p-5 sm:p-6 text-left font-bold text-slate-900 flex justify-between items-center gap-4 text-sm sm:text-base focus:outline-none transition-colors group cursor-pointer" aria-expanded="false">
+            <span class="group-hover:text-brand-700 transition-colors leading-snug">Can our existing student and staff records be imported from Excel?</span>
+            <span class="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-brand-50 text-slate-500 group-hover:text-brand-600 flex items-center justify-center shrink-0 faq-icon transition-all duration-300">
+              <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </span>
           </button>
-          <div class="faq-answer px-5 pb-5 text-xs sm:text-sm text-slate-600 hidden leading-relaxed border-t border-slate-200/60 pt-3">
-            Yes, definitely. Our platform provides bulk CSV/Excel import tools. During onboarding, our dedicated engineering team migrates all your student rosters, roll numbers, guardian contacts, and past balances free of charge.
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              <div class="px-5 sm:px-6 pb-6 pt-2 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                Yes, definitely. Our platform provides bulk CSV/Excel import tools. During onboarding, our dedicated engineering team migrates all your student rosters, roll numbers, guardian contacts, and past balances free of charge.
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all bg-slate-50/50">
-          <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base">
-            <span>What happens during local power outages or internet interruptions?</span>
-            <i class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform duration-200"></i>
+        <!-- Q5 -->
+        <div class="faq-item bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:border-brand-300 hover:shadow-md transition-all duration-300 overflow-hidden">
+          <button type="button" onclick="toggleFaq(this)" class="w-full p-5 sm:p-6 text-left font-bold text-slate-900 flex justify-between items-center gap-4 text-sm sm:text-base focus:outline-none transition-colors group cursor-pointer" aria-expanded="false">
+            <span class="group-hover:text-brand-700 transition-colors leading-snug">What happens during local power outages or internet interruptions?</span>
+            <span class="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-brand-50 text-slate-500 group-hover:text-brand-600 flex items-center justify-center shrink-0 faq-icon transition-all duration-300">
+              <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </span>
           </button>
-          <div class="faq-answer px-5 pb-5 text-xs sm:text-sm text-slate-600 hidden leading-relaxed border-t border-slate-200/60 pt-3">
-            Because the system is securely hosted in the cloud, campus operations remain uninterrupted. Staff and administration can immediately access the portal using a mobile 4G hotspot or home Wi-Fi. Your records remain safe and immune to local hard drive failures.
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              <div class="px-5 sm:px-6 pb-6 pt-2 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                Because the system is securely hosted in the cloud, campus operations remain uninterrupted. Staff and administration can immediately access the portal using a mobile 4G hotspot or home Wi-Fi. Your records remain safe and immune to local hard drive failures.
+              </div>
+            </div>
           </div>
         </div>
 
       </div>
+
+      <!-- Reassuring Help / Contact Banner -->
+      <div class="mt-12 sm:mt-16 bg-gradient-to-r from-slate-50 via-brand-50/40 to-slate-50 border border-slate-200/90 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+        <div class="flex items-center gap-4 text-left">
+          <div class="w-12 h-12 rounded-2xl bg-brand-600 text-white flex items-center justify-center shrink-0 shadow-md shadow-brand-600/20">
+            <i class="fa-solid fa-headset text-xl"></i>
+          </div>
+          <div>
+            <h3 class="text-sm sm:text-base font-bold text-slate-900">Have a specific question about your school's workflow?</h3>
+            <p class="text-xs sm:text-sm text-slate-500 mt-0.5">Our academic deployment team is available directly on WhatsApp to assist with syllabus, fee voucher formats, or custom setup inquiries.</p>
+          </div>
+        </div>
+        <a href="https://wa.me/923066589195?text=Hello%20StudentXces%20Team!%20I%20have%20a%20question%20about%20the%20ERP." target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs sm:text-sm shadow-md shadow-brand-600/20 hover:shadow-lg transition-all shrink-0">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Ask on WhatsApp</span>
+        </a>
+      </div>
+
     </div>
   </section>
 
@@ -1799,16 +1875,22 @@
 
       </div>
 
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-[11px]">
+      <div class="pt-8 flex flex-col lg:flex-row items-center justify-between gap-4 text-slate-500 text-[11px] text-center lg:text-left">
         <div>
           &copy; 2026 StudentXces Technologies Pakistan. All rights reserved. Built for school excellence.
         </div>
-        <div class="flex items-center gap-4">
-          <a href="#" class="hover:underline">Privacy Policy</a>
-          <span>&bull;</span>
-          <a href="#" class="hover:underline">Terms of Service</a>
-          <span>&bull;</span>
-          <a href="#" class="hover:underline">Security Whitepaper</a>
+        <div class="flex flex-wrap items-center justify-center gap-x-3.5 gap-y-2 text-slate-400">
+          <a href="privacy-policy.html" class="hover:text-brand-400 hover:underline transition-colors">Privacy Policy</a>
+          <span class="text-slate-700 hidden sm:inline">&bull;</span>
+          <a href="terms-and-conditions.html" class="hover:text-brand-400 hover:underline transition-colors">Terms &amp; Conditions</a>
+          <span class="text-slate-700 hidden sm:inline">&bull;</span>
+          <a href="cookie-policy.html" class="hover:text-brand-400 hover:underline transition-colors">Cookie Policy</a>
+          <span class="text-slate-700 hidden sm:inline">&bull;</span>
+          <a href="data-protection-policy.html" class="hover:text-brand-400 hover:underline transition-colors">Data Protection Policy</a>
+          <span class="text-slate-700 hidden sm:inline">&bull;</span>
+          <a href="refund-cancellation-policy.html" class="hover:text-brand-400 hover:underline transition-colors">Refund &amp; Cancellation</a>
+          <span class="text-slate-700 hidden sm:inline">&bull;</span>
+          <a href="security-whitepaper.html" class="hover:text-brand-400 hover:underline transition-colors">Security Whitepaper</a>
         </div>
       </div>
     </div>
@@ -2092,19 +2174,54 @@
 
     // 6. FAQ Accordion Toggle
     function toggleFaq(button) {
-      const item = button.parentElement;
-      const answer = item.querySelector('.faq-answer');
-      const icon = button.querySelector('i');
+      const item = button.closest('.faq-item');
+      if (!item) return;
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.faq-icon i');
+      const iconPill = item.querySelector('.faq-icon');
+      if (!content) return;
+      const isOpen = content.classList.contains('open');
 
-      const isHidden = answer.classList.contains('hidden');
+      // Close all other FAQ items
+      document.querySelectorAll('.faq-item').forEach(otherItem => {
+        if (otherItem !== item) {
+          const otherContent = otherItem.querySelector('.faq-content');
+          const otherIcon = otherItem.querySelector('.faq-icon i');
+          const otherPill = otherItem.querySelector('.faq-icon');
+          const otherBtn = otherItem.querySelector('button');
+          if (otherContent) otherContent.classList.remove('open');
+          if (otherIcon) otherIcon.classList.remove('rotate-180');
+          if (otherPill) {
+            otherPill.classList.remove('bg-brand-100', 'text-brand-700');
+            otherPill.classList.add('bg-slate-100', 'text-slate-500');
+          }
+          otherItem.classList.remove('border-brand-300', 'ring-2', 'ring-brand-500/10', 'shadow-md');
+          otherItem.classList.add('border-slate-200/90', 'shadow-sm');
+          if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
 
-      // Close all others
-      document.querySelectorAll('.faq-answer').forEach(ans => ans.classList.add('hidden'));
-      document.querySelectorAll('.faq-item i').forEach(ic => ic.classList.remove('rotate-180'));
-
-      if (isHidden) {
-        answer.classList.remove('hidden');
-        icon.classList.add('rotate-180');
+      // Toggle current
+      if (isOpen) {
+        content.classList.remove('open');
+        if (icon) icon.classList.remove('rotate-180');
+        if (iconPill) {
+          iconPill.classList.remove('bg-brand-100', 'text-brand-700');
+          iconPill.classList.add('bg-slate-100', 'text-slate-500');
+        }
+        item.classList.remove('border-brand-300', 'ring-2', 'ring-brand-500/10', 'shadow-md');
+        item.classList.add('border-slate-200/90', 'shadow-sm');
+        button.setAttribute('aria-expanded', 'false');
+      } else {
+        content.classList.add('open');
+        if (icon) icon.classList.add('rotate-180');
+        if (iconPill) {
+          iconPill.classList.remove('bg-slate-100', 'text-slate-500');
+          iconPill.classList.add('bg-brand-100', 'text-brand-700');
+        }
+        item.classList.add('border-brand-300', 'ring-2', 'ring-brand-500/10', 'shadow-md');
+        item.classList.remove('border-slate-200/90', 'shadow-sm');
+        button.setAttribute('aria-expanded', 'true');
       }
     }
 
