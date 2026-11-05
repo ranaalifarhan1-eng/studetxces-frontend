@@ -1,0 +1,2044 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All 14 School Management Modules | StudentXces</title>
+  <meta name="description" content="Explore all 14 integrated school management ERP modules in StudentXces. From admissions and 3-part bank challans to cloud-based attendance, exams, and payroll on a single database.">
+  <link rel="canonical" href="https://studentxces.io/modules.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://studentxces.io/modules.html">
+  <meta property="og:title" content="All 14 School Management Modules | StudentXces">
+  <meta property="og:description" content="Explore how each StudentXces module works on a single unified database. Admissions, 3-part bank challans, cloud attendance, exams, and payroll.">
+  <meta property="og:image" content="assets/studentxces_logo.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://studentxces.io/modules.html">
+  <meta property="twitter:title" content="All 14 School Management Modules | StudentXces">
+  <meta property="twitter:description" content="Admissions, 3-part bank challans, cloud attendance, exams, payroll, and WhatsApp alerts on one database.">
+  <meta property="twitter:image" content="assets/studentxces_logo.png">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              200: '#a7f3d0',
+              300: '#6ee7b7',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+              950: '#022c22',
+            },
+            navy: {
+              800: '#0f172a',
+              900: '#0b1324',
+              950: '#060c18',
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          boxShadow: {
+            'glow': '0 0 45px -5px rgba(16, 185, 129, 0.35)',
+            'card': '0 10px 30px -5px rgba(15, 23, 42, 0.05), 0 4px 10px -2px rgba(15, 23, 42, 0.02)',
+            'card-hover': '0 20px 40px -10px rgba(16, 185, 129, 0.15), 0 8px 16px -4px rgba(15, 23, 42, 0.06)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Font Awesome 6 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* Custom Gradients & Patterns */
+    .bg-grid-pattern {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(16, 185, 129, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #065f46 0%, #10b981 50%, #0284c7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+    }
+    /* Smooth FAQ Accordion Transition */
+    .faq-content {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .faq-content.open {
+      grid-template-rows: 1fr;
+    }
+    .faq-content-inner {
+      overflow: hidden;
+    }
+    /* Hide scrollbar for horizontal chip navigation */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Module Tab Panels */
+    .module-panel {
+      animation: tabFadeIn 250ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .module-panel[hidden] {
+      display: none !important;
+    }
+    @keyframes tabFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .module-panel {
+        animation: none !important;
+      }
+    }
+  </style>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "All 14 School Management Modules | StudentXces",
+    "description": "Comprehensive guide to all 14 cloud-based school ERP modules in StudentXces for Pakistani educational institutions.",
+    "url": "https://studentxces.io/modules.html",
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "StudentXces School ERP Modules",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Student Information System" },
+        { "@type": "ListItem", "position": 2, "name": "Fee & Bank Challans" },
+        { "@type": "ListItem", "position": 3, "name": "Cloud-Based Attendance" },
+        { "@type": "ListItem", "position": 4, "name": "Examinations & DMCs" },
+        { "@type": "ListItem", "position": 5, "name": "Staff & Payroll Management" },
+        { "@type": "ListItem", "position": 6, "name": "Timetable & Periods" },
+        { "@type": "ListItem", "position": 7, "name": "Homework & Digital Diary" },
+        { "@type": "ListItem", "position": 8, "name": "Noticeboard & Circulars" },
+        { "@type": "ListItem", "position": 9, "name": "Library Barcode Catalog" },
+        { "@type": "ListItem", "position": 10, "name": "School Van & Transport" },
+        { "@type": "ListItem", "position": 11, "name": "School Inventory & Stock" },
+        { "@type": "ListItem", "position": 12, "name": "Hostel & Mess Management" },
+        { "@type": "ListItem", "position": 13, "name": "50+ Executive Reports" },
+        { "@type": "ListItem", "position": 14, "name": "CNAME Custom Domain & Brand" }
+      ]
+    }
+  }
+  </script>
+</head>
+<body id="top" class="bg-slate-50 text-slate-800 antialiased font-sans selection:bg-brand-500 selection:text-white overflow-x-hidden">
+
+  <!-- TOP TICKER ANNOUNCEMENT -->
+  <div class="bg-navy-950 text-slate-300 py-2.5 px-4 text-xs font-medium border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-brand-500/20 text-brand-400 border border-brand-500/30 shrink-0">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-400 animate-ping"></span>
+          All 14 Modules
+        </span>
+        <span class="text-slate-300 leading-snug">⚡ 100% Unified Cloud ERP Architecture &bull; Admissions, 3-Part Challans &amp; WhatsApp Alerts</span>
+      </div>
+      <div class="flex items-center justify-center gap-4 text-slate-300 text-xs shrink-0">
+        <span class="hidden md:inline text-slate-400"><i class="fa-solid fa-location-dot text-brand-400 mr-1"></i> 14-A, Davis Road, Lahore, Pakistan</span>
+        <a href="https://wa.me/923066589195" target="_blank" rel="noopener" class="hover:text-emerald-400 transition-colors font-semibold text-emerald-400 flex items-center gap-1.5">
+          <i class="fa-brands fa-whatsapp text-sm text-emerald-400"></i> +92 306 6589195
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 transition-all duration-300 shadow-sm" id="main-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center group shrink-0" aria-label="StudentXces Home">
+        <img src="assets/studentxces_logo.png" alt="StudentXces" class="h-10 sm:h-11 lg:h-12 w-auto object-contain group-hover:opacity-90 transition-opacity">
+      </a>
+
+      <!-- Desktop Nav (Exactly 4 links) -->
+      <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold text-slate-600">
+        <a href="index.html" class="hover:text-brand-600 transition-colors">Home</a>
+        <a href="modules.html" class="text-brand-600 font-bold border-b-2 border-brand-600 pb-0.5 transition-colors">Modules</a>
+        <a href="about.html" class="hover:text-brand-600 transition-colors">About Us</a>
+        <a href="contact.html" class="hover:text-brand-600 transition-colors">Contact</a>
+      </nav>
+
+      <!-- CTA Buttons -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="index.html#simulator" class="px-5 py-2.5 rounded-full text-sm font-bold bg-brand-600 hover:bg-brand-700 text-white shadow-md shadow-brand-600/30 hover:shadow-lg hover:shadow-brand-600/40 transform hover:-translate-y-0.5 transition-all flex items-center gap-2">
+          <i class="fa-solid fa-desktop text-xs"></i> Try Live Demo
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button onclick="toggleMobileNav()" class="md:hidden p-2 text-slate-700 hover:text-brand-600 focus:outline-none shrink-0" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars text-2xl" id="nav-toggle-icon"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-5 space-y-4 shadow-xl">
+      <div class="flex items-center pb-3 border-b border-slate-100">
+        <img src="assets/studentxces_logo.png" alt="StudentXces" class="h-9 w-auto object-contain">
+      </div>
+      <a href="index.html" onclick="toggleMobileNav()" class="block text-base font-semibold text-slate-700 hover:text-brand-600">Home</a>
+      <a href="modules.html" onclick="toggleMobileNav()" class="block text-base font-bold text-brand-600">Modules</a>
+      <a href="about.html" onclick="toggleMobileNav()" class="block text-base font-semibold text-slate-700 hover:text-brand-600">About Us</a>
+      <a href="contact.html" onclick="toggleMobileNav()" class="block text-base font-semibold text-slate-700 hover:text-brand-600">Contact</a>
+      <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+        <a href="index.html#simulator" onclick="toggleMobileNav()" class="w-full text-center py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold flex items-center justify-center gap-2 text-sm shadow-md shadow-brand-600/20 transition-colors">
+          <i class="fa-solid fa-desktop text-xs"></i> Try Live Demo
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION (Dark green gradient like "How Your School Transitions") -->
+    <section class="relative pt-18 pb-20 sm:pt-24 sm:pb-28 bg-gradient-to-tr from-brand-950 via-slate-900 to-navy-950 text-white overflow-hidden">
+      <!-- Ambient Glows -->
+      <div class="absolute -top-24 -left-24 w-96 h-96 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-brand-500/15 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-emerald-400/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-brand-300 text-xs font-bold uppercase tracking-wider mb-6 shadow-xs">
+          <i class="fa-solid fa-layer-group text-emerald-400"></i>
+          <span>ALL 14 MODULES</span>
+        </div>
+
+        <!-- H1 -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15] max-w-5xl mx-auto mb-6">
+          One Connected Platform. <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-200">Every School Module You Need.</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-base sm:text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10">
+          Explore how each StudentXces module works, from admissions and 3-part bank challans to cloud attendance, exams, payroll and parent communication, all on a single database.
+        </p>
+
+        <!-- Primary Actions -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 max-w-xl mx-auto">
+          <a href="index.html#simulator" class="w-full sm:w-auto h-12 sm:h-[50px] px-7 rounded-xl text-sm sm:text-base font-bold bg-brand-600 hover:bg-brand-700 text-white shadow-md shadow-brand-600/30 hover:shadow-lg hover:-translate-y-0.5 transition-all inline-flex items-center justify-center gap-2.5">
+            <i class="fa-solid fa-desktop text-emerald-200 text-xs"></i>
+            <span>Try Live Demo</span>
+          </a>
+          <a href="https://wa.me/923066589195?text=Hello%20StudentXces%20Team!%20I%20would%20like%20to%20learn%20more%20about%20the%2014%20school%20ERP%20modules." target="_blank" rel="noopener" class="w-full sm:w-auto h-12 sm:h-[50px] px-7 rounded-xl text-sm sm:text-base font-bold bg-white/10 hover:bg-white/15 text-white border border-white/20 hover:border-white/40 shadow-xs hover:-translate-y-0.5 transition-all inline-flex items-center justify-center gap-2.5">
+            <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i>
+            <span>Chat on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STICKY TAB NAVIGATION BAR -->
+    <nav aria-label="ERP Modules Navigation" class="sticky top-20 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/90 py-3 shadow-xs">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative flex items-center">
+          
+          <!-- Left Arrow & Gradient Edge -->
+          <div id="tab-arrow-left-wrapper" class="hidden absolute left-0 inset-y-0 z-20 flex items-center pr-6 bg-gradient-to-r from-white via-white/95 to-transparent pointer-events-none transition-opacity duration-200">
+            <button type="button" id="tab-arrow-left" tabindex="-1" aria-label="Scroll tabs left" class="pointer-events-auto w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-slate-200 text-slate-700 shadow-card hover:bg-brand-50 hover:text-brand-700 hover:border-brand-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 flex items-center justify-center transition-all duration-150">
+              <i class="fa-solid fa-chevron-left text-xs"></i>
+            </button>
+          </div>
+
+          <!-- Scrollable Tablist -->
+          <div id="modules-tablist" role="tablist" aria-orientation="horizontal" aria-label="School ERP Modules" class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5 w-full">
+            <button type="button" role="tab" id="tab-student-information-system" aria-controls="student-information-system" aria-selected="true" tabindex="0" class="module-tab-btn inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shrink-0 whitespace-nowrap bg-brand-600 text-white shadow-md border border-brand-600">
+              <i class="fa-solid fa-user-graduate text-xs"></i>
+              <span>Student Information System</span>
+            </button>
+            <button type="button" role="tab" id="tab-fee-bank-challans" aria-controls="fee-bank-challans" aria-selected="false" tabindex="-1" class="module-tab-btn inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shrink-0 whitespace-nowrap bg-white text-slate-600 border border-slate-200 hover:border-brand-300 hover:text-brand-700">
+              <i class="fa-solid fa-file-invoice-dollar text-xs"></i>
+              <span>Fee &amp; Bank Challans</span>
+            </button>
+            <button type="button" role="tab" id="tab-cloud-attendance" aria-controls="cloud-attendance" aria-selected="false" tabindex="-1" class="module-tab-btn inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shrink-0 whitespace-nowrap bg-white text-slate-600 border border-slate-200 hover:border-brand-300 hover:text-brand-700">
+              <i class="fa-solid fa-fingerprint text-xs"></i>
+              <span>Cloud Based Attendance</span>
+            </button>
+            <button type="button" role="tab" id="tab-exams-dmcs" aria-controls="exams-dmcs" aria-selected="false" tabindex="-1" class="module-tab-btn inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shrink-0 whitespace-nowrap bg-white text-slate-600 border border-slate-200 hover:border-brand-300 hover:text-brand-700">
+              <i class="fa-solid fa-award text-xs"></i>
+              <span>Examinations &amp; DMCs</span>
+            </button>
+            <button type="button" role="tab" id="tab-staff-payroll" aria-controls="staff-payroll" aria-selected="false" tabindex="-1" class="module-tab-btn inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shrink-0 whitespace-nowrap bg-white text-slate-600 border border-slate-200 hover:border-brand-300 hover:text-brand-700">
+              <i class="fa-solid fa-users-gear text-xs"></i>
+              <span>Staff &amp; Payroll Management</span>
+            </button>
+            <button type="button" role="tab" id="tab-timetable-periods" aria-controls="timetable-periods" aria-selected="false" tabindex="-1" class="module-tab-btn inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shrink-0 whitespace-nowrap bg-white text-slate-600 border border-slate-200 hover:border-brand-300 hover:text-brand-700">
+              <i class="fa-solid fa-calendar-days text-xs"></i>
+              <span>Timetable &amp; Periods</span>
+            </button>
+            <button type="button" role="tab" id="tab-more-modules" aria-controls="more-modules" aria-selected="false" tabindex="-1" class="module-tab-btn inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shrink-0 whitespace-nowrap bg-white text-slate-600 border border-slate-200 hover:border-brand-300 hover:text-brand-700">
+              <i class="fa-solid fa-layer-group text-xs text-brand-600"></i>
+              <span>More Modules</span>
+              <span class="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-brand-50 text-brand-700 border border-brand-200">+8</span>
+            </button>
+          </div>
+
+          <!-- Right Arrow & Gradient Edge -->
+          <div id="tab-arrow-right-wrapper" class="hidden absolute right-0 inset-y-0 z-20 flex items-center pl-6 bg-gradient-to-l from-white via-white/95 to-transparent pointer-events-none transition-opacity duration-200">
+            <button type="button" id="tab-arrow-right" tabindex="-1" aria-label="Scroll tabs right" class="pointer-events-auto w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-slate-200 text-slate-700 shadow-card hover:bg-brand-50 hover:text-brand-700 hover:border-brand-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 flex items-center justify-center transition-all duration-150">
+              <i class="fa-solid fa-chevron-right text-xs"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- MODULE PANELS CONTAINER -->
+    <section id="modules-container" class="py-12 sm:py-16 bg-slate-50 min-h-[680px]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- PANEL 1: Student Information System -->
+        <div id="student-information-system" role="tabpanel" aria-labelledby="tab-student-information-system" tabindex="0" class="module-panel bg-white rounded-3xl border border-slate-200/90 shadow-card p-6 sm:p-10 lg:p-12 transition-all">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            <!-- Text Content (Col 1 to 7) -->
+            <div class="lg:col-span-7 space-y-5">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-xl shrink-0">
+                  <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <div>
+                  <span class="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200">
+                    Academics &bull; Core Module
+                  </span>
+                  <div class="text-xs text-slate-400 font-mono mt-0.5">Module 01 of 14</div>
+                </div>
+              </div>
+
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                Student Information System (SIS)
+              </h2>
+
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Centralize your complete student lifecycle from initial enquiry to alumni status. The SIS manages comprehensive student profiles, NADRA B-Form verification, family groupings, previous school academic history, and automated session-to-session class promotions without duplicating records.
+              </p>
+
+              <!-- Key Features Checklist -->
+              <div>
+                <div class="text-xs font-bold uppercase tracking-wider text-slate-700 mb-3">Key Capabilities</div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm text-slate-700">
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Bulk Excel / CSV import and export</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>NADRA B-Form &amp; CNIC record tracking</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Family &amp; sibling link for fee discounts</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>1-Click session-to-session promotions</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Digital student ID card generator</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Alumni and withdrawal certificate logs</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Who Uses It -->
+              <div class="pt-2 flex flex-wrap items-center gap-2">
+                <span class="text-xs font-semibold text-slate-500 mr-1">Who uses it:</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Principal</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Admission Officer</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Teachers</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Parents</span>
+              </div>
+
+              <!-- Benefit Box -->
+              <div class="p-3.5 rounded-xl bg-brand-50/70 border border-brand-200 text-xs sm:text-sm text-brand-950 flex items-center gap-3">
+                <i class="fa-solid fa-bolt text-brand-600 text-base shrink-0"></i>
+                <div><strong>Primary Benefit:</strong> Eliminates lost paper registers and reduces admission processing time from 40 minutes to under 3 minutes.</div>
+              </div>
+            </div>
+
+            <!-- Visual Mock-Card (Col 8 to 12) -->
+            <div class="lg:col-span-5">
+              <div class="rounded-2xl border border-slate-200/90 bg-gradient-to-b from-slate-50/80 to-white p-5 shadow-sm space-y-4">
+                <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-10 h-10 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm shadow-xs">
+                      MR
+                    </div>
+                    <div>
+                      <div class="text-xs font-bold text-slate-900">Muhammad Rayan Khan</div>
+                      <div class="text-[11px] text-slate-500 font-mono">Reg # 2026-0842 &bull; Class 9-A</div>
+                    </div>
+                  </div>
+                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">
+                    Active
+                  </span>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2 text-[11px]">
+                  <div class="p-2.5 rounded-lg bg-white border border-slate-100">
+                    <span class="text-slate-400 block text-[10px]">Father's Name</span>
+                    <span class="font-semibold text-slate-800">Tariq Mahmood Khan</span>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-white border border-slate-100">
+                    <span class="text-slate-400 block text-[10px]">B-Form Verified</span>
+                    <span class="font-semibold text-emerald-700 flex items-center gap-1">
+                      <i class="fa-solid fa-circle-check text-[10px]"></i> 35202-*******-1
+                    </span>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-white border border-slate-100">
+                    <span class="text-slate-400 block text-[10px]">Family Group</span>
+                    <span class="font-semibold text-slate-800">Tariq (2 Siblings)</span>
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-white border border-slate-100">
+                    <span class="text-slate-400 block text-[10px]">Promotion Status</span>
+                    <span class="font-semibold text-brand-700">Eligible (Session 26-27)</span>
+                  </div>
+                </div>
+
+                <div class="p-2.5 rounded-xl bg-slate-100/80 text-[11px] text-slate-600 flex items-center justify-between">
+                  <span class="font-medium"><i class="fa-solid fa-file-excel text-emerald-600 mr-1.5"></i> Excel Roster Sync</span>
+                  <span class="text-slate-400 font-mono">100% Up to date</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Sequential Navigation -->
+          <div class="mt-8 pt-6 border-t border-slate-200/80 flex items-center justify-end">
+            <button type="button" data-next-tab="fee-bank-challans" class="tab-nav-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-50 hover:bg-brand-100 text-brand-700 font-semibold text-xs sm:text-sm border border-brand-200 hover:border-brand-300 transition-all shadow-xs group">
+              <span>Next: Fee &amp; Bank Challans</span>
+              <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-0.5 transition-transform"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- PANEL 2: Fee & Bank Challans (Alternating: Visual Left, Text Right) -->
+        <div id="fee-bank-challans" role="tabpanel" aria-labelledby="tab-fee-bank-challans" tabindex="0" hidden class="module-panel bg-white rounded-3xl border border-slate-200/90 shadow-card p-6 sm:p-10 lg:p-12 transition-all">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            <!-- Visual Mock-Card (Col 1 to 5 on Desktop) -->
+            <div class="lg:col-span-5 order-2 lg:order-1">
+              <div class="rounded-2xl border border-blue-200/90 bg-gradient-to-b from-blue-50/40 via-white to-white p-5 shadow-sm space-y-3.5">
+                <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                    <span class="text-xs font-bold text-slate-900 font-mono">CHALLAN # 2026-9482</span>
+                  </div>
+                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-100 text-blue-800">
+                    3-Part Bank Copy
+                  </span>
+                </div>
+
+                <div class="grid grid-cols-3 gap-1.5 text-center text-[10px] font-bold text-slate-600 pb-2 border-b border-dashed border-slate-200">
+                  <div class="p-1.5 rounded bg-slate-100">Bank Copy</div>
+                  <div class="p-1.5 rounded bg-slate-100">School Copy</div>
+                  <div class="p-1.5 rounded bg-blue-100 text-blue-800">Student Copy</div>
+                </div>
+
+                <div class="space-y-1.5 text-[11px]">
+                  <div class="flex justify-between text-slate-600">
+                    <span>Monthly Tuition Fee:</span>
+                    <span class="font-bold text-slate-800 font-mono">PKR 4,500</span>
+                  </div>
+                  <div class="flex justify-between text-slate-600">
+                    <span>Computer &amp; Lab Fund:</span>
+                    <span class="font-bold text-slate-800 font-mono">PKR 500</span>
+                  </div>
+                  <div class="flex justify-between text-slate-600">
+                    <span>Previous Arrears:</span>
+                    <span class="font-bold text-slate-400 font-mono">PKR 0</span>
+                  </div>
+                  <div class="pt-2 border-t border-slate-200 flex justify-between font-bold text-slate-900">
+                    <span>Total Payable by Due Date:</span>
+                    <span class="text-emerald-700 font-mono text-xs">PKR 5,000</span>
+                  </div>
+                  <div class="text-[10px] text-amber-700 pt-0.5 flex justify-between">
+                    <span>After Due Date (+ PKR 300 surcharge):</span>
+                    <span class="font-mono font-bold">PKR 5,300</span>
+                  </div>
+                </div>
+
+                <div class="p-2 rounded-lg bg-emerald-50 border border-emerald-200 text-[11px] text-emerald-800 flex items-center justify-between">
+                  <span><i class="fa-brands fa-whatsapp text-emerald-600 mr-1"></i> WhatsApp Fee Notice</span>
+                  <span class="font-bold text-emerald-700">Auto-dispatched</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Text Content (Col 6 to 12 on Desktop) -->
+            <div class="lg:col-span-7 order-1 lg:order-2 space-y-5">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-800 flex items-center justify-center text-xl shrink-0">
+                  <i class="fa-solid fa-file-invoice-dollar"></i>
+                </div>
+                <div>
+                  <span class="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-800 border border-blue-200">
+                    Finance &bull; High Impact
+                  </span>
+                  <div class="text-xs text-slate-400 font-mono mt-0.5">Module 02 of 14</div>
+                </div>
+              </div>
+
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                Fee &amp; Bank Challans
+              </h2>
+
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Generate standardized, audit-ready 3-part bank challans (Bank, School, and Parent copy) in a single click for any Pakistani commercial bank. The fee engine automatically factors in sibling discounts, previous arrears, transport add-ons, and late fee surcharges with zero manual recalculations.
+              </p>
+
+              <!-- Key Features Checklist -->
+              <div>
+                <div class="text-xs font-bold uppercase tracking-wider text-slate-700 mb-3">Key Capabilities</div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm text-slate-700">
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>1-Click printable 3-part custom bank challans</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Automated arrears &amp; late fine calculation</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Automated WhatsApp fee reminders to defaulters</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Real-time bank collection reconciliation</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Head-wise breakdown (Tuition, Lab, Exam, Van)</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Instant printable computerized fee receipts</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Who Uses It -->
+              <div class="pt-2 flex flex-wrap items-center gap-2">
+                <span class="text-xs font-semibold text-slate-500 mr-1">Who uses it:</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Principal</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Accountant</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Bank Partners</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Parents</span>
+              </div>
+
+              <!-- Benefit Box -->
+              <div class="p-3.5 rounded-xl bg-blue-50/70 border border-blue-200 text-xs sm:text-sm text-blue-950 flex items-center gap-3">
+                <i class="fa-solid fa-coins text-blue-600 text-base shrink-0"></i>
+                <div><strong>Primary Benefit:</strong> Accelerates monthly fee recoveries by over 40% through automated WhatsApp reminders and zero ledger errors.</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Sequential Navigation -->
+          <div class="mt-8 pt-6 border-t border-slate-200/80 flex items-center justify-between gap-4">
+            <button type="button" data-prev-tab="student-information-system" class="tab-nav-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs sm:text-sm border border-slate-200 transition-all shadow-xs group">
+              <i class="fa-solid fa-arrow-left text-xs group-hover:-translate-x-0.5 transition-transform"></i>
+              <span>Previous: Student Information</span>
+            </button>
+            <button type="button" data-next-tab="cloud-attendance" class="tab-nav-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-50 hover:bg-brand-100 text-brand-700 font-semibold text-xs sm:text-sm border border-brand-200 hover:border-brand-300 transition-all shadow-xs group">
+              <span>Next: Cloud Attendance</span>
+              <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-0.5 transition-transform"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- PANEL 3: Cloud-Based Attendance (Normal: Text Left, Visual Right) -->
+        <div id="cloud-attendance" role="tabpanel" aria-labelledby="tab-cloud-attendance" tabindex="0" hidden class="module-panel bg-white rounded-3xl border border-slate-200/90 shadow-card p-6 sm:p-10 lg:p-12 transition-all">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            <!-- Text Content (Col 1 to 7) -->
+            <div class="lg:col-span-7 space-y-5">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl shrink-0">
+                  <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <div>
+                  <span class="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200">
+                    Academics &bull; Daily Operation
+                  </span>
+                  <div class="text-xs text-slate-400 font-mono mt-0.5">Module 03 of 14</div>
+                </div>
+              </div>
+
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                Cloud-Based Attendance
+              </h2>
+
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Mark class-wise and section-wise student attendance instantly from any smartphone, laptop, or office tablet without relying on vulnerable local machines. Absentees trigger immediate automated WhatsApp &amp; SMS alerts to parents, ensuring institutional transparency and high attendance accountability.
+              </p>
+
+              <!-- Key Features Checklist -->
+              <div>
+                <div class="text-xs font-bold uppercase tracking-wider text-slate-700 mb-3">Key Capabilities</div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm text-slate-700">
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Mark attendance from any web browser or mobile</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Automated real-time WhatsApp &amp; SMS notifications</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Section-wise monthly attendance percentage sheets</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Medical and planned leave application approvals</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Examination eligibility threshold tracking (75%)</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>100% Cloud-hosted &bull; Zero hardware dependency</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Who Uses It -->
+              <div class="pt-2 flex flex-wrap items-center gap-2">
+                <span class="text-xs font-semibold text-slate-500 mr-1">Who uses it:</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Class Teachers</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Principal</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Parents</span>
+              </div>
+
+              <!-- Benefit Box -->
+              <div class="p-3.5 rounded-xl bg-amber-50/70 border border-amber-200 text-xs sm:text-sm text-amber-950 flex items-center gap-3">
+                <i class="fa-solid fa-paper-plane text-amber-600 text-base shrink-0"></i>
+                <div><strong>Primary Benefit:</strong> Notifies guardians before 9:00 AM regarding unannounced absences, building deep institutional trust with parents.</div>
+              </div>
+            </div>
+
+            <!-- Visual Mock-Card (Col 8 to 12) -->
+            <div class="lg:col-span-5">
+              <div class="rounded-2xl border border-slate-200/90 bg-gradient-to-b from-slate-50/80 to-white p-5 shadow-sm space-y-4">
+                <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+                  <div>
+                    <div class="text-xs font-bold text-slate-900">Class 10-B Daily Roll Call</div>
+                    <div class="text-[11px] text-slate-500 font-mono">Today &bull; 34 Total Enrolled</div>
+                  </div>
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">
+                    94.1% Present
+                  </span>
+                </div>
+
+                <div class="grid grid-cols-3 gap-2 text-center">
+                  <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200">
+                    <div class="text-xl font-black text-emerald-700">32</div>
+                    <div class="text-[10px] uppercase font-bold text-emerald-800">Present</div>
+                  </div>
+                  <div class="p-3 rounded-xl bg-rose-50 border border-rose-200">
+                    <div class="text-xl font-black text-rose-700">1</div>
+                    <div class="text-[10px] uppercase font-bold text-rose-800">Absent</div>
+                  </div>
+                  <div class="p-3 rounded-xl bg-amber-50 border border-amber-200">
+                    <div class="text-xl font-black text-amber-700">1</div>
+                    <div class="text-[10px] uppercase font-bold text-amber-800">Leave</div>
+                  </div>
+                </div>
+
+                <div class="p-3 rounded-xl bg-white border border-slate-200/80 text-[11px] space-y-1.5">
+                  <div class="font-bold text-slate-800 flex items-center justify-between">
+                    <span>Absentee Alert Log:</span>
+                    <span class="text-[10px] text-slate-400 font-mono">08:24 AM</span>
+                  </div>
+                  <div class="text-slate-600 flex items-center justify-between">
+                    <span>Hamza Bilal (Roll #19)</span>
+                    <span class="text-emerald-700 font-semibold flex items-center gap-1">
+                      <i class="fa-brands fa-whatsapp"></i> WhatsApp Sent
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Sequential Navigation -->
+          <div class="mt-8 pt-6 border-t border-slate-200/80 flex items-center justify-between gap-4">
+            <button type="button" data-prev-tab="fee-bank-challans" class="tab-nav-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs sm:text-sm border border-slate-200 transition-all shadow-xs group">
+              <i class="fa-solid fa-arrow-left text-xs group-hover:-translate-x-0.5 transition-transform"></i>
+              <span>Previous: Fee &amp; Challans</span>
+            </button>
+            <button type="button" data-next-tab="exams-dmcs" class="tab-nav-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-50 hover:bg-brand-100 text-brand-700 font-semibold text-xs sm:text-sm border border-brand-200 hover:border-brand-300 transition-all shadow-xs group">
+              <span>Next: Examinations &amp; DMCs</span>
+              <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-0.5 transition-transform"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- PANEL 4: Examinations & DMCs (Alternating: Visual Left, Text Right) -->
+        <div id="exams-dmcs" role="tabpanel" aria-labelledby="tab-exams-dmcs" tabindex="0" hidden class="module-panel bg-white rounded-3xl border border-slate-200/90 shadow-card p-6 sm:p-10 lg:p-12 transition-all">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            <!-- Visual Mock-Card (Col 1 to 5 on Desktop) -->
+            <div class="lg:col-span-5 order-2 lg:order-1">
+              <div class="rounded-2xl border border-rose-200/90 bg-gradient-to-b from-rose-50/30 via-white to-white p-5 shadow-sm space-y-3.5">
+                <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+                  <div>
+                    <span class="text-[10px] font-mono text-slate-400 uppercase">Mid-Term Examination</span>
+                    <div class="text-xs font-bold text-slate-900">Detailed Marks Certificate (DMC)</div>
+                  </div>
+                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-rose-100 text-rose-800">
+                    1st Position
+                  </span>
+                </div>
+
+                <div class="space-y-1.5 text-[11px]">
+                  <div class="flex justify-between py-1 border-b border-slate-100 text-slate-600">
+                    <span>Mathematics:</span>
+                    <span class="font-bold text-slate-900 font-mono">98 / 100 <span class="text-emerald-600">(A+)</span></span>
+                  </div>
+                  <div class="flex justify-between py-1 border-b border-slate-100 text-slate-600">
+                    <span>Physics (Theory + Practical):</span>
+                    <span class="font-bold text-slate-900 font-mono">92 / 100 <span class="text-emerald-600">(A+)</span></span>
+                  </div>
+                  <div class="flex justify-between py-1 border-b border-slate-100 text-slate-600">
+                    <span>English Literature:</span>
+                    <span class="font-bold text-slate-900 font-mono">88 / 100 <span class="text-emerald-600">(A)</span></span>
+                  </div>
+                  <div class="flex justify-between py-1 text-slate-600">
+                    <span>Urdu Compulsory:</span>
+                    <span class="font-bold text-slate-900 font-mono">86 / 100 <span class="text-emerald-600">(A)</span></span>
+                  </div>
+                  <div class="pt-2 border-t-2 border-slate-200 flex justify-between font-bold text-slate-900 text-xs">
+                    <span>Aggregate Score:</span>
+                    <span class="text-brand-700 font-mono">364 / 400 (91.0%)</span>
+                  </div>
+                </div>
+
+                <div class="p-2 rounded-lg bg-slate-100 text-[10px] text-slate-600 flex items-center justify-between">
+                  <span><i class="fa-solid fa-certificate text-rose-600 mr-1"></i> BISE / Cambridge Scale</span>
+                  <span class="font-mono text-emerald-700 font-bold">Grade: A+ (Pass)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Text Content (Col 6 to 12 on Desktop) -->
+            <div class="lg:col-span-7 order-1 lg:order-2 space-y-5">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-2xl bg-rose-100 text-rose-800 flex items-center justify-center text-xl shrink-0">
+                  <i class="fa-solid fa-award"></i>
+                </div>
+                <div>
+                  <span class="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-800 border border-rose-200">
+                    Academics &bull; Grading &amp; Assessment
+                  </span>
+                  <div class="text-xs text-slate-400 font-mono mt-0.5">Module 04 of 14</div>
+                </div>
+              </div>
+
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                Examinations &amp; DMCs
+              </h2>
+
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Streamline exam schedules, roll number slips, and subject mark entry. StudentXces instantly calculates term-wise averages, class rank positions, and grade criteria (conforming to BISE, FBISE, or Cambridge O/A Level scales) and generates tamper-resistant, print-ready Detailed Marks Certificates (DMCs).
+              </p>
+
+              <!-- Key Features Checklist -->
+              <div>
+                <div class="text-xs font-bold uppercase tracking-wider text-slate-700 mb-3">Key Capabilities</div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm text-slate-700">
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Configurable BISE, FBISE &amp; Cambridge grading scales</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Automated student position &amp; class rank calculation</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Instant printable report cards &amp; DMC certificates</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Batch mark sheet entry portal for subject teachers</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Roll number slips with room &amp; seat allocation</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Direct result publication to parent mobile portals</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Who Uses It -->
+              <div class="pt-2 flex flex-wrap items-center gap-2">
+                <span class="text-xs font-semibold text-slate-500 mr-1">Who uses it:</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Exam Controller</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Teachers</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Principal</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Students</span>
+              </div>
+
+              <!-- Benefit Box -->
+              <div class="p-3.5 rounded-xl bg-rose-50/70 border border-rose-200 text-xs sm:text-sm text-rose-950 flex items-center gap-3">
+                <i class="fa-solid fa-trophy text-rose-600 text-base shrink-0"></i>
+                <div><strong>Primary Benefit:</strong> Saves weeks of manual mark tabulation and compiles complete institutional results in under two minutes.</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Sequential Navigation -->
+          <div class="mt-8 pt-6 border-t border-slate-200/80 flex items-center justify-between gap-4">
+            <button type="button" data-prev-tab="cloud-attendance" class="tab-nav-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs sm:text-sm border border-slate-200 transition-all shadow-xs group">
+              <i class="fa-solid fa-arrow-left text-xs group-hover:-translate-x-0.5 transition-transform"></i>
+              <span>Previous: Cloud Attendance</span>
+            </button>
+            <button type="button" data-next-tab="staff-payroll" class="tab-nav-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-50 hover:bg-brand-100 text-brand-700 font-semibold text-xs sm:text-sm border border-brand-200 hover:border-brand-300 transition-all shadow-xs group">
+              <span>Next: Staff &amp; Payroll</span>
+              <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-0.5 transition-transform"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- PANEL 5: Staff & Payroll Management (Normal: Text Left, Visual Right) -->
+        <div id="staff-payroll" role="tabpanel" aria-labelledby="tab-staff-payroll" tabindex="0" hidden class="module-panel bg-white rounded-3xl border border-slate-200/90 shadow-card p-6 sm:p-10 lg:p-12 transition-all">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            <!-- Text Content (Col 1 to 7) -->
+            <div class="lg:col-span-7 space-y-5">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-800 flex items-center justify-center text-xl shrink-0">
+                  <i class="fa-solid fa-users-gear"></i>
+                </div>
+                <div>
+                  <span class="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-purple-50 text-purple-800 border border-purple-200">
+                    HR &bull; Administration
+                  </span>
+                  <div class="text-xs text-slate-400 font-mono mt-0.5">Module 05 of 14</div>
+                </div>
+              </div>
+
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                Staff &amp; Payroll Management
+              </h2>
+
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Maintain faculty qualifications, appointment contracts, and departmental designations. Calculate monthly salaries automatically by factoring in unapproved leaves, advances, bonuses, and tax deductions, generating bank transfer disbursement sheets in one click.
+              </p>
+
+              <!-- Key Features Checklist -->
+              <div>
+                <div class="text-xs font-bold uppercase tracking-wider text-slate-700 mb-3">Key Capabilities</div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm text-slate-700">
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Teacher qualifications, degree &amp; CNIC files</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Automated leave deduction &amp; salary computation</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Advance salary management &amp; installments</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Printable monthly bank disbursement advice</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Individual computerized salary pay slips</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Role-based login permissions and access tiers</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Who Uses It -->
+              <div class="pt-2 flex flex-wrap items-center gap-2">
+                <span class="text-xs font-semibold text-slate-500 mr-1">Who uses it:</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Principal</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">HR Manager</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Accountant</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Teachers</span>
+              </div>
+
+              <!-- Benefit Box -->
+              <div class="p-3.5 rounded-xl bg-purple-50/70 border border-purple-200 text-xs sm:text-sm text-purple-950 flex items-center gap-3">
+                <i class="fa-solid fa-shield-check text-purple-600 text-base shrink-0"></i>
+                <div><strong>Primary Benefit:</strong> Eliminates end-of-month salary disputes and handles 100+ faculty payslips in under 5 minutes.</div>
+              </div>
+            </div>
+
+            <!-- Visual Mock-Card (Col 8 to 12) -->
+            <div class="lg:col-span-5">
+              <div class="rounded-2xl border border-slate-200/90 bg-gradient-to-b from-slate-50/80 to-white p-5 shadow-sm space-y-3.5">
+                <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-9 h-9 rounded-xl bg-purple-600 text-white font-bold flex items-center justify-center text-xs">
+                      SF
+                    </div>
+                    <div>
+                      <div class="text-xs font-bold text-slate-900">Senior Science Faculty</div>
+                      <div class="text-[10px] text-slate-500 font-mono">Emp # 1042 &bull; Monthly Slip</div>
+                    </div>
+                  </div>
+                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">
+                    Disbursed
+                  </span>
+                </div>
+
+                <div class="space-y-1.5 text-[11px]">
+                  <div class="flex justify-between text-slate-600">
+                    <span>Basic Salary:</span>
+                    <span class="font-bold text-slate-800 font-mono">PKR 55,000</span>
+                  </div>
+                  <div class="flex justify-between text-slate-600">
+                    <span>Teaching Allowance:</span>
+                    <span class="font-bold text-slate-800 font-mono">+ PKR 5,000</span>
+                  </div>
+                  <div class="flex justify-between text-slate-600">
+                    <span>Unpaid Leave Deductions (1 Day):</span>
+                    <span class="font-bold text-rose-600 font-mono">- PKR 2,000</span>
+                  </div>
+                  <div class="pt-2 border-t border-slate-200 flex justify-between font-bold text-slate-900 text-xs">
+                    <span>Net Disbursed:</span>
+                    <span class="text-purple-700 font-mono">PKR 58,000</span>
+                  </div>
+                </div>
+
+                <div class="p-2 rounded-lg bg-slate-100 text-[11px] text-slate-600 flex items-center justify-between">
+                  <span><i class="fa-solid fa-building-columns text-purple-600 mr-1.5"></i> Bank Transfer Sheet</span>
+                  <span class="font-mono text-emerald-700 font-semibold">Ready for Export</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Sequential Navigation -->
+          <div class="mt-8 pt-6 border-t border-slate-200/80 flex items-center justify-between gap-4">
+            <button type="button" data-prev-tab="exams-dmcs" class="tab-nav-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs sm:text-sm border border-slate-200 transition-all shadow-xs group">
+              <i class="fa-solid fa-arrow-left text-xs group-hover:-translate-x-0.5 transition-transform"></i>
+              <span>Previous: Examinations &amp; DMCs</span>
+            </button>
+            <button type="button" data-next-tab="timetable-periods" class="tab-nav-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-50 hover:bg-brand-100 text-brand-700 font-semibold text-xs sm:text-sm border border-brand-200 hover:border-brand-300 transition-all shadow-xs group">
+              <span>Next: Timetable &amp; Periods</span>
+              <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-0.5 transition-transform"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- PANEL 6: Timetable & Periods (Alternating: Visual Left, Text Right) -->
+        <div id="timetable-periods" role="tabpanel" aria-labelledby="tab-timetable-periods" tabindex="0" hidden class="module-panel bg-white rounded-3xl border border-slate-200/90 shadow-card p-6 sm:p-10 lg:p-12 transition-all">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            <!-- Visual Mock-Card (Col 1 to 5 on Desktop) -->
+            <div class="lg:col-span-5 order-2 lg:order-1">
+              <div class="rounded-2xl border border-cyan-200/90 bg-gradient-to-b from-cyan-50/30 via-white to-white p-5 shadow-sm space-y-3">
+                <div class="flex items-center justify-between pb-2 border-b border-slate-200">
+                  <div>
+                    <span class="text-[10px] font-mono text-slate-400 uppercase">Period Schedule</span>
+                    <div class="text-xs font-bold text-slate-900">Class 9-A Schedule &bull; Mon</div>
+                  </div>
+                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-cyan-100 text-cyan-800">
+                    0 Conflicts
+                  </span>
+                </div>
+
+                <div class="space-y-1.5 text-[11px]">
+                  <div class="p-2 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-between">
+                    <div>
+                      <span class="font-bold text-slate-800">Period 1 (08:00 - 08:45)</span>
+                      <div class="text-[10px] text-slate-500">Physics &bull; Room 12</div>
+                    </div>
+                    <span class="px-2 py-0.5 rounded bg-cyan-50 text-cyan-800 font-mono text-[10px]">Sir Asad</span>
+                  </div>
+                  <div class="p-2 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-between">
+                    <div>
+                      <span class="font-bold text-slate-800">Period 2 (08:45 - 09:30)</span>
+                      <div class="text-[10px] text-slate-500">Mathematics &bull; Room 12</div>
+                    </div>
+                    <span class="px-2 py-0.5 rounded bg-cyan-50 text-cyan-800 font-mono text-[10px]">Miss Hira</span>
+                  </div>
+                  <div class="p-2 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-between">
+                    <div>
+                      <span class="font-bold text-slate-800">Period 3 (09:30 - 10:15)</span>
+                      <div class="text-[10px] text-slate-500">Chemistry Lab</div>
+                    </div>
+                    <span class="px-2 py-0.5 rounded bg-cyan-50 text-cyan-800 font-mono text-[10px]">Sir Kamran</span>
+                  </div>
+                </div>
+
+                <div class="p-2 rounded-lg bg-emerald-50 text-[10px] text-emerald-800 flex items-center justify-between">
+                  <span><i class="fa-solid fa-check-double text-emerald-600 mr-1"></i> Conflict Detection</span>
+                  <span class="font-bold text-emerald-700">Zero Overlaps</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Text Content (Col 6 to 12 on Desktop) -->
+            <div class="lg:col-span-7 order-1 lg:order-2 space-y-5">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-2xl bg-cyan-100 text-cyan-800 flex items-center justify-center text-xl shrink-0">
+                  <i class="fa-solid fa-calendar-days"></i>
+                </div>
+                <div>
+                  <span class="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-cyan-50 text-cyan-800 border border-cyan-200">
+                    Academics &bull; Scheduling
+                  </span>
+                  <div class="text-xs text-slate-400 font-mono mt-0.5">Module 06 of 14</div>
+                </div>
+              </div>
+
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                Timetable &amp; Periods
+              </h2>
+
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Design clean, conflict-free weekly class timetables and period breakdowns. Built-in algorithmic conflict checking guarantees that no teacher is assigned to two classrooms simultaneously and instantly handles substitute teacher arrangements.
+              </p>
+
+              <!-- Key Features Checklist -->
+              <div>
+                <div class="text-xs font-bold uppercase tracking-wider text-slate-700 mb-3">Key Capabilities</div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm text-slate-700">
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Automatic teacher double-booking collision prevention</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Class-wise, section-wise &amp; room-wise timetable views</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Teacher-specific personal weekly period rosters</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>1-Click printable master schedule for the staff room</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Substitute teacher re-allocation workflow</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-brand-600 text-xs shrink-0"></i>
+                    <span>Synchronized timetable display on student portal</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Who Uses It -->
+              <div class="pt-2 flex flex-wrap items-center gap-2">
+                <span class="text-xs font-semibold text-slate-500 mr-1">Who uses it:</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Academic Incharge</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Principal</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Teachers</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Students</span>
+              </div>
+
+              <!-- Benefit Box -->
+              <div class="p-3.5 rounded-xl bg-cyan-50/70 border border-cyan-200 text-xs sm:text-sm text-cyan-950 flex items-center gap-3">
+                <i class="fa-solid fa-calendar-check text-cyan-600 text-base shrink-0"></i>
+                <div><strong>Primary Benefit:</strong> Eliminates teacher scheduling collisions and makes semester timetable overhauls instantaneous.</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Sequential Navigation -->
+          <div class="mt-8 pt-6 border-t border-slate-200/80 flex items-center justify-between gap-4">
+            <button type="button" data-prev-tab="staff-payroll" class="tab-nav-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs sm:text-sm border border-slate-200 transition-all shadow-xs group">
+              <i class="fa-solid fa-arrow-left text-xs group-hover:-translate-x-0.5 transition-transform"></i>
+              <span>Previous: Staff &amp; Payroll</span>
+            </button>
+            <button type="button" data-next-tab="more-modules" class="tab-nav-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-50 hover:bg-brand-100 text-brand-700 font-semibold text-xs sm:text-sm border border-brand-200 hover:border-brand-300 transition-all shadow-xs group">
+              <span>Next: More Modules (8)</span>
+              <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-0.5 transition-transform"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- PANEL 7: More Modules (Compact Grid of 8 remaining modules) -->
+        <div id="more-modules" role="tabpanel" aria-labelledby="tab-more-modules" tabindex="0" hidden class="module-panel bg-white rounded-3xl border border-slate-200/90 shadow-card p-6 sm:p-10 lg:p-12 transition-all">
+          
+          <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+            <span class="text-brand-600 font-extrabold uppercase text-xs tracking-wider">Extended Operational Tools</span>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mt-2 mb-3 tracking-tight">
+              And Even More, Built In
+            </h2>
+            <p class="text-slate-600 text-xs sm:text-sm sm:leading-relaxed">
+              Every module shares the same database, so nothing needs to be entered twice.
+            </p>
+          </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Card 1: Homework & Digital Diary -->
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/60 hover:bg-white hover:border-brand-300 shadow-sm hover:shadow-card transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center text-lg mb-4">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 mb-1.5">Homework &amp; Digital Diary</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                Subject teachers post homework, worksheets, and syllabus outlines directly to the student and parent mobile portals.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200/80 flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-[10px] font-semibold text-slate-600">Zero Paper Costs</span>
+              <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-[10px] font-semibold text-brand-700">Parent Sync</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Noticeboard & Circulars -->
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/60 hover:bg-white hover:border-brand-300 shadow-sm hover:shadow-card transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-lg mb-4">
+                <i class="fa-solid fa-bullhorn"></i>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 mb-1.5">Noticeboard &amp; Circulars</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                Broadcast sudden holiday announcements, exam circulars, and sports gala events instantly without expensive manual printouts.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200/80 flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-[10px] font-semibold text-slate-600">Push Delivery</span>
+              <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-[10px] font-semibold text-brand-700">Digital Notices</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Library Barcode Catalog -->
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/60 hover:bg-white hover:border-brand-300 shadow-sm hover:shadow-card transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-lg mb-4">
+                <i class="fa-solid fa-book-bookmark"></i>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 mb-1.5">Library Barcode Catalog</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                Complete cataloging of books, author registers, issue/return histories, barcode scanner compatibility, and automated late fine calculation.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200/80 flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-[10px] font-semibold text-slate-600">Barcode Ready</span>
+              <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-[10px] font-semibold text-brand-700">Auto Late Fine</span>
+            </div>
+          </div>
+
+          <!-- Card 4: School Van & Transport -->
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/60 hover:bg-white hover:border-brand-300 shadow-sm hover:shadow-card transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-700 flex items-center justify-center text-lg mb-4">
+                <i class="fa-solid fa-bus"></i>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 mb-1.5">School Van &amp; Transport</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                Manage school buses, van drivers, passenger student rosters, stop-wise fee billing, and driver document renewals.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200/80 flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-[10px] font-semibold text-slate-600">Route Rosters</span>
+              <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-[10px] font-semibold text-brand-700">Auto Fee Add-on</span>
+            </div>
+          </div>
+
+          <!-- Card 5: School Inventory & Stock -->
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/60 hover:bg-white hover:border-brand-300 shadow-sm hover:shadow-card transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-lime-100 text-lime-700 flex items-center justify-center text-lg mb-4">
+                <i class="fa-solid fa-boxes-stacked"></i>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 mb-1.5">School Inventory &amp; Stock</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                Control laboratory supplies, uniform stocks, library furniture, school stationery purchases, and branch asset audits.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200/80 flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-[10px] font-semibold text-slate-600">Stock Warnings</span>
+              <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-[10px] font-semibold text-brand-700">Asset Audit</span>
+            </div>
+          </div>
+
+          <!-- Card 6: Hostel & Mess Management -->
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/60 hover:bg-white hover:border-brand-300 shadow-sm hover:shadow-card transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-pink-100 text-pink-700 flex items-center justify-center text-lg mb-4">
+                <i class="fa-solid fa-bed"></i>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 mb-1.5">Hostel &amp; Mess Management</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                Track room numbers, bed allocations, warden shift logs, mess charges, and visitor permissions for boarding schools.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200/80 flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-[10px] font-semibold text-slate-600">Bed Allocation</span>
+              <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-[10px] font-semibold text-brand-700">Mess Billing</span>
+            </div>
+          </div>
+
+          <!-- Card 7: 50+ Executive Reports -->
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/60 hover:bg-white hover:border-brand-300 shadow-sm hover:shadow-card transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-lg mb-4">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 mb-1.5">50+ Executive Reports</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                Comprehensive financial audit reports, monthly cash collection summaries, fee defalcation trackers, and board result analytics in Excel &amp; PDF.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200/80 flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-[10px] font-semibold text-slate-600">Audit Reports</span>
+              <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-[10px] font-semibold text-brand-700">PDF / Excel Export</span>
+            </div>
+          </div>
+
+          <!-- Card 8: CNAME Custom Domain & Brand -->
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/60 hover:bg-white hover:border-brand-300 shadow-sm hover:shadow-card transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center text-lg mb-4">
+                <i class="fa-solid fa-certificate"></i>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 mb-1.5">CNAME Custom Domain &amp; Brand</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">
+                White-label your portal under your official school address (e.g. portal.beaconhouse.edu.pk) with your emblem, custom login page, and color scheme.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200/80 flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-[10px] font-semibold text-slate-600">Custom Domain</span>
+              <span class="px-2 py-0.5 rounded bg-white border border-slate-200 text-[10px] font-semibold text-brand-700">White-Label</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom Sequential Navigation (Tab 7 has Prev only) -->
+        <div class="mt-10 pt-6 border-t border-slate-200/80 flex items-center justify-between flex-wrap gap-4">
+          <button type="button" data-prev-tab="timetable-periods" class="tab-nav-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs sm:text-sm border border-slate-200 transition-all shadow-xs group">
+            <i class="fa-solid fa-arrow-left text-xs group-hover:-translate-x-0.5 transition-transform"></i>
+            <span>Previous: Timetable &amp; Periods</span>
+          </button>
+          <a href="#plan-availability" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-50 hover:bg-brand-100 text-brand-700 font-semibold text-xs sm:text-sm border border-brand-200 hover:border-brand-300 transition-all shadow-xs">
+            <span>View Plan Availability</span>
+            <i class="fa-solid fa-arrow-down text-xs"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+    <!-- HOW THE MODULES WORK TOGETHER STRIP (4-Step Flow) -->
+    <section class="py-16 sm:py-20 bg-slate-50 border-t border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-brand-600 font-extrabold uppercase text-xs tracking-wider">Zero Redundant Entry</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2 mb-3 tracking-tight">
+            How The Modules Work Together
+          </h2>
+          <p class="text-slate-500 text-xs sm:text-sm">
+            Information flows seamlessly from module to module so your administrative team never re-types student details.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Step 1 -->
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative group hover:shadow-card transition-all">
+            <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center font-black text-sm mb-4 border border-brand-200">
+              01
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">1. Admit Student</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Student bio-data is captured once in the SIS with roll number, class assignment, and guardian contact details.
+            </p>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-brand-700 flex items-center gap-1">
+              <i class="fa-solid fa-arrow-right text-[10px]"></i> Flows to Fees &amp; Class Roster
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative group hover:shadow-card transition-all">
+            <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center font-black text-sm mb-4 border border-blue-200">
+              02
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">2. Generate Fee Challan</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Finance automatically compiles the student's tuition, sibling concession, and transport add-ons into a 3-part bank voucher.
+            </p>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-blue-700 flex items-center gap-1">
+              <i class="fa-solid fa-arrow-right text-[10px]"></i> WhatsApp Notice Dispatched
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative group hover:shadow-card transition-all">
+            <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center font-black text-sm mb-4 border border-amber-200">
+              03
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">3. Mark Attendance</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Teachers mark daily attendance from their phone. Absentees receive immediate alert messages without paper logs.
+            </p>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-amber-700 flex items-center gap-1">
+              <i class="fa-solid fa-arrow-right text-[10px]"></i> Syncs to Exam Eligibility
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative group hover:shadow-card transition-all">
+            <div class="w-10 h-10 rounded-xl bg-rose-50 text-rose-700 flex items-center justify-center font-black text-sm mb-4 border border-rose-200">
+              04
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">4. Publish Results</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Exams compile mark sheets into printable DMCs, calculate student ranks, and push terminal grades to parent dashboards.
+            </p>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-semibold text-rose-700 flex items-center gap-1">
+              <i class="fa-solid fa-circle-check text-[10px]"></i> Comprehensive Final DMC
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PLAN AVAILABILITY SECTION -->
+    <section id="plan-availability" class="scroll-mt-36 py-16 sm:py-20 bg-white border-t border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span class="text-brand-600 font-extrabold uppercase text-xs tracking-wider">Plan Architecture</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 mb-4 tracking-tight">
+            Module Availability Across Plans
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Choose the subscription tier that best matches your campus size and management complexity. Start with core operations and upgrade at any time.
+          </p>
+        </div>
+
+        <!-- 3 Plan Summary Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12">
+          
+          <!-- Plan 1: Core -->
+          <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-sm hover:border-brand-300 transition-all flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500 block mb-2">FOR SMALL SCHOOLS</span>
+              <h3 class="text-xl font-black text-slate-900">Core Plan</h3>
+              <p class="text-xs text-slate-500 mt-1 mb-5">Essential tools for preschools, academies, and small single campuses.</p>
+              
+              <div class="p-3 rounded-xl bg-white border border-slate-200 mb-5">
+                <div class="text-2xl font-black text-brand-700">9 Core Modules</div>
+                <div class="text-[11px] text-slate-500 font-medium">Included in base subscription</div>
+              </div>
+
+              <ul class="space-y-2 text-xs text-slate-700">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Student Information System (SIS)</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Fee &amp; 3-Part Bank Challans</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Cloud-Based Attendance</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Examinations &amp; DMCs</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Homework &amp; Digital Diary</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Noticeboard &amp; Circulars</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Parent &amp; Student Portal</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Basic Financial &amp; Attendance Reports</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> WhatsApp Absentee &amp; Fee Alerts</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 pt-4 border-t border-slate-200 text-xs text-slate-500">
+              Minimum 3-month billing term
+            </div>
+          </div>
+
+          <!-- Plan 2: Growth (Highlighted) -->
+          <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-brand-50/70 via-white to-white border-2 border-brand-500 shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between relative">
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-brand-600 text-white text-[10px] font-extrabold uppercase tracking-wider shadow-sm">
+              Most Popular in Pakistan
+            </div>
+
+            <div>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-700 block mb-2 mt-1">FOR GROWING SCHOOLS</span>
+              <h3 class="text-xl font-black text-slate-900">Growth Plan</h3>
+              <p class="text-xs text-slate-500 mt-1 mb-5">Comprehensive management for established high schools and multi-section campuses.</p>
+              
+              <div class="p-3 rounded-xl bg-brand-50 border border-brand-200 mb-5">
+                <div class="text-2xl font-black text-brand-700">13 Modules Included</div>
+                <div class="text-[11px] text-brand-800 font-medium">Adds HR, Timetable, Transport &amp; Library</div>
+              </div>
+
+              <ul class="space-y-2 text-xs text-slate-700">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-600"></i> <strong>All 9 Core Modules</strong></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-600"></i> <strong>Staff &amp; Payroll Management</strong></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-600"></i> <strong>Timetable &amp; Period Conflict Planner</strong></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-600"></i> <strong>Library Barcode Cataloging</strong></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-600"></i> <strong>School Van &amp; Transport Logistics</strong></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-600"></i> 50+ Executive Audit Reports</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-600"></i> Free Data Migration Included</li>
+              </ul>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-brand-100 text-xs text-brand-800 font-semibold">
+              Includes Custom Domain CNAME
+            </div>
+          </div>
+
+          <!-- Plan 3: Enterprise -->
+          <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-sm hover:border-brand-300 transition-all flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500 block mb-2">LARGE CAMPUSES &amp; NETWORKS</span>
+              <h3 class="text-xl font-black text-slate-900">Enterprise Plan</h3>
+              <p class="text-xs text-slate-500 mt-1 mb-5">Unrestricted enterprise architecture for multi-branch school networks and boarding institutions.</p>
+              
+              <div class="p-3 rounded-xl bg-white border border-slate-200 mb-5">
+                <div class="text-2xl font-black text-slate-900">All 14 Modules Unlocked</div>
+                <div class="text-[11px] text-slate-500 font-medium">Adds Hostel &amp; School Inventory</div>
+              </div>
+
+              <ul class="space-y-2 text-xs text-slate-700">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> <strong>All 13 Growth Modules</strong></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> <strong>Hostel &amp; Mess Management</strong></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> <strong>School Inventory &amp; Stock Audits</strong></li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Multi-branch central administrative console</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> API webhooks for 1Link / KuickPay banking</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-600"></i> Dedicated Account Deployment Manager</li>
+              </ul>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-200 text-xs text-slate-500">
+              Custom Domain &bull; 99.98% Cloud SLA
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA to Pricing Section -->
+        <div class="text-center">
+          <a href="index.html#pricing" class="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-xl font-bold bg-brand-600 hover:bg-brand-700 text-white shadow-md shadow-brand-600/30 hover:shadow-lg hover:-translate-y-0.5 transition-all text-sm">
+            <i class="fa-solid fa-tags text-emerald-200"></i>
+            <span>View Pricing Plans &amp; Terms</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SHORT FAQ SECTION (4 Accordion Items) -->
+    <section id="faq" class="scroll-mt-36 py-16 sm:py-20 bg-slate-50 border-t border-slate-200/80">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-brand-600 font-extrabold uppercase text-xs tracking-wider">Frequently Asked Questions</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2 mb-3 tracking-tight">
+            Common Questions About Modules
+          </h2>
+          <p class="text-slate-500 text-xs sm:text-sm">
+            Clear, honest answers regarding data architecture, upgrades, migration, and live product demonstrations.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          
+          <!-- Q1 -->
+          <div class="faq-item bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:border-brand-300 hover:shadow-md transition-all duration-300 overflow-hidden">
+            <button type="button" onclick="toggleFaq(this)" class="w-full p-5 sm:p-6 text-left font-bold text-slate-900 flex justify-between items-center gap-4 text-sm sm:text-base focus:outline-none transition-colors group cursor-pointer" aria-expanded="false">
+              <span class="group-hover:text-brand-700 transition-colors leading-snug">Are all modules on one database?</span>
+              <span class="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-brand-50 text-slate-500 group-hover:text-brand-600 flex items-center justify-center shrink-0 faq-icon transition-all duration-300">
+                <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+              </span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                <div class="px-5 sm:px-6 pb-6 pt-2 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                  Yes, 100%. All 14 StudentXces modules are built natively into a single centralized cloud database. There are no separate plugins, disjointed third-party add-ons, or duplicate data entry. When an admission is registered, the student record is immediately available across fee challans, cloud attendance, exams, and parent communication.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="faq-item bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:border-brand-300 hover:shadow-md transition-all duration-300 overflow-hidden">
+            <button type="button" onclick="toggleFaq(this)" class="w-full p-5 sm:p-6 text-left font-bold text-slate-900 flex justify-between items-center gap-4 text-sm sm:text-base focus:outline-none transition-colors group cursor-pointer" aria-expanded="false">
+              <span class="group-hover:text-brand-700 transition-colors leading-snug">Can I start with fewer modules and upgrade later?</span>
+              <span class="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-brand-50 text-slate-500 group-hover:text-brand-600 flex items-center justify-center shrink-0 faq-icon transition-all duration-300">
+                <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+              </span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                <div class="px-5 sm:px-6 pb-6 pt-2 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                  Yes, absolutely. Many schools start with the Core plan (9 modules covering Admissions, 3-Part Challans, Attendance, and Exams) and seamlessly upgrade to Growth (13 modules) or Enterprise (all 14 modules) as they expand their transportation, library, or hostel facilities. Upgrades are instantaneous with zero data loss or downtime.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="faq-item bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:border-brand-300 hover:shadow-md transition-all duration-300 overflow-hidden">
+            <button type="button" onclick="toggleFaq(this)" class="w-full p-5 sm:p-6 text-left font-bold text-slate-900 flex justify-between items-center gap-4 text-sm sm:text-base focus:outline-none transition-colors group cursor-pointer" aria-expanded="false">
+              <span class="group-hover:text-brand-700 transition-colors leading-snug">Do you help move my existing data?</span>
+              <span class="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-brand-50 text-slate-500 group-hover:text-brand-600 flex items-center justify-center shrink-0 faq-icon transition-all duration-300">
+                <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+              </span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                <div class="px-5 sm:px-6 pb-6 pt-2 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                  Yes, 100% free of charge. You can send us your existing student records, guardian contact numbers, past fee balances, and staff profiles in Excel spreadsheets or physical registers. Our engineering deployment team in Lahore formats, cleans, and securely migrates all data within 24 hours.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="faq-item bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:border-brand-300 hover:shadow-md transition-all duration-300 overflow-hidden">
+            <button type="button" onclick="toggleFaq(this)" class="w-full p-5 sm:p-6 text-left font-bold text-slate-900 flex justify-between items-center gap-4 text-sm sm:text-base focus:outline-none transition-colors group cursor-pointer" aria-expanded="false">
+              <span class="group-hover:text-brand-700 transition-colors leading-snug">Can I see a demo of these modules?</span>
+              <span class="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-brand-50 text-slate-500 group-hover:text-brand-600 flex items-center justify-center shrink-0 faq-icon transition-all duration-300">
+                <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+              </span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                <div class="px-5 sm:px-6 pb-6 pt-2 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                  Yes! You can explore the Interactive ERP Dashboard Simulator directly on our home page or request a live 15-minute screen share walkthrough with our academic engineers. Message our team on WhatsApp at +92 306 6589195 to schedule a demo tailored to your school's exact syllabus and fee structure.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section class="py-16 sm:py-20 bg-slate-50 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="rounded-3xl bg-gradient-to-br from-brand-700 via-brand-600 to-emerald-500 p-8 sm:p-12 lg:p-16 text-center text-white relative overflow-hidden shadow-xl shadow-brand-600/20">
+          
+          <!-- Decorative Glows & Background Pattern -->
+          <div class="absolute -top-24 -right-24 w-80 h-80 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
+          <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-emerald-300/20 rounded-full blur-2xl pointer-events-none"></div>
+          <div class="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
+
+          <div class="relative z-10 max-w-4xl mx-auto">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 text-white border border-white/25 text-xs font-bold uppercase tracking-wider mb-5 backdrop-blur-xs">
+              <i class="fa-solid fa-rocket text-emerald-200"></i>
+              <span>Empower Your Campus</span>
+            </div>
+
+            <!-- Heading -->
+            <h2 class="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight max-w-3xl mx-auto text-balance">
+              Ready to Modernize Your School Operations?
+            </h2>
+
+            <!-- Subtitle -->
+            <p class="mt-4 text-sm sm:text-base lg:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed">
+              Schedule a live demonstration of StudentXces or speak with our academic deployment engineers in Lahore.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href="https://wa.me/923066589195" target="_blank" rel="noopener" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white hover:bg-emerald-50 text-brand-900 font-extrabold text-sm shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2.5">
+                <i class="fa-brands fa-whatsapp text-xl text-emerald-600"></i>
+                <span>Chat on WhatsApp</span>
+              </a>
+              <a href="contact.html" class="w-full sm:w-auto px-6 py-3.5 rounded-xl border-2 border-white/60 hover:border-white text-white hover:bg-white/10 font-bold text-sm transition-all flex items-center justify-center gap-2">
+                <i class="fa-solid fa-envelope text-white"></i>
+                <span>Contact Support Desk</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-navy-950 text-slate-300 py-16 border-t border-white/10 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+        
+        <!-- Col 1: StudentXces Brand Section -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2.5">
+            <img src="assets/studentxces_logo_white.png" alt="StudentXces ERP" class="h-9 sm:h-10 w-auto object-contain">
+            <span class="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-brand-500/20 text-brand-300 border border-brand-500/30 shrink-0">ERP</span>
+          </div>
+          <p class="leading-relaxed text-slate-300 text-xs">
+            StudentXces is Pakistan's leading cloud-hosted school management ERP. Engineered for reliability, financial accuracy, and seamless parent-teacher communication.
+          </p>
+          <div class="flex items-center gap-3 text-slate-400 pt-2">
+            <a href="https://wa.me/923066589195" target="_blank" rel="noopener" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-emerald-600 hover:text-white flex items-center justify-center transition-colors" title="WhatsApp">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-colors" title="Facebook">
+              <i class="fa-brands fa-facebook-f text-sm"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-sky-500 hover:text-white flex items-center justify-center transition-colors" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Main Modules (Links to deep anchors on modules.html) -->
+        <div>
+          <div class="font-bold text-white uppercase tracking-wider text-xs mb-4">Main Modules</div>
+          <ul class="space-y-2">
+            <li><a href="modules.html#student-information-system" class="text-slate-300 hover:text-white transition-colors">Student Management &amp; Admissions</a></li>
+            <li><a href="modules.html#cloud-attendance" class="text-slate-300 hover:text-white transition-colors">Attendance Management</a></li>
+            <li><a href="modules.html#fee-bank-challans" class="text-slate-300 hover:text-white transition-colors">Fee &amp; Finance Management</a></li>
+            <li><a href="modules.html#exams-dmcs" class="text-slate-300 hover:text-white transition-colors">Examination &amp; Results</a></li>
+            <li><a href="modules.html#staff-payroll" class="text-slate-300 hover:text-white transition-colors">Staff &amp; HR Management</a></li>
+            <li><a href="modules.html#timetable-periods" class="text-slate-300 hover:text-white transition-colors">Timetable &amp; Class Management</a></li>
+            <li><a href="modules.html#student-information-system" class="text-slate-300 hover:text-white transition-colors">Parent &amp; Student Portal</a></li>
+            <li><a href="modules.html#cloud-attendance" class="text-slate-300 hover:text-white transition-colors">WhatsApp Notifications</a></li>
+            <li><a href="modules.html#more-modules" class="text-slate-300 hover:text-white transition-colors">Transport Management</a></li>
+            <li><a href="modules.html#more-modules" class="text-slate-300 hover:text-white transition-colors">Reports &amp; Analytics</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Legal & Policies -->
+        <div>
+          <div class="font-bold text-white uppercase tracking-wider text-xs mb-4">Legal &amp; Policies</div>
+          <ul class="space-y-2.5">
+            <li><a href="privacy-policy.html" class="text-slate-300 hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="terms-and-conditions.html" class="text-slate-300 hover:text-white transition-colors">Terms &amp; Conditions</a></li>
+            <li><a href="cookie-policy.html" class="text-slate-300 hover:text-white transition-colors">Cookie Policy</a></li>
+            <li><a href="data-protection-policy.html" class="text-slate-300 hover:text-white transition-colors">Data Protection Policy</a></li>
+            <li><a href="refund-cancellation-policy.html" class="text-slate-300 hover:text-white transition-colors">Refund &amp; Cancellation</a></li>
+            <li><a href="security-whitepaper.html" class="text-slate-300 hover:text-white transition-colors">Security Whitepaper</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Support & Sales -->
+        <div>
+          <div class="font-bold text-white uppercase tracking-wider text-xs mb-4">Support &amp; Sales</div>
+          <div class="space-y-3.5">
+            <div>
+              <div class="text-[11px] text-slate-400 font-semibold mb-1">OUR OFFICE:</div>
+              <div class="text-slate-300 leading-snug">14-A, Davis Road, Lahore, Pakistan</div>
+            </div>
+            <div>
+              <div class="text-[11px] text-slate-400 font-semibold mb-1">WHATSAPP HELPLINE:</div>
+              <a href="https://wa.me/923066589195" target="_blank" rel="noopener" class="text-sm font-extrabold text-emerald-400 hover:underline inline-flex items-center gap-1.5">
+                <i class="fa-brands fa-whatsapp"></i> +92 306 6589195
+              </a>
+            </div>
+            <div>
+              <div class="text-[11px] text-slate-400 font-semibold mb-1">EMAIL INQUIRIES:</div>
+              <a href="mailto:support@studentxces.io" class="text-slate-300 hover:text-emerald-400 transition-colors break-all">support@studentxces.io</a>
+            </div>
+            <div>
+              <div class="text-[11px] text-slate-400 font-semibold mb-1">ACTIVE UPTIME:</div>
+              <span class="inline-flex items-center gap-1.5 text-emerald-400 font-bold">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> 99.98% Cloud SLA
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400 text-[11px] text-center sm:text-left">
+        <div>
+          <span class="block sm:inline">&copy; 2026 StudentXces. All rights reserved.</span> <a href="https://pakalfa.com/" target="_blank" rel="noopener noreferrer" class="inline-block sm:inline font-semibold text-slate-300 hover:text-emerald-400 hover:underline transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-brand-400 focus-visible:underline rounded-xs">Built &amp; owned by Pakalfa</a>.
+        </div>
+        <div class="flex items-center gap-4 text-slate-400">
+          <span>Trusted by Schools Across Pakistan</span>
+          <span>&bull;</span>
+          <a href="#main-header" class="text-slate-400 hover:text-emerald-400 transition-colors inline-flex items-center gap-1">
+            <span>Back to top</span> <i class="fa-solid fa-arrow-up text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/923066589195?text=Hello%20StudentXces%20Team!%20I%20would%20like%20more%20information%20regarding%20the%20School%20ERP." target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center text-3xl shadow-xl hover:scale-110 active:scale-95 transition-all duration-300" title="Chat with Support Team">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script>
+    // 1. Mobile Menu Toggle
+    function toggleMobileNav() {
+      const menu = document.getElementById('mobile-menu');
+      const icon = document.getElementById('nav-toggle-icon');
+      if (menu) {
+        menu.classList.toggle('hidden');
+        if (icon) {
+          if (menu.classList.contains('hidden')) {
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+          } else {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-xmark');
+          }
+        }
+      }
+    }
+
+    // 2. FAQ Accordion Toggle
+    function toggleFaq(button) {
+      const item = button.closest('.faq-item');
+      if (!item) return;
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.faq-icon i');
+      const iconPill = item.querySelector('.faq-icon');
+      if (!content) return;
+      const isOpen = content.classList.contains('open');
+
+      // Close all other FAQ items
+      document.querySelectorAll('.faq-item').forEach(otherItem => {
+        if (otherItem !== item) {
+          const otherContent = otherItem.querySelector('.faq-content');
+          const otherIcon = otherItem.querySelector('.faq-icon i');
+          const otherPill = otherItem.querySelector('.faq-icon');
+          const otherBtn = otherItem.querySelector('button');
+          if (otherContent) otherContent.classList.remove('open');
+          if (otherIcon) otherIcon.classList.remove('rotate-180');
+          if (otherPill) {
+            otherPill.classList.remove('bg-brand-100', 'text-brand-700');
+            otherPill.classList.add('bg-slate-100', 'text-slate-500');
+          }
+          otherItem.classList.remove('border-brand-300', 'ring-2', 'ring-brand-500/10', 'shadow-md');
+          otherItem.classList.add('border-slate-200/90', 'shadow-sm');
+          if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Toggle current
+      if (isOpen) {
+        content.classList.remove('open');
+        if (icon) icon.classList.remove('rotate-180');
+        if (iconPill) {
+          iconPill.classList.remove('bg-brand-100', 'text-brand-700');
+          iconPill.classList.add('bg-slate-100', 'text-slate-500');
+        }
+        item.classList.remove('border-brand-300', 'ring-2', 'ring-brand-500/10', 'shadow-md');
+        item.classList.add('border-slate-200/90', 'shadow-sm');
+        button.setAttribute('aria-expanded', 'false');
+      } else {
+        content.classList.add('open');
+        if (icon) icon.classList.add('rotate-180');
+        if (iconPill) {
+          iconPill.classList.remove('bg-slate-100', 'text-slate-500');
+          iconPill.classList.add('bg-brand-100', 'text-brand-700');
+        }
+        item.classList.add('border-brand-300', 'ring-2', 'ring-brand-500/10', 'shadow-md');
+        item.classList.remove('border-slate-200/90', 'shadow-sm');
+        button.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    // 3. Module Tabs System with Arrow Scrolling (WAI-ARIA, Keyboard Navigation & Deep-Linking)
+    const validTabIds = [
+      'student-information-system',
+      'fee-bank-challans',
+      'cloud-attendance',
+      'exams-dmcs',
+      'staff-payroll',
+      'timetable-periods',
+      'more-modules'
+    ];
+
+    function getMotionBehavior() {
+      return window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+    }
+
+    function updateTabBarArrows() {
+      const tablist = document.getElementById('modules-tablist');
+      const leftWrapper = document.getElementById('tab-arrow-left-wrapper');
+      const leftBtn = document.getElementById('tab-arrow-left');
+      const rightWrapper = document.getElementById('tab-arrow-right-wrapper');
+      const rightBtn = document.getElementById('tab-arrow-right');
+
+      if (!tablist || !leftWrapper || !leftBtn || !rightWrapper || !rightBtn) return;
+
+      const scrollLeft = tablist.scrollLeft;
+      const maxScrollLeft = tablist.scrollWidth - tablist.clientWidth;
+      const hasOverflow = maxScrollLeft > 2;
+
+      const canScrollLeft = hasOverflow && scrollLeft > 2;
+      const canScrollRight = hasOverflow && scrollLeft < (maxScrollLeft - 2);
+
+      if (canScrollLeft) {
+        leftWrapper.classList.remove('hidden');
+        leftBtn.removeAttribute('disabled');
+        leftBtn.setAttribute('aria-hidden', 'false');
+      } else {
+        leftWrapper.classList.add('hidden');
+        leftBtn.setAttribute('disabled', 'true');
+        leftBtn.setAttribute('aria-hidden', 'true');
+      }
+
+      if (canScrollRight) {
+        rightWrapper.classList.remove('hidden');
+        rightBtn.removeAttribute('disabled');
+        rightBtn.setAttribute('aria-hidden', 'false');
+      } else {
+        rightWrapper.classList.add('hidden');
+        rightBtn.setAttribute('disabled', 'true');
+        rightBtn.setAttribute('aria-hidden', 'true');
+      }
+    }
+
+    function scrollActiveTabIntoView(btn) {
+      if (!btn) return;
+      const behavior = getMotionBehavior();
+      if (typeof btn.scrollIntoView === 'function') {
+        btn.scrollIntoView({ inline: 'center', block: 'nearest', behavior });
+      }
+      updateTabBarArrows();
+      setTimeout(updateTabBarArrows, 350);
+    }
+
+    function switchModuleTab(targetId, updateHistory = true, shouldScroll = false) {
+      if (!validTabIds.includes(targetId)) {
+        targetId = 'student-information-system';
+      }
+
+      const tabButtons = document.querySelectorAll('[role="tab"][aria-controls]');
+      const tabPanels = document.querySelectorAll('.module-panel');
+      let activeBtn = null;
+
+      // Update tab buttons
+      tabButtons.forEach(btn => {
+        const controls = btn.getAttribute('aria-controls');
+        const isSelected = (controls === targetId);
+        btn.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+        btn.setAttribute('tabindex', isSelected ? '0' : '-1');
+
+        if (isSelected) {
+          btn.className = 'module-tab-btn inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shrink-0 whitespace-nowrap bg-brand-600 text-white shadow-md border border-brand-600';
+          activeBtn = btn;
+        } else {
+          btn.className = 'module-tab-btn inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shrink-0 whitespace-nowrap bg-white text-slate-600 border border-slate-200 hover:border-brand-300 hover:text-brand-700';
+        }
+      });
+
+      // Update panels
+      tabPanels.forEach(panel => {
+        if (panel.id === targetId) {
+          panel.removeAttribute('hidden');
+        } else {
+          panel.setAttribute('hidden', '');
+        }
+      });
+
+      // Scroll active tab into view inside the tab bar
+      if (activeBtn) {
+        scrollActiveTabIntoView(activeBtn);
+      }
+
+      // Update URL hash
+      if (updateHistory) {
+        history.replaceState(null, '', '#' + targetId);
+      }
+
+      // Smooth scroll to container top if requested
+      if (shouldScroll) {
+        const container = document.getElementById('modules-container');
+        if (container) {
+          const topOffset = container.getBoundingClientRect().top + window.pageYOffset - 90;
+          window.scrollTo({ top: topOffset, behavior: 'smooth' });
+        }
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const tablist = document.getElementById('modules-tablist');
+      const leftBtn = document.getElementById('tab-arrow-left');
+      const rightBtn = document.getElementById('tab-arrow-right');
+      const tabButtons = Array.from(document.querySelectorAll('[role="tab"][aria-controls]'));
+
+      // Arrow button click handlers
+      if (leftBtn && tablist) {
+        leftBtn.addEventListener('click', () => {
+          const amount = Math.max(160, Math.floor(tablist.clientWidth * 0.7));
+          tablist.scrollBy({ left: -amount, behavior: getMotionBehavior() });
+          setTimeout(updateTabBarArrows, 350);
+        });
+      }
+
+      if (rightBtn && tablist) {
+        rightBtn.addEventListener('click', () => {
+          const amount = Math.max(160, Math.floor(tablist.clientWidth * 0.7));
+          tablist.scrollBy({ left: amount, behavior: getMotionBehavior() });
+          setTimeout(updateTabBarArrows, 350);
+        });
+      }
+
+      // Tab list scroll & resize listeners
+      if (tablist) {
+        tablist.addEventListener('scroll', updateTabBarArrows, { passive: true });
+        
+        // Mouse wheel over tab bar: convert vertical wheel to horizontal scroll if it can scroll
+        tablist.addEventListener('wheel', (e) => {
+          const scrollLeft = tablist.scrollLeft;
+          const maxScrollLeft = tablist.scrollWidth - tablist.clientWidth;
+          const canScrollLeft = scrollLeft > 2;
+          const canScrollRight = scrollLeft < (maxScrollLeft - 2);
+
+          if (e.deltaY !== 0 && ((e.deltaY > 0 && canScrollRight) || (e.deltaY < 0 && canScrollLeft))) {
+            e.preventDefault();
+            tablist.scrollLeft += e.deltaY;
+            updateTabBarArrows();
+          }
+        }, { passive: false });
+      }
+
+      window.addEventListener('resize', updateTabBarArrows);
+      window.addEventListener('load', updateTabBarArrows);
+
+      if (typeof ResizeObserver !== 'undefined' && tablist) {
+        const ro = new ResizeObserver(updateTabBarArrows);
+        ro.observe(tablist);
+        Array.from(tablist.children).forEach(child => ro.observe(child));
+      }
+
+      // Click events for tab buttons
+      tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('aria-controls');
+          switchModuleTab(targetId, true, false);
+        });
+      });
+
+      // Click events for Prev / Next navigation buttons
+      document.querySelectorAll('[data-next-tab], [data-prev-tab]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-next-tab') || btn.getAttribute('data-prev-tab');
+          if (targetId) {
+            switchModuleTab(targetId, true, true);
+          }
+        });
+      });
+
+      // WAI-ARIA Keyboard navigation on tablist
+      if (tablist) {
+        tablist.addEventListener('keydown', (e) => {
+          const currentBtn = document.activeElement;
+          const currentIndex = tabButtons.indexOf(currentBtn);
+          if (currentIndex === -1) return;
+
+          let nextIndex = null;
+          if (e.key === 'ArrowRight') {
+            nextIndex = (currentIndex + 1) % tabButtons.length;
+          } else if (e.key === 'ArrowLeft') {
+            nextIndex = (currentIndex - 1 + tabButtons.length) % tabButtons.length;
+          } else if (e.key === 'Home') {
+            nextIndex = 0;
+          } else if (e.key === 'End') {
+            nextIndex = tabButtons.length - 1;
+          }
+
+          if (nextIndex !== null) {
+            e.preventDefault();
+            tabButtons[nextIndex].focus();
+            const targetId = tabButtons[nextIndex].getAttribute('aria-controls');
+            switchModuleTab(targetId, true, false);
+          }
+        });
+      }
+
+      // Handle Initial Hash on Load & hashchange
+      function handleUrlHash(scrollOnHash = false) {
+        const hash = window.location.hash.replace('#', '');
+        if (validTabIds.includes(hash)) {
+          switchModuleTab(hash, false, scrollOnHash);
+        } else if (!hash) {
+          switchModuleTab('student-information-system', false, false);
+        }
+      }
+
+      handleUrlHash(false);
+      window.addEventListener('hashchange', () => handleUrlHash(true));
+      updateTabBarArrows();
+
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(updateTabBarArrows);
+      }
+      setTimeout(updateTabBarArrows, 150);
+      setTimeout(updateTabBarArrows, 500);
+    });
+  </script>
+
+</body>
+</html>
