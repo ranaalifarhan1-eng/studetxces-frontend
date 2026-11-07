@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth overflow-x-hidden">
+<html lang="en" class="scroll-smooth overflow-x-clip">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,8 +96,77 @@
     }
   }
   </script>
+  <style>
+
+    /* Header & Scroll Padding */
+    :root {
+      --header-h: 80px;
+    }
+    html {
+      scroll-padding-top: calc(var(--header-h) + 16px);
+      overflow-x: clip;
+    }
+    body {
+      overflow-x: clip;
+    }
+
+    /* Floating WhatsApp Button Pulse & Icon Attention */
+    @keyframes wa-pulse {
+      0% {
+        transform: scale(0.95);
+        opacity: 0.55;
+      }
+      50% {
+        opacity: 0.25;
+      }
+      100% {
+        transform: scale(1.7);
+        opacity: 0;
+      }
+    }
+    @keyframes wa-icon-attention {
+      0%, 82%, 100% {
+        transform: scale(1);
+      }
+      88% {
+        transform: scale(1.06);
+      }
+      94% {
+        transform: scale(1);
+      }
+    }
+    .wa-pulse-ring-1 {
+      animation: wa-pulse 2.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+    }
+    .wa-pulse-ring-2 {
+      animation: wa-pulse 2.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+      animation-delay: 1.1s;
+    }
+    .wa-icon-pulse {
+      animation: wa-icon-attention 4.4s ease-in-out infinite;
+    }
+    /* Pause pulse animation on hover/focus */
+    .group:hover .wa-pulse-ring-1,
+    .group:hover .wa-pulse-ring-2,
+    .group:hover .wa-icon-pulse,
+    .group:focus-visible .wa-pulse-ring-1,
+    .group:focus-visible .wa-pulse-ring-2,
+    .group:focus-visible .wa-icon-pulse {
+      animation-play-state: paused !important;
+      opacity: 0;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .wa-pulse-ring-1,
+      .wa-pulse-ring-2,
+      .wa-icon-pulse {
+        animation: none !important;
+        display: none !important;
+      }
+    }
+
+  </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white flex flex-col min-h-screen overflow-x-hidden">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white flex flex-col min-h-screen overflow-x-clip">
 
   <!-- TOP ANNOUNCEMENT BANNER -->
   <div class="bg-gradient-to-r from-slate-900 via-brand-950 to-slate-900 text-slate-200 text-xs py-2 px-4 border-b border-slate-800">
@@ -445,6 +514,16 @@
     </div>
   </footer>
 
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/923066589195?text=Hello%20StudentXces%20Team!%20I%20would%20like%20to%20know%20more%20about%20StudentXces." target="_blank" rel="noopener noreferrer" class="group fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center text-3xl shadow-xl hover:scale-110 active:scale-95 transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 motion-reduce:hover:scale-100 motion-reduce:transition-none print:hidden" style="margin-bottom: env(safe-area-inset-bottom, 0px); margin-right: env(safe-area-inset-right, 0px);" aria-label="Chat with StudentXces on WhatsApp" title="Chat with StudentXces on WhatsApp">
+    <span class="wa-pulse-ring-1 absolute inset-0 rounded-full bg-[#25D366] pointer-events-none -z-10" aria-hidden="true"></span>
+    <span class="wa-pulse-ring-2 absolute inset-0 rounded-full bg-[#25D366] pointer-events-none -z-10" aria-hidden="true"></span>
+    <span class="pointer-events-none absolute right-16 top-1/2 -translate-y-1/2 whitespace-nowrap rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white shadow-lg opacity-0 transition-opacity duration-200 hidden lg:block group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true">
+      Chat on WhatsApp
+    </span>
+    <i class="fa-brands fa-whatsapp wa-icon-pulse relative z-10" aria-hidden="true"></i>
+  </a>
+
   <!-- MOBILE NAVIGATION SCRIPT -->
   <script>
     function toggleMobileNav() {
@@ -463,6 +542,41 @@
         }
       }
     }
+  </script>
+
+
+  <!-- HEADER HEIGHT & SCROLL SHADOW SCRIPT -->
+  <script>
+    (function initHeaderEnhancements() {
+      function updateHeaderHeight() {
+        const header = document.getElementById('main-header');
+        if (header) {
+          const h = header.offsetHeight;
+          document.documentElement.style.setProperty('--header-h', h + 'px');
+        }
+      }
+
+      function updateHeaderShadow() {
+        const header = document.getElementById('main-header');
+        if (!header) return;
+        if (window.pageYOffset > 10) {
+          header.classList.add('shadow-md');
+          header.classList.remove('shadow-sm');
+        } else {
+          header.classList.remove('shadow-md');
+          header.classList.add('shadow-sm');
+        }
+      }
+
+      window.addEventListener('resize', updateHeaderHeight, { passive: true });
+      window.addEventListener('scroll', updateHeaderShadow, { passive: true });
+      document.addEventListener('DOMContentLoaded', () => {
+        updateHeaderHeight();
+        updateHeaderShadow();
+      });
+      window.addEventListener('load', updateHeaderHeight);
+      updateHeaderHeight();
+    })();
   </script>
 
 </body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth overflow-x-hidden">
+<html lang="en" class="scroll-smooth overflow-x-clip">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -135,6 +135,94 @@
         animation: none !important;
       }
     }
+  
+    /* Header & Sticky Scroll Offsets */
+    :root {
+      --header-h: 80px;
+      --sticky-offset: var(--header-h, 80px);
+    }
+    html {
+      scroll-padding-top: calc(var(--header-h, 80px) + 64px + 16px);
+      overflow-x: clip;
+    }
+    body {
+      overflow-x: clip;
+    }
+    /* Main Header Hide / Show Animation */
+    #main-header {
+      transition: transform 250ms ease, box-shadow 250ms ease;
+      will-change: transform;
+    }
+    #main-header.is-hidden {
+      transform: translateY(-100%);
+    }
+    /* Sticky Tab Navigation Bar */
+    #modules-tab-nav {
+      top: var(--sticky-offset, var(--header-h, 80px));
+      transition: top 250ms ease, box-shadow 200ms ease;
+      will-change: top;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #main-header,
+      #modules-tab-nav {
+        transition: none !important;
+      }
+    }
+
+    /* Floating WhatsApp Button Pulse & Attention Keyframes */
+    @keyframes wa-pulse {
+      0% {
+        transform: scale(0.95);
+        opacity: 0.55;
+      }
+      50% {
+        opacity: 0.25;
+      }
+      100% {
+        transform: scale(1.7);
+        opacity: 0;
+      }
+    }
+    @keyframes wa-icon-attention {
+      0%, 82%, 100% {
+        transform: scale(1);
+      }
+      88% {
+        transform: scale(1.06);
+      }
+      94% {
+        transform: scale(1);
+      }
+    }
+    .wa-pulse-ring-1 {
+      animation: wa-pulse 2.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+    }
+    .wa-pulse-ring-2 {
+      animation: wa-pulse 2.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+      animation-delay: 1.1s;
+    }
+    .wa-icon-pulse {
+      animation: wa-icon-attention 4.4s ease-in-out infinite;
+    }
+    /* Pause pulse animation on hover/focus */
+    .group:hover .wa-pulse-ring-1,
+    .group:hover .wa-pulse-ring-2,
+    .group:hover .wa-icon-pulse,
+    .group:focus-visible .wa-pulse-ring-1,
+    .group:focus-visible .wa-pulse-ring-2,
+    .group:focus-visible .wa-icon-pulse {
+      animation-play-state: paused !important;
+      opacity: 0;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .wa-pulse-ring-1,
+      .wa-pulse-ring-2,
+      .wa-icon-pulse {
+        animation: none !important;
+        display: none !important;
+      }
+    }
+
   </style>
 
   <!-- JSON-LD Structured Data -->
@@ -168,7 +256,7 @@
   }
   </script>
 </head>
-<body id="top" class="bg-slate-50 text-slate-800 antialiased font-sans selection:bg-brand-500 selection:text-white overflow-x-hidden">
+<body id="top" class="bg-slate-50 text-slate-800 antialiased font-sans selection:bg-brand-500 selection:text-white overflow-x-clip">
 
   <!-- TOP TICKER ANNOUNCEMENT -->
   <div class="bg-navy-950 text-slate-300 py-2.5 px-4 text-xs font-medium border-b border-white/10">
@@ -275,8 +363,11 @@
       </div>
     </section>
 
-    <!-- STICKY TAB NAVIGATION BAR -->
-    <nav aria-label="ERP Modules Navigation" class="sticky top-20 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/90 py-3 shadow-xs">
+    <!-- MODULES EXPLORER WRAPPER (Holds sticky tab bar and tab panels) -->
+    <div id="modules-explorer-wrapper" class="relative">
+
+      <!-- STICKY TAB NAVIGATION BAR -->
+      <nav id="modules-tab-nav" aria-label="ERP Modules Navigation" class="sticky z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/90 py-3 shadow-sm">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="relative flex items-center">
           
@@ -1296,6 +1387,8 @@
     </div>
   </section>
 
+  </div><!-- END MODULES EXPLORER WRAPPER -->
+
     <!-- HOW THE MODULES WORK TOGETHER STRIP (4-Step Flow) -->
     <section class="py-16 sm:py-20 bg-slate-50 border-t border-slate-200/80">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1730,8 +1823,13 @@
   </footer>
 
   <!-- FLOATING WHATSAPP BUTTON -->
-  <a href="https://wa.me/923066589195?text=Hello%20StudentXces%20Team!%20I%20would%20like%20more%20information%20regarding%20the%20School%20ERP." target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center text-3xl shadow-xl hover:scale-110 active:scale-95 transition-all duration-300" title="Chat with Support Team">
-    <i class="fa-brands fa-whatsapp"></i>
+  <a href="https://wa.me/923066589195?text=Hello%20StudentXces%20Team!%20I%20would%20like%20to%20know%20more%20about%20your%20school%20modules." target="_blank" rel="noopener noreferrer" class="group fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center text-3xl shadow-xl hover:scale-110 active:scale-95 transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 motion-reduce:hover:scale-100 motion-reduce:transition-none print:hidden" style="margin-bottom: env(safe-area-inset-bottom, 0px); margin-right: env(safe-area-inset-right, 0px);" aria-label="Chat with StudentXces on WhatsApp" title="Chat with StudentXces on WhatsApp">
+    <span class="wa-pulse-ring-1 absolute inset-0 rounded-full bg-[#25D366] pointer-events-none -z-10" aria-hidden="true"></span>
+    <span class="wa-pulse-ring-2 absolute inset-0 rounded-full bg-[#25D366] pointer-events-none -z-10" aria-hidden="true"></span>
+    <span class="pointer-events-none absolute right-16 top-1/2 -translate-y-1/2 whitespace-nowrap rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white shadow-lg opacity-0 transition-opacity duration-200 hidden lg:block group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden="true">
+      Chat on WhatsApp
+    </span>
+    <i class="fa-brands fa-whatsapp wa-icon-pulse relative z-10" aria-hidden="true"></i>
   </a>
 
   <!-- SCRIPTS -->
@@ -1740,6 +1838,12 @@
     function toggleMobileNav() {
       const menu = document.getElementById('mobile-menu');
       const icon = document.getElementById('nav-toggle-icon');
+      const header = document.getElementById('main-header');
+      if (header && header.classList.contains('is-hidden')) {
+        header.classList.remove('is-hidden');
+        const h = header.offsetHeight || 80;
+        document.documentElement.style.setProperty('--sticky-offset', h + 'px');
+      }
       if (menu) {
         menu.classList.toggle('hidden');
         if (icon) {
@@ -1860,10 +1964,17 @@
     }
 
     function scrollActiveTabIntoView(btn) {
-      if (!btn) return;
+      const tablist = document.getElementById('modules-tablist');
+      if (!tablist || !btn) return;
+      const tabRect = btn.getBoundingClientRect();
+      const listRect = tablist.getBoundingClientRect();
+      const currentScroll = tablist.scrollLeft;
+      const targetScroll = currentScroll + (tabRect.left - listRect.left) - (listRect.width / 2) + (tabRect.width / 2);
       const behavior = getMotionBehavior();
-      if (typeof btn.scrollIntoView === 'function') {
-        btn.scrollIntoView({ inline: 'center', block: 'nearest', behavior });
+      if (typeof tablist.scrollTo === 'function') {
+        tablist.scrollTo({ left: Math.max(0, targetScroll), behavior });
+      } else {
+        tablist.scrollLeft = Math.max(0, targetScroll);
       }
       updateTabBarArrows();
       setTimeout(updateTabBarArrows, 350);
@@ -1915,9 +2026,16 @@
       // Smooth scroll to container top if requested
       if (shouldScroll) {
         const container = document.getElementById('modules-container');
+        const header = document.getElementById('main-header');
+        const nav = document.getElementById('modules-tab-nav');
         if (container) {
-          const topOffset = container.getBoundingClientRect().top + window.pageYOffset - 90;
-          window.scrollTo({ top: topOffset, behavior: 'smooth' });
+          const isHeaderHidden = header && header.classList.contains('is-hidden');
+          const headerH = (!isHeaderHidden && header) ? header.offsetHeight : 0;
+          const navH = nav ? nav.offsetHeight : 64;
+          const totalOffset = headerH + navH + 16;
+          const targetY = container.getBoundingClientRect().top + window.pageYOffset - totalOffset;
+          const behavior = getMotionBehavior();
+          window.scrollTo({ top: Math.max(0, targetY), behavior });
         }
       }
     }
@@ -2028,7 +2146,10 @@
         }
       }
 
-      handleUrlHash(false);
+      // Handle deep-link on load
+      const initialHash = window.location.hash.replace('#', '');
+      const hasInitialModuleHash = validTabIds.includes(initialHash);
+      handleUrlHash(hasInitialModuleHash);
       window.addEventListener('hashchange', () => handleUrlHash(true));
       updateTabBarArrows();
 
@@ -2038,6 +2159,95 @@
       setTimeout(updateTabBarArrows, 150);
       setTimeout(updateTabBarArrows, 500);
     });
+
+    // 4. Sticky Header & Modules Tab Bar Coordinator
+    (function initStickyCoordinator() {
+      let lastScrollY = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
+      let ticking = false;
+      const SCROLL_THRESHOLD = 8;
+      const TOP_LIMIT = 120;
+
+      function updateHeaderMetrics() {
+        const header = document.getElementById('main-header');
+        if (header) {
+          const h = header.offsetHeight;
+          document.documentElement.style.setProperty('--header-h', h + 'px');
+          if (!header.classList.contains('is-hidden')) {
+            document.documentElement.style.setProperty('--sticky-offset', h + 'px');
+          }
+        }
+      }
+
+      function showMainHeader() {
+        const header = document.getElementById('main-header');
+        if (header && header.classList.contains('is-hidden')) {
+          header.classList.remove('is-hidden');
+          const h = header.offsetHeight || 80;
+          document.documentElement.style.setProperty('--sticky-offset', h + 'px');
+        }
+      }
+
+      function hideMainHeader() {
+        const header = document.getElementById('main-header');
+        if (header && !header.classList.contains('is-hidden')) {
+          header.classList.add('is-hidden');
+          document.documentElement.style.setProperty('--sticky-offset', '0px');
+        }
+      }
+
+      function onScroll() {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const currentScrollY = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
+            const header = document.getElementById('main-header');
+            if (!header) {
+              ticking = false;
+              return;
+            }
+
+            // Enhanced shadow on scroll
+            if (currentScrollY > 10) {
+              header.classList.add('shadow-md');
+              header.classList.remove('shadow-sm');
+            } else {
+              header.classList.remove('shadow-md');
+              header.classList.add('shadow-sm');
+            }
+
+            const mobileMenu = document.getElementById('mobile-menu');
+            const isDrawerOpen = mobileMenu && !mobileMenu.classList.contains('hidden');
+            const hasFocusInside = header.contains(document.activeElement);
+
+            const diff = currentScrollY - lastScrollY;
+
+            if (currentScrollY <= TOP_LIMIT || isDrawerOpen || hasFocusInside) {
+              showMainHeader();
+            } else if (diff > SCROLL_THRESHOLD) {
+              hideMainHeader();
+            } else if (diff < -SCROLL_THRESHOLD) {
+              showMainHeader();
+            }
+
+            lastScrollY = currentScrollY;
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', updateHeaderMetrics, { passive: true });
+      document.addEventListener('DOMContentLoaded', updateHeaderMetrics);
+      window.addEventListener('load', updateHeaderMetrics);
+
+      // Keep header visible when tabbing into it
+      const mainHeader = document.getElementById('main-header');
+      if (mainHeader) {
+        mainHeader.addEventListener('focusin', showMainHeader);
+      }
+
+      updateHeaderMetrics();
+    })();
   </script>
 
 </body>
